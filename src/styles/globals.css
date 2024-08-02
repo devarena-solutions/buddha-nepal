@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+* {
+  transition: all 100ms ease;
+}
+
+.food-description {
+  display: none;
+}
+
+.food-banner:hover .food-description {
+  display: inline;
+}
+
+.food-scroll::-webkit-scrollbar {
+  background-color: rgba(173, 173, 173, 0.527);
+}
+
+.food-scroll::-webkit-scrollbar-thumb {
+  background-color: #26554fff;
+  border: 1px solid white;
+}
+
+textarea {
+  resize: none;
+}
+
+.menu-scroll::-webkit-scrollbar {
+  background-color: white;
+  height: 5px;
+}
+
+.menu-scroll::-webkit-scrollbar-thumb {
+  background-color: #26554fff;
+}
+
+/* Animate the border */
+/* @keyframes rotateBorder {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-border {
+  animation: rotateBorder 5s linear infinite;
+} */
+
+.namaste-image {
+  width: 140px;
+  height: auto;
+}
+
+.welcome-image {
+  width: 250px;
+  height: auto;
+}
