@@ -7,9 +7,8 @@ const nextConfig = {
   },
   reactStrictMode: true,
   env: {
-    //GOOGLE_API: process.env.NEXT_PUBLIC_GOOGLE_API,
+    GOOGLE_API: process.env.NEXT_PUBLIC_GOOGLE_API,
   },
-  output: 'export'
 };
 
 module.exports = nextConfig;
