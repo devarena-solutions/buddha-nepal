@@ -199,7 +199,7 @@ export default function Menu() {
         </div>
       </div>
 
-      <div className="flex justify-center my-[100px]">
+      <div className="flex justify-center mt-[100px]">
         <div className="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px]">
           <div
             className="w-full h-[200px] bg-cover bg-center rounded-lg mb-5 bg-black"
@@ -214,90 +214,47 @@ export default function Menu() {
             </h1>
             <hr className="flex-1 border-[1px] border-primary" />
           </div>
-          <div className="w-full grid lg:grid-cols-1 gap-7">
+          <div className="w-full grid lg:grid-cols-3">
             {menu.clay_oven.items.map((item) => (
-              <div className="mt-5" key={item.name[t]}>
-                <h2 className="text-[25px] md:text-[32px] text-primary font-bold">
-                  {item.name[t]}
-                </h2>
-
-                <div className="lg:grid grid-cols-3 flex flex-wrap items-start gap-5 mt-5">
-                  {item.sub?.map((sub) => (
-                    <div
-                      key={sub.name[t]}
-                      className="flex flex-col flex-grow w-[300px] gap-3 ml-3 mt-5"
-                    >
-                      <div className="flex items-start gap-10 text-primary font-semibold">
-                        <div className="flex gap-1 items-start ">
-                          <>•</>
-                          <h1>{sub.name[t]} </h1>
-                        </div>
-                        <p className="w-[85px] text-end">{sub.price} kr</p>
-                      </div>
-
-                      <h2>{sub.description && sub.description[t]}</h2>
-                    </div>
-                  ))}
+              <div className="w-[300px] mt-5" key={item.name[t]}>
+                <div className="flex font-bold text-primary justify-between text-[23px]">
+                  <h2>{item.name[t]}</h2> <p>{item.price}kr</p>
                 </div>
+                <p className="text-sm mt-3">{item.description[t]}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="flex justify-center my-[100px]">
+      <div className="flex justify-center mt-[100px]">
         <div className="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px]">
           <div
             className="w-full h-[200px] bg-cover bg-center rounded-lg mb-5 bg-black"
-            style={{ backgroundImage: `url(${menu.mughlai_dishes.source})` }}
+            style={{ backgroundImage: `url(${menu.biryani_dishes.source})` }}
           />
           <div
             className="customTest flex items-center gap-5"
-            id={menu.mughlai_dishes.index.toString()}
+            id={menu.biryani_dishes.index.toString()}
           >
             <h1 className="text-[27px] md:text-[40px] font-bold text-primary">
-              {menu.mughlai_dishes.name[t]}
+              {menu.biryani_dishes.name[t]}
             </h1>
             <hr className="flex-1 border-[1px] border-primary" />
           </div>
-          <div className="w-full grid lg:grid-cols-1 gap-7">
-            {menu.mughlai_dishes.items.map((item) => (
-              <div className="mt-5" key={item.name[t]}>
-                <div className="flex justify-between">
-                  <h2 className="text-[25px] md:text-[32px] text-primary font-bold">
-                    {item.name[t]}
-                  </h2>
-                  {item.price && (
-                    <h2 className="text-[25px] md:text-[32px] text-primary font-bold">
-                      {item.price} kr
-                    </h2>
-                  )}
+          <div className="w-full grid lg:grid-cols-1">
+            {menu.biryani_dishes.items.map((item) => (
+              <div className="w-full mt-5" key={item.name[t]}>
+                <div className="flex font-bold text-primary justify-between text-[23px]">
+                  <h2>{item.name[t]}</h2> <p>{item.price}kr</p>
                 </div>
-                <p className="text-[18px] text-primary mt-3 font-semibold">
-                  {item.description?.[t]}
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-2 lg:gap-5 mt-5">
-                  {item.sub?.map((sub) => (
-                    <div
-                      key={sub.name[t]}
-                      className="flex flex-col flex-grow w-[300px] gap-3 ml-3 mt-5"
-                    >
-                      <div className="flex items-center gap-5 text-primary font-semibold">
-                        <div className="flex items-center gap-1 ">
-                          <>•</>
-                          <h1>{sub.name[t]} </h1>
-                        </div>
-                        <p>{sub.price} kr</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <p className="text-sm mt-3">{item.description[t]}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
-      
+
       <div className="flex justify-center my-[100px]">
         <div className="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px]">
           <div
@@ -313,10 +270,10 @@ export default function Menu() {
             </h1>
             <hr className="flex-1 border-[1px] border-primary" />
           </div>
-          <div className="w-full grid lg:grid-cols-3">
+          <div className="w-full grid lg:grid-cols-1">
             {menu.fish_and_seafood.items.map((item) => (
-              <div className="w-[300px] mt-5" key={item.name[t]}>
-                <div className="flex flex-col font-bold text-primary justify-between text-[23px]">
+              <div className="w-full mt-5" key={item.name[t]}>
+                <div className="flex font-bold text-primary justify-between text-[23px]">
                   <h2>{item.name[t]}</h2> <p>{item.price}kr</p>
                 </div>
                 <p className="text-sm mt-3">{item.description[t]}</p>
@@ -326,7 +283,35 @@ export default function Menu() {
         </div>
       </div>
 
-      <div className="flex justify-center my-[100px]">
+      <div className="flex justify-center mt-[100px]">
+        <div className="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px]">
+          <div
+            className="w-full h-[200px] bg-cover bg-center rounded-lg mb-5 bg-black"
+            style={{ backgroundImage: `url(${menu.bread.source})` }}
+          />
+          <div
+            className="customTest flex items-center gap-5"
+            id={menu.bread.index.toString()}
+          >
+            <h1 className="text-[27px] md:text-[40px] font-bold text-primary">
+              {menu.bread.name[t]}
+            </h1>
+            <hr className="flex-1 border-[1px] border-primary" />
+          </div>
+          <div className="w-full grid lg:grid-cols-3">
+            {menu.bread.items.map((item) => (
+              <div className="w-[300px] mt-5" key={item.name[t]}>
+                <div className="flex font-bold text-primary justify-between text-[23px]">
+                  <h2>{item.name[t]}</h2> <p>{item.price}kr</p>
+                </div>
+                <p className="text-sm mt-3">{item.description[t]}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center mt-[100px]">
         <div className="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px]">
           <div
             className="w-full h-[200px] bg-cover bg-center rounded-lg mb-5 bg-black"
@@ -344,85 +329,38 @@ export default function Menu() {
           <div className="w-full grid lg:grid-cols-3">
             {menu.accessories.items.map((item) => (
               <div className="w-[300px] mt-5" key={item.name[t]}>
-                <div className="flex font-medium text-black justify-between text-[18px]">
+                <div className="flex font-bold text-primary justify-between text-[23px]">
                   <h2>{item.name[t]}</h2> <p>{item.price}kr</p>
                 </div>
-                {item.description && <p>{item.description[t]}</p>}
+                {item.description && <p className="text-sm mt-3">{item.description[t]}</p>}
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="flex justify-center mt-[50px] mb-[100px]">
+      <div className="flex justify-center mt-[100px]">
         <div className="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px]">
-          <div className="flex flex-col items-start gap-5">
-            <div className="flex items-center gap-5 w-full">
-              <h1 className="text-[27px] md:text-[40px] font-bold text-primary">
-                {menu.vegan.name[t]}
-              </h1>
-              <hr className="flex-1 border-[1px] border-primary" />
-            </div>
-            <h1 className="text-[23px] md:text-[30px] font-bold text-primary">
-              {menu.vegan.description[t]}
+          <div
+            className="w-full h-[200px] bg-cover bg-center rounded-lg mb-5 bg-black"
+            style={{ backgroundImage: `url(${menu.desserts.source})` }}
+          />
+          <div
+            className="customTest flex items-center gap-5"
+            id={menu.desserts.index.toString()}
+          >
+            <h1 className="text-[27px] md:text-[40px] font-bold text-primary">
+              {menu.desserts.name[t]}
             </h1>
+            <hr className="flex-1 border-[1px] border-primary" />
           </div>
           <div className="w-full grid lg:grid-cols-3">
-            {menu.vegan.items.map((item) => (
+            {menu.desserts.items.map((item) => (
               <div className="w-[300px] mt-5" key={item.name[t]}>
                 <div className="flex font-bold text-primary justify-between text-[23px]">
                   <h2>{item.name[t]}</h2> <p>{item.price}kr</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="flex justify-center my-[100px]">
-        <div className="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px]">
-          <div
-            className="w-full h-[200px] bg-cover bg-center rounded-lg mb-5 bg-black"
-            style={{
-              backgroundImage: `url(${menu.desserts_and_children.source})`,
-            }}
-          />
-          <div
-            className="customTest flex items-center gap-5"
-            id={menu.desserts_and_children.index.toString()}
-          >
-            <h1 className="text-[27px] md:text-[40px] font-bold text-primary">
-              {menu.desserts_and_children.name[t]}
-            </h1>
-            <hr className="flex-1 border-[1px] border-primary" />
-          </div>
-          <div className="w-full grid lg:grid-cols-1 gap-7">
-            {menu.desserts_and_children.items.map((item) => (
-              <div className="mt-5" key={item.name[t]}>
-                <h2 className="text-[25px] md:text-[32px] text-primary font-bold">
-                  {item.name[t]}
-                </h2>
-                <p className="text-[18px] text-primary mt-3 font-semibold">
-                  {item.description?.[t]}
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-2 lg:gap-5 mt-5">
-                  {item.sub?.map((sub) => (
-                    <div
-                      key={sub.name[t]}
-                      className="flex flex-col flex-grow w-[300px] gap-3 ml-3 mt-5"
-                    >
-                      <div className="flex items-center gap-5 text-primary font-semibold">
-                        <div className="flex items-center gap-1 ">
-                          <>•</>
-                          <h1>{sub.name[t]} </h1>
-                        </div>
-                        <p>{sub.price} kr</p>
-                      </div>
-
-                      <h2>{sub.description && sub.description[t]}</h2>
-                    </div>
-                  ))}
-                </div>
+                <p className="text-sm mt-3">{item.description[t]}</p>
               </div>
             ))}
           </div>

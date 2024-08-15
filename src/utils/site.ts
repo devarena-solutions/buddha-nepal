@@ -68,8 +68,8 @@ export const siteSetting = {
         src: "/clay_oven.svg",
       },
       {
-        en: "Mughlai Dishes",
-        se: "Mughlai Rätter",
+        en: "Biryani Dishes",
+        se: "Biryani Rätter",
         src: "/mughal.svg",
       },
       {
@@ -78,13 +78,18 @@ export const siteSetting = {
         src: "/fish.svg",
       },
       {
-        en: "Accessories and Bread",
-        se: "Tillbehor Och Brod",
+        en: "Naan Bread",
+        se: "Naan Brod",
+        src: "/naan.svg",
+      },
+      {
+        en: "Accessories",
+        se: "Tillbehör",
         src: "/accessories.svg",
       },
       {
-        en: "Desserts/Children's Menu",
-        se: "Efterrätter/Barnmeny",
+        en: "Desserts",
+        se: "Efterrätter",
         src: "/dessert.svg",
       },
     ];

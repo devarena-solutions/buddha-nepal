@@ -6,6 +6,28 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import { toast } from "react-toastify"
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 1
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
 
 export default function Homepage() {
   const router = useRouter()
@@ -80,6 +102,18 @@ export default function Homepage() {
       <Head>
         <title>The Table Himalaya</title>
       </Head>
+      {/* <Carousel responsive={responsive}>
+        <Image
+          src={icons.homeSlider1}
+          alt="Food-1"
+        />
+        <Image
+          src={icons.homeSlider2}
+          alt="Food-2"
+        />        
+        <div>Item 3</div>
+        <div>Item 4</div>
+      </Carousel> */}
       <div className="flex flex-col lg:flex-row bg-cover px-2 h-fit lg:h-[70vh]">
         <div className="w-full md:h-[50%] py-[50px] lg:w-[35%] lg:h-[70vh] bg-primary grid place-content-center text-white">
           <div className="flex flex-col items-center gap-4">
@@ -293,9 +327,8 @@ export default function Homepage() {
             title="map"
             className="w-full h-[500px]"
             loading="lazy"
-            src={`https://www.google.com/maps/embed/v1/place?key=${
-              process.env.NEXT_PUBLIC_GOOGLE_API
-            }&q=cumin+stockholm&language=${t === "en" ? "en" : "sv"}`}
+            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_API
+              }&q=cumin+stockholm&language=${t === "en" ? "en" : "sv"}`}
           ></iframe>
         </div>
       </div>
