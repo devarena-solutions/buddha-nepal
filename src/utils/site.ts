@@ -79,7 +79,7 @@ export const siteSetting = {
       },
       {
         en: "Naan Bread",
-        se: "Naan Brod",
+        se: "Naan Bröd",
         src: "/naan.svg",
       },
       {

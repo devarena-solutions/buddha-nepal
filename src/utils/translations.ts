@@ -489,22 +489,7 @@ export const menu = {
           en: "Marinated chicken fillets cooked with mango, finely chopped garlic and ginger.",
           se: "Marinerade kycklingfileer tilllagad med mango, finnhakade vitlök och ingefära.",
         },
-        sub: [
-          {
-            name: {
-              en: "Mild",
-              se: "Mild",
-            },
-            price: 210,
-          },
-          {
-            name: {
-              en: "Medium",
-              se: "Mellan",
-            },
-            price: 225,
-          },
-        ],
+        price: 210,
       },
       {
         name: {
@@ -626,22 +611,7 @@ export const menu = {
           en: "Chicken with well-prepared special sauce (from South India).",
           se: "Kyckling med vällagade special sås (från syd indian).",
         },
-        sub: [
-          {
-            name: {
-              en: "Medium",
-              se: "Mellan",
-            },
-            price: 205,
-          },
-          {
-            name: {
-              en: "Strong",
-              se: "Stark",
-            },
-            price: 219,
-          },
-        ],
+        price: 205,
       },
       {
         name: {
@@ -670,8 +640,8 @@ export const menu = {
           se: "Ayurveda Thali",
         },
         description: {
-          en: "Three vegetarian dishes: palak panir, mix-veg, paprika, onion and lenses, served with rice, naan and raita",
-          se: "Tre vegetariska rätter: palak panir, mix-veg, paprika, lök och linser, serveras med ris, naan och raita.    ",
+          en: "Three vegetarian dishes: spinach vadji, okra, lentils and mix-veg. Served with rice and raita.",
+          se: "Tre vegetariska rätter: spenat vadji, okra, linser och mix-veg. Serveras med ris och raita.",
         },
         price: 245,
       },
@@ -911,7 +881,7 @@ export const menu = {
     index: 7,
     name: {
       en: "Bread",
-      se: "BROD",
+      se: "BRÖD",
     },
     items: [
       {
@@ -965,7 +935,7 @@ export const menu = {
     index: 8,
     name: {
       en: "Accessories",
-      se: "TILLBEHOR",
+      se: "TILLBEHÖR",
     },
     items: [
       {
