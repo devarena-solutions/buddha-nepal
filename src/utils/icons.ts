@@ -17,8 +17,9 @@ import arrow_top from "@/assets/arrow-top.svg"
 import chef from "@/assets/chef.jpg"
 import namaste from "@/assets/namaste.png"
 import swagatam from "@/assets/swagatam.png"
-import homeSlider1 from "@/assets/home-slider-1.png"
-import homeSlider2 from "@/assets/home-slider-2.png"
+import homeSlider1 from "@/assets/home-slider-1.jpeg"
+import homeSlider2 from "@/assets/home-slider-2.jpeg"
+import homeSlider3 from "@/assets/home-slider-3.webp"
 
 import snow from "../../public/snow.jpg"
 import oumph_korai from "../../public/oumph-korai.jpg"
@@ -79,5 +80,6 @@ export const icons = {
   arrow_top,
   chef,
   homeSlider1,
-  homeSlider2
+  homeSlider2,
+  homeSlider3,
 }

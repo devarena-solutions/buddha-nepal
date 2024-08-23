@@ -102,19 +102,58 @@ export default function Homepage() {
       <Head>
         <title>The Table Himalaya</title>
       </Head>
-      {/* <Carousel responsive={responsive}>
-        <Image
-          src={icons.homeSlider1}
-          alt="Food-1"
-        />
-        <Image
-          src={icons.homeSlider2}
-          alt="Food-2"
-        />        
-        <div>Item 3</div>
-        <div>Item 4</div>
-      </Carousel> */}
-      <div className="flex flex-col lg:flex-row bg-cover px-2 h-fit lg:h-[70vh]">
+      <div className="slider-container">
+        <Carousel
+          responsive={responsive}
+          itemClass="slider-image"
+          infinite
+          autoPlay
+          autoPlaySpeed={3000}
+        >
+          <Image
+            src={icons.homeSlider1}
+            alt="Food-1"
+          />
+          <Image
+            src={icons.homeSlider2}
+            alt="Food-2"
+          />
+          <Image
+            src={icons.homeSlider3}
+            alt="Food-2"
+          />
+        </Carousel>
+
+        <div className="slider-message">
+          <h1 className="text-[23px] lg:text-[32px] font-bold text-white">
+            The Table Himalaya
+          </h1>
+
+          <h1 className="mt-6 text-[23px] lg:text-[25px] text-white">{homepage.title[t]}</h1>
+
+          <div className="relative inline-flex  group">
+            <div
+              className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+            </div>
+            <button
+              onClick={() =>
+                document.getElementById("form")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                  inline: "end",
+                })
+              }
+              title="Get quote now"
+              className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+              role="button">{homepage.reservation_button[t]}
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+      {/* <div className="flex flex-col lg:flex-row bg-cover px-2 h-fit lg:h-[70vh]">
         <div className="w-full md:h-[50%] py-[50px] lg:w-[35%] lg:h-[70vh] bg-primary grid place-content-center text-white">
           <div className="flex flex-col items-center gap-4">
             <Image
@@ -148,10 +187,10 @@ export default function Homepage() {
           </div>
         </div>
         <div className="bg-wallpaper2 bg-cover bg-center lg:flex lg:flex-1 h-[300px] md:h-[600px] lg:h-full "></div>
-      </div>
+      </div> */}
 
       <div className="flex justify-center bg-white text-black text-center md:text-start">
-        <div className="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-7 my-[100px] ">
+        <div className="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-7 my-[50px] ">
           <div className="flex flex-col gap-7">
             <h2 className="text-[23px] text-primary">{homepage.intro[t]}</h2>
             <h1 className="text-[32px] text-primary font-bold">

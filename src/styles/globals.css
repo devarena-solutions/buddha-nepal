@@ -75,3 +75,34 @@ textarea {
   width: 250px;
   height: auto;
 }
+
+.slider-container {
+  position: relative;
+}
+
+.slider-image {
+  display: flex;
+  background: rgb(59, 55, 55);
+  overflow: hidden;
+}
+
+.slider-image > img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  flex: 1;
+  max-height: 500px;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.slider-message {
+  position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: auto;
+      font-size: 60px;
+      text-align: center;
+}
