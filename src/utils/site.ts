@@ -14,6 +14,17 @@ export const siteSetting = {
         se: "Meny",
         href: "/menu",
       },
+      // {
+      //   en: "Lunch",
+      //   se: "Lunch",
+      //   href: "/lunch",
+      // },
+
+      // {
+      //   en: "Catering/Event Service",
+      //   se: "Catering/Event Service",
+      //   href: "/catering",
+      // },
       {
         en: "Öppettider",
         se: "Öppettider",
