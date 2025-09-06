@@ -41,7 +41,7 @@ export default function Navbar({ id }: { id: string }) {
           <div className="flex flex-col text-right text-xs">
             <LocationSelect className="cursor-pointer bg-transparent" />
             {location && (
-              <div className="flex gap-2">
+              <div className="flex flex-col items-end gap-1">
                 {locations[location].phones.map((p) => (
                   <a key={p} href={`tel:${p.replace(/\s+/g, "")}`}>{p}</a>
                 ))}
