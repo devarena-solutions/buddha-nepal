@@ -13,7 +13,7 @@ export default function AboutUs() {
   return (
     <div className="">
       <Head>
-        <title>The Table Himalaya - About Us</title>
+        <title>Buddha Nepal - About Us</title>
       </Head>
       <div className="flex justify-center py-[50px]">
         <div className="w-[350px] md:w-[700px] mb-[25px] lg:mb-[100px] lg:w-[1000px] xl:w-[1200px] flex items-start flex-col justify-center gap-10">

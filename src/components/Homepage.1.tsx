@@ -100,7 +100,7 @@ export default function Homepage() {
   return (
     <div>
       <Head>
-        <title>The Table Himalaya</title>
+        <title>Buddha Nepal</title>
       </Head>
       <div className="slider-container">
         <Carousel
@@ -126,7 +126,7 @@ export default function Homepage() {
 
         <div className="slider-message">
           <h1 className="text-[23px] lg:text-[32px] font-bold text-white">
-            The Table Himalaya
+            Buddha Nepal
           </h1>
 
           <h1 className="mt-6 text-[23px] lg:text-[25px] text-white">{homepage.title[t]}</h1>
@@ -168,7 +168,7 @@ export default function Homepage() {
             />
 
             <h1 className="text-[23px] lg:text-[32px] font-bold">
-              The Table Himalaya
+              Buddha Nepal
             </h1>
 
             <h1 className="text-[23px] lg:text-[25px]">{homepage.title[t]}</h1>

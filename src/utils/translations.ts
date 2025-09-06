@@ -1,7 +1,7 @@
 export type Language = {
-  en: string
-  se: string
-}
+  en: string;
+  se: string;
+};
 
 export const homepage = {
   title: {
@@ -24,13 +24,13 @@ export const homepage = {
   },
 
   intro_description_one: {
-    en: "Welcome to The Table Himalaya - a culinary journey that transports you to the heart of the Himalayas through a symphony of flavors and a warm, inviting atmosphere. Nestled in the heart of Stockholm, our restaurant is a hidden gem that promises a dining experience like no other.",
-    se: "Välkommen till The Table Himalaya - en kulinarisk resa som tar dig till Himalayas hjärta genom en symfoni av smaker och en varm, inbjudande atmosfär. Inbäddat i hjärtat av Stockholm är vår restaurang en dold pärla som utlovar en matupplevelse utan dess like",
+    en: "Welcome to Buddha Nepal - a culinary journey that transports you to the heart of the Himalayas through a symphony of flavors and a warm, inviting atmosphere. Nestled in the heart of Stockholm, our restaurant is a hidden gem that promises a dining experience like no other.",
+    se: "Välkommen till Buddha Nepal - en kulinarisk resa som tar dig till Himalayas hjärta genom en symfoni av smaker och en varm, inbjudande atmosfär. Inbäddat i hjärtat av Stockholm är vår restaurang en dold pärla som utlovar en matupplevelse utan dess like",
   },
 
   intro_description_two: {
-    en: "At The Table Himalaya, we pride ourselves on offering a gastronomic adventure that showcases the diverse and rich culinary traditions of the Himalayan region.",
-    se: "På The Table Himalaya är vi stolta över att erbjuda ett gastronomiskt äventyr som visar upp de olika och rika kulinariska traditionerna i Himalaya-regionen",
+    en: "At Buddha Nepal, we pride ourselves on offering a gastronomic adventure that showcases the diverse and rich culinary traditions of the Himalayan region.",
+    se: "På Buddha Nepal är vi stolta över att erbjuda ett gastronomiskt äventyr som visar upp de olika och rika kulinariska traditionerna i Himalaya-regionen",
   },
 
   dishes: [
@@ -182,7 +182,7 @@ export const homepage = {
     en: "Message",
     se: "meddelande",
   },
-}
+};
 
 export const menu = {
   appetizer: {
@@ -552,7 +552,7 @@ export const menu = {
           en: "Lamb fillets with a smell of fresh saffron, cardamom, fresh coriander, tomatoes & almond.",
           se: "Lamm filé med doft av saffran, kardemumma, färsk koriander, tomater och mandelflarn.",
         },
-        price: 225
+        price: 225,
       },
       {
         name: {
@@ -589,7 +589,7 @@ export const menu = {
           en: "Chicken with paprika, onion, garlic, tomato sauce, chili sauce and soy sauce.",
           se: "Kyckling med paprika, lök, vitlök, tomatsås, chilisås och sojasås.",
         },
-        price: 205
+        price: 205,
       },
       {
         name: {
@@ -600,7 +600,7 @@ export const menu = {
           en: "Grilled chicken fillet with paprika, onion, ginger, garlic, chili pepper and Timmur (Himalayan herbs, Sichuan pepper from Nepal)",
           se: "Grillad kycklingfilé med paprika, lök, ingefära, vitlök, chilipeppar och Timmur (Himalaya örter, Sichuan pepper från Nepal)",
         },
-        price: 219
+        price: 219,
       },
       {
         name: {
@@ -622,7 +622,7 @@ export const menu = {
           en: "Noodles/ Spaghetti, fried with vegetables and chicken pieces.",
           se: "Nudlar/ Spaghetti, stekta med grönsaker och kyckling bitar.",
         },
-        price: 199
+        price: 199,
       },
     ],
   },
@@ -1030,7 +1030,7 @@ export const menu = {
       },
     ],
   },
-}
+};
 
 export const drinks = {
   bottle_beer: {
@@ -1461,7 +1461,7 @@ export const drinks = {
       },
     ],
   },
-}
+};
 
 export const catering = {
   description: {
@@ -1747,7 +1747,7 @@ export const catering = {
       ],
     },
   ],
-}
+};
 
 export const about_us = {
   about_us: {
@@ -1775,8 +1775,8 @@ export const about_us = {
     se: "Vi talar matens språk",
   },
   second_description: {
-    en: "Welcome to The Table Himalaya, where culinary artistry meets a warm and inviting atmosphere. Nestled in the heart of Stockholm, our restaurant is a gastronomic haven that promises an unforgettable dining experience. From the moment you step through our doors, you'll be transported into a world of exquisite flavors, impeccable service, and a welcoming ambiance that feels like home. Whether you're seeking a romantic dinner for two, a memorable celebration with friends and family, or simply a delightful meal to savor, we invite you to join us and indulge in a culinary journey that celebrates the finest in food and hospitality.",
-    se: "Välkommen till The Table Himalaya, där kulinariskt konstnärskap möter en varm och inbjudande atmosfär. Inbäddat i hjärtat av Stockholm är vår restaurang en gastronomisk fristad som utlovar en oförglömlig matupplevelse. Från det ögonblick du kliver in genom våra dörrar kommer du att transporteras in i en värld av utsökta smaker, oklanderlig service och en välkomnande atmosfär som känns som hemma. Oavsett om du letar efter en romantisk middag för två, en minnesvärd fest med vänner och familj, eller bara en härlig måltid att njuta av, bjuder vi in ​​dig att gå med oss ​​och njuta av en kulinarisk resa som firar det finaste inom mat och gästfrihet.",
+    en: "Welcome to Buddha Nepal, where culinary artistry meets a warm and inviting atmosphere. Nestled in the heart of Stockholm, our restaurant is a gastronomic haven that promises an unforgettable dining experience. From the moment you step through our doors, you'll be transported into a world of exquisite flavors, impeccable service, and a welcoming ambiance that feels like home. Whether you're seeking a romantic dinner for two, a memorable celebration with friends and family, or simply a delightful meal to savor, we invite you to join us and indulge in a culinary journey that celebrates the finest in food and hospitality.",
+    se: "Välkommen till Buddha Nepal, där kulinariskt konstnärskap möter en varm och inbjudande atmosfär. Inbäddat i hjärtat av Stockholm är vår restaurang en gastronomisk fristad som utlovar en oförglömlig matupplevelse. Från det ögonblick du kliver in genom våra dörrar kommer du att transporteras in i en värld av utsökta smaker, oklanderlig service och en välkomnande atmosfär som känns som hemma. Oavsett om du letar efter en romantisk middag för två, en minnesvärd fest med vänner och familj, eller bara en härlig måltid att njuta av, bjuder vi in ​​dig att gå med oss ​​och njuta av en kulinarisk resa som firar det finaste inom mat och gästfrihet.",
   },
   featured_food: {
     en: "Featured Food",
@@ -1786,7 +1786,7 @@ export const about_us = {
     en: "Fresh taste and great price",
     se: "Fräsch smak och bra pris",
   },
-}
+};
 
 export const messages = {
   information: {
@@ -1802,7 +1802,7 @@ export const messages = {
       footer: {
         en: "You are warmly welcome.",
         se: "Ni är varmt välkomna.",
-      }
-    }
-  }
-}
+      },
+    },
+  },
+};

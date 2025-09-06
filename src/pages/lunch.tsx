@@ -54,7 +54,7 @@ export default function Lunch() {
   return (
     <main className="flex justify-center bg-white text-black text-center md:text-start flex-1">
       <Head>
-        <title>The Table Himalaya - Lunches</title>
+        <title>Buddha Nepal - Lunches</title>
       </Head>
       {/* <div classNameName="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] flex flex-col items-center gap-10">
         <h1 classNameName="text-primary font-bold text-3xl lg:text-[60px] mt-10">

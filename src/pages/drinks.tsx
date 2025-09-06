@@ -12,7 +12,7 @@ export default function Drinks() {
   return (
     <div>
       <Head>
-        <title>The Table Himalaya - Drinks</title>
+        <title>Buddha Nepal - Drinks</title>
       </Head>
 
       <div className="flex justify-center my-[100px]">

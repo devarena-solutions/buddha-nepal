@@ -14,7 +14,7 @@ export default function Footer() {
           
         </div>
         <div>
-          <p>© Copyright The Table Himalaya</p>
+          <p>© Copyright Buddha Nepal</p>
         </div>
       </div>
     </div>

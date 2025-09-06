@@ -18,7 +18,7 @@ export default function Navbar({ id }: { id : string}) {
       <div className="z-50 md:px-0 w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] py-5 flex items-center justify-between">
         <div className="flex flex-row items-center gap-5 text-primary cursor-pointer" onClick={() => router.push("/")}>
           <Image src={icons.logo} alt="logo" className="w-[75px] lg:w-[100px]"/>
-          <h1 className="hidden lg:flex font-semibold md:text-[23px] lg:text-[32px]">The Table Himalaya</h1>
+          <h1 className="hidden lg:flex font-semibold md:text-[23px] lg:text-[32px]">Buddha Nepal</h1>
         </div>
         <div className="hidden items-center md:flex text-md lg:text-lg gap-7 font-semibold text-primary">
           {siteSetting.getHeaderLinks().map(item => <Link locale={router.locale} key={item.en} href={item.href} className={`${router.asPath === item.href ? "border-b-2 border-primary" : ""}`}>{item[t]}</Link>)}
