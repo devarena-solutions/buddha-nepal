@@ -42,9 +42,11 @@ export default function Navbar({ id }: { id: string }) {
             <LocationSelect className="cursor-pointer bg-transparent" />
             {location && (
               <div className="flex flex-col items-end gap-1">
-                {locations[location].phones.map((p) => (
-                  <a key={p} href={`tel:${p.replace(/\s+/g, "")}`}>{p}</a>
-                ))}
+                {locations[location].phones
+                  .filter(p => !p.replace(/\s+/g, "").startsWith("07"))
+                  .map(p => (
+                    <a key={p} href={`tel:${p.replace(/\s+/g, "")}`}>{p}</a>
+                  ))}
               </div>
             )}
           </div>
@@ -89,9 +91,11 @@ export default function Navbar({ id }: { id: string }) {
               />
               {location && (
                 <>
-                  {locations[location].phones.map((p) => (
-                    <p key={p}>{p}</p>
-                  ))}
+                  {locations[location].phones
+                    .filter(p => !p.replace(/\s+/g, "").startsWith("07"))
+                    .map(p => (
+                      <p key={p}>{p}</p>
+                    ))}
                 </>
               )}
             </div>
