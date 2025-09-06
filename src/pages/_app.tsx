@@ -4,14 +4,16 @@ import Image from "next/image";
 import restaurantMovingImg from "@/assets/restaurant-moving.avif";
 import "@/styles/globals.css";
 import Layout from "@/components/Layout";
+import { LocationProvider } from "@/context/LocationContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className="flex flex-col min-h-screen">
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-      {/* <div className="h-screen w-full bg-purple-200 flex flex-col items-center  p-24">
+    <LocationProvider>
+      <main className="flex flex-col min-h-screen">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+        {/* <div className="h-screen w-full bg-purple-200 flex flex-col items-center  p-24">
         <div className="flex flex-row">
         <Image className="h-36 w-36" src={icons.announcement} alt=""  />
         <div className="flex flex-col ml-8 leading-10">
@@ -21,6 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </div>
         </div>
       </div> */}
-    </main>
+      </main>
+    </LocationProvider>
   );
 }
