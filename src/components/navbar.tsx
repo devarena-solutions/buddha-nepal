@@ -1,26 +1,18 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { icons } from "@/utils/icons";
 import { type Language, siteSetting } from "@/utils/site";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useLocation } from "@/context/LocationContext";
-import LocationModal from "./LocationModal";
+import LocationSelect from "./LocationSelect";
 
-export default function Navbar({ id }: { id : string}) {
-
+export default function Navbar({ id }: { id: string }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [locationModal, setLocationModal] = useState(false);
   const router = useRouter();
   const { location, locations } = useLocation();
 
   const t = router.locale as Language;
-
-  useEffect(() => {
-    if (!location) {
-      setLocationModal(true);
-    }
-  }, [location]);
 
   return (
     <nav id={id} className={`z-50 w-full bg-[#ffffff] bg-cover flex justify-center ${menuOpen ? "sticky lg:relative" : ""} top-0 shadow-md shadow-primary`}>
@@ -40,11 +32,8 @@ export default function Navbar({ id }: { id : string}) {
               {item[t]}
             </Link>
           ))}
-          <div
-            className="flex flex-col text-right text-xs cursor-pointer"
-            onClick={() => setLocationModal(true)}
-          >
-            <span>{location ? locations[location].name : "Select Location"}</span>
+          <div className="flex flex-col text-right text-xs">
+            <LocationSelect className="cursor-pointer bg-transparent" />
             {location && (
               <div className="flex gap-2">
                 {locations[location].phones.map((p) => (
@@ -87,14 +76,11 @@ export default function Navbar({ id }: { id : string}) {
                 {item[t]}
               </Link>
             ))}
-            <div
-              className="text-center text-base cursor-pointer"
-              onClick={() => {
-                setLocationModal(true);
-                setMenuOpen(false);
-              }}
-            >
-              <p>{location ? locations[location].name : "Select Location"}</p>
+            <div className="text-center text-base">
+              <LocationSelect
+                className="cursor-pointer bg-transparent"
+                onChange={() => setMenuOpen(false)}
+              />
               {location && (
                 <>
                   {locations[location].phones.map((p) => (
@@ -124,7 +110,6 @@ export default function Navbar({ id }: { id : string}) {
           </div>
         </div>
       )}
-      {locationModal && <LocationModal onClose={() => setLocationModal(false)} />}
     </nav>
-  )
+  );
 }

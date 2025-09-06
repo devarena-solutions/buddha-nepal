@@ -3,17 +3,22 @@ import { createContext, useContext, useEffect, useState, ReactNode } from "react
 export type LocationKey = "arsta" | "haga";
 
 interface LocationInfo {
+  /** Full descriptive name or address */
   name: string;
+  /** Short label used in the UI dropdown */
+  shortName: string;
   phones: string[];
 }
 
 const locations: Record<LocationKey, LocationInfo> = {
   arsta: {
     name: "ÅRSTAVÄGEN 39, 120 52 Årsta",
+    shortName: "Buddha Årsta",
     phones: ["08-684 271 90", "0760-35 37 99"],
   },
   haga: {
     name: "Buddha Haga",
+    shortName: "Buddha Haga",
     phones: ["08-684 271 90", "0760-35 37 99"],
   },
 };
