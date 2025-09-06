@@ -1,17 +1,26 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { icons } from "@/utils/icons";
 import { type Language, siteSetting } from "@/utils/site";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useLocation } from "@/context/LocationContext";
+import LocationModal from "./LocationModal";
 
 export default function Navbar({ id }: { id : string}) {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [locationModal, setLocationModal] = useState(false);
   const router = useRouter();
+  const { location, locations } = useLocation();
 
   const t = router.locale as Language;
+
+  useEffect(() => {
+    if (!location) {
+      setLocationModal(true);
+    }
+  }, [location]);
 
   return (
     <nav id={id} className={`z-50 w-full bg-[#ffffff] bg-cover flex justify-center ${menuOpen ? "sticky lg:relative" : ""} top-0 shadow-md shadow-primary`}>
@@ -21,23 +30,101 @@ export default function Navbar({ id }: { id : string}) {
           <h1 className="hidden lg:flex font-semibold md:text-[23px] lg:text-[32px]">Buddha Nepal</h1>
         </div>
         <div className="hidden items-center md:flex text-md lg:text-lg gap-7 font-semibold text-primary">
-          {siteSetting.getHeaderLinks().map(item => <Link locale={router.locale} key={item.en} href={item.href} className={`${router.asPath === item.href ? "border-b-2 border-primary" : ""}`}>{item[t]}</Link>)}
+          {siteSetting.getHeaderLinks().map(item => (
+            <Link
+              locale={router.locale}
+              key={item.en}
+              href={item.href}
+              className={`${router.asPath === item.href ? "border-b-2 border-primary" : ""}`}
+            >
+              {item[t]}
+            </Link>
+          ))}
+          <div
+            className="flex flex-col text-right text-xs cursor-pointer"
+            onClick={() => setLocationModal(true)}
+          >
+            <span>{location ? locations[location].name : "Select Location"}</span>
+            {location && (
+              <div className="flex gap-2">
+                {locations[location].phones.map((p) => (
+                  <a key={p} href={`tel:${p.replace(/\s+/g, "")}`}>{p}</a>
+                ))}
+              </div>
+            )}
+          </div>
           <div className="flex gap-2 [&>*]:p-1 ">
-            <Image src={icons.english} alt="english" onClick={() => router.push("", "", { locale: "en"})}  width={40} height={40} className={`rounded ${t === "en" ? "bg-primary" : ""}`} />
-            <Image src={icons.swedish} alt="swedish" onClick={() => router.push("", "", { locale: "se"})}  width={40} height={40} className={`rounded ${t === "se" ? "bg-primary" : ""}`} />
+            <Image
+              src={icons.english}
+              alt="english"
+              onClick={() => router.push("", "", { locale: "en" })}
+              width={40}
+              height={40}
+              className={`rounded ${t === "en" ? "bg-primary" : ""}`}
+            />
+            <Image
+              src={icons.swedish}
+              alt="swedish"
+              onClick={() => router.push("", "", { locale: "se" })}
+              width={40}
+              height={40}
+              className={`rounded ${t === "se" ? "bg-primary" : ""}`}
+            />
           </div>
         </div>
         <Image src={menuOpen ? icons.close : icons.menu} onClick={() => setMenuOpen(prev => !prev)} alt="menu" width={30} className="md:hidden cursor-pointer" />
       </div>
-      {menuOpen && <div className="z-30 md:hidden fixed h-screen w-screen bg-white top-0 left-0 grid place-content-center">
+      {menuOpen && (
+        <div className="z-30 md:hidden fixed h-screen w-screen bg-white top-0 left-0 grid place-content-center">
           <div className="flex flex-col items-center gap-7 font-semibold text-primary text-[25px]">
-            {siteSetting.getHeaderLinks().map(item => <Link key={item.en} href={item.href} onClick={() => setMenuOpen(false)} className={`${router.asPath === item.href ? "border-b-2 border-primary" : ""}`}>{item[t]}</Link>)}
+            {siteSetting.getHeaderLinks().map((item) => (
+              <Link
+                key={item.en}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className={`${router.asPath === item.href ? "border-b-2 border-primary" : ""}`}
+              >
+                {item[t]}
+              </Link>
+            ))}
+            <div
+              className="text-center text-base cursor-pointer"
+              onClick={() => {
+                setLocationModal(true);
+                setMenuOpen(false);
+              }}
+            >
+              <p>{location ? locations[location].name : "Select Location"}</p>
+              {location && (
+                <>
+                  {locations[location].phones.map((p) => (
+                    <p key={p}>{p}</p>
+                  ))}
+                </>
+              )}
+            </div>
             <div className="flex gap-2 [&>*]:p-1 ">
-            <Image src={icons.english} alt="english" onClick={() => router.push("", "", { locale: "en"})}  width={40} height={40} className={`rounded ${t === "en" ? "bg-primary" : ""}`} />
-            <Image src={icons.swedish} alt="swedish" onClick={() => router.push("", "", { locale: "se"})}  width={40} height={40} className={`rounded ${t === "se" ? "bg-primary" : ""}`} />
+              <Image
+                src={icons.english}
+                alt="english"
+                onClick={() => router.push("", "", { locale: "en" })}
+                width={40}
+                height={40}
+                className={`rounded ${t === "en" ? "bg-primary" : ""}`}
+              />
+              <Image
+                src={icons.swedish}
+                alt="swedish"
+                onClick={() => router.push("", "", { locale: "se" })}
+                width={40}
+                height={40}
+                className={`rounded ${t === "se" ? "bg-primary" : ""}`}
+              />
+            </div>
           </div>
-          </div>
-        </div>}
+        </div>
+      )}
+      {locationModal && <LocationModal onClose={() => setLocationModal(false)} />}
     </nav>
   )
 }
