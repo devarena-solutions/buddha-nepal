@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { icons } from "@/utils/icons";
 import { type Language, siteSetting } from "@/utils/site";
 import Image from "next/image";
@@ -6,13 +6,19 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useLocation } from "@/context/LocationContext";
 import LocationSelect from "./LocationSelect";
+import LocationModal from "./LocationModal";
 
 export default function Navbar({ id }: { id: string }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [locationModal, setLocationModal] = useState(false);
   const router = useRouter();
   const { location, locations } = useLocation();
 
   const t = router.locale as Language;
+
+  useEffect(() => {
+    setLocationModal(!location);
+  }, [location]);
 
   return (
     <nav id={id} className={`z-50 w-full bg-[#ffffff] bg-cover flex justify-center ${menuOpen ? "sticky lg:relative" : ""} top-0 shadow-md shadow-primary`}>
@@ -110,6 +116,7 @@ export default function Navbar({ id }: { id: string }) {
           </div>
         </div>
       )}
+      {locationModal && <LocationModal onClose={() => setLocationModal(false)} />}
     </nav>
   );
 }
