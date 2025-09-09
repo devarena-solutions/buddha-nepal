@@ -45,7 +45,7 @@ export default function Navbar({ id }: { id: string }) {
               {item[t]}
             </Link>
           ))}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 pl-4 ml-2 text-sm font-normal border-l border-primary/30">
             <LocationSelect className="cursor-pointer bg-transparent" />
             {phone && (
               <a href={`tel:${phone.replace(/\s+/g, "")}`}>
@@ -53,7 +53,7 @@ export default function Navbar({ id }: { id: string }) {
               </a>
             )}
           </div>
-          <div className="flex gap-2 [&>*]:p-1 ">
+          <div className="flex gap-2 pl-4 ml-2 border-l border-primary/30 [&>*]:p-1">
             <Image
               src={icons.english}
               alt="english"
