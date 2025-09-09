@@ -16,6 +16,13 @@ export default function Navbar({ id }: { id: string }) {
 
   const t = router.locale as Language;
 
+  const phone =
+    location
+      ? locations[location].phones.find(
+          p => !p.replace(/\s+/g, "").startsWith("07")
+        )
+      : null;
+
   useEffect(() => {
     setLocationModal(!location);
   }, [location]);
@@ -38,16 +45,12 @@ export default function Navbar({ id }: { id: string }) {
               {item[t]}
             </Link>
           ))}
-          <div className="flex flex-col text-right text-xs">
+          <div className="flex items-center gap-2">
             <LocationSelect className="cursor-pointer bg-transparent" />
-            {location && (
-              <div className="flex flex-col items-end gap-1">
-                {locations[location].phones
-                  .filter(p => !p.replace(/\s+/g, "").startsWith("07"))
-                  .map(p => (
-                    <a key={p} href={`tel:${p.replace(/\s+/g, "")}`}>{p}</a>
-                  ))}
-              </div>
+            {phone && (
+              <a href={`tel:${phone.replace(/\s+/g, "")}`}>
+                <Image src={icons.phone} alt="phone" className="w-5 h-5" />
+              </a>
             )}
           </div>
           <div className="flex gap-2 [&>*]:p-1 ">
@@ -84,19 +87,15 @@ export default function Navbar({ id }: { id: string }) {
                 {item[t]}
               </Link>
             ))}
-            <div className="text-center text-base">
+            <div className="flex flex-col items-center text-base">
               <LocationSelect
                 className="cursor-pointer bg-transparent"
                 onChange={() => setMenuOpen(false)}
               />
-              {location && (
-                <>
-                  {locations[location].phones
-                    .filter(p => !p.replace(/\s+/g, "").startsWith("07"))
-                    .map(p => (
-                      <p key={p}>{p}</p>
-                    ))}
-                </>
+              {phone && (
+                <a href={`tel:${phone.replace(/\s+/g, "")}`}> 
+                  <Image src={icons.phone} alt="phone" className="w-6 h-6 mt-2" />
+                </a>
               )}
             </div>
             <div className="flex gap-2 [&>*]:p-1 ">
