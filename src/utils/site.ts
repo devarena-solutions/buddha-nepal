@@ -26,9 +26,9 @@ export const siteSetting = {
       //   href: "/catering",
       // },
       {
-        en: "Öppettider",
-        se: "Öppettider",
-        href: "/timings",
+        en: "Contact",
+        se: "Kontakt",
+        href: "/contact",
       },
       {
         en: "About Us",

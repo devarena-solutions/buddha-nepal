@@ -1803,6 +1803,45 @@ export const timings = {
   },
 };
 
+export const contact = {
+  title: {
+    en: "Contact",
+    se: "Kontakt",
+  },
+  address_one: {
+    en: "Årstavägen 39, 120 52 Årsta",
+    se: "Årstavägen 39, 120 52 Årsta",
+  },
+  address_two: {
+    en: "Ynglingagatan 9, 113 47 Stockholm",
+    se: "Ynglingagatan 9, 113 47 Stockholm",
+  },
+  opening_times: {
+    en: "Opening times for this location:",
+    se: "Öppettider för denna plats:",
+  },
+  weekdays: {
+    en: "Mon - Fri : 11:00 - 21:00",
+    se: "Mån - Fre : 11:00 - 21:00",
+  },
+  weekends: {
+    en: "Sat - Sun : 13:00 - 21:00",
+    se: "Lör - Sön : 13:00 - 21:00",
+  },
+  order_call: {
+    en: "You can order by calling us on:",
+    se: "Du kan beställa genom att ringa oss på:",
+  },
+  phone_one: {
+    en: "08-684 271 90",
+    se: "08-684 271 90",
+  },
+  phone_two: {
+    en: "0760-35 37 99",
+    se: "0760-35 37 99",
+  },
+};
+
 export const messages = {
   information: {
     lunch: {
