@@ -8,6 +8,7 @@ import { useState } from "react"
 import { toast } from "react-toastify"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { contact } from "@/utils/translations";
 
 const responsive = {
   superLargeDesktop: {
@@ -262,11 +263,11 @@ export default function Homepage() {
                   <h1 className="text-[23px] mt-3 font-semibold">
                     {homepage.phone[t]}
                   </h1>
-                  <Link href={"tel:4686123780"}>
-                    <h1 className="mt-[10px]">+4686123780</h1>
+                  <Link href={"tel:0868427190"}>
+                    <h1 className="mt-[10px]">{contact.phone_one[t]}</h1>
                   </Link>
                   <Link href={"tel:0760353799"}>
-                    <h1 className="mt-[10px]">0760353799</h1>
+                    <h1 className="mt-[10px]">{contact.phone_two[t]}</h1>
                   </Link>
                   {/* <h1 className="">093 234 34324</h1> */}
                 </div>
