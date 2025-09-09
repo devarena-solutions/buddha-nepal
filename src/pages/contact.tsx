@@ -43,9 +43,9 @@ export default function Contact() {
               </a>
             </div>
             <div className="flex items-center gap-4 mt-4">
-              <Image src="/foodora.svg" alt="Foodora" width={120} height={40} />
-              <Image src="/wolt.svg" alt="Wolt" width={120} height={40} />
-              <Image src="/uber-eats.svg" alt="Uber Eats" width={120} height={40} />
+              <Image src="/foodora.svg" alt="Foodora" width={60} height={60} />
+              <Image src="/wolt.svg" alt="Wolt" width={60} height={60} />
+              <Image src="/uber-eats.svg" alt="Uber Eats" width={60} height={60} />
             </div>
           </div>
         </div>

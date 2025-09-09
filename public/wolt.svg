@@ -1,3 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40">
-  <text x="10" y="30" font-family="'Brush Script MT', cursive" font-size="30" font-weight="bold" fill="#009de0">Wolt</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="50" fill="#0059c9"/>
+  <text x="50" y="65" text-anchor="middle" font-family="'Brush Script MT', cursive" font-size="45" font-weight="bold" fill="#fff">Wolt</text>
 </svg>
