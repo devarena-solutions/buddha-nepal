@@ -41,11 +41,11 @@ export default function AboutUs() {
               </div>
             </div>
           </div>
-          <div className="bg-restaurant bg-cover bg-center flex-none h-[300px] lg:h-[750px] w-full rounded"></div>
-        </div>
+{/*           <div className="bg-restaurant bg-cover bg-center flex-none h-[300px] lg:h-[750px] w-full rounded"></div>
+ */}        </div>
       </div>
 
-      <div className="flex justify-center pb-[150px] lg:py-[100px] text-center lg:text-start">
+      <div className="flex justify-center pb-[150px] lg:pb-[100px] text-center lg:text-start">
         <div className="w-[350px] md:w-full md:mx-[50px] lg:mx-0 lg:w-[1000px] xl:w-[1200px] flex items-center flex-col-reverse lg:flex-row justify-center gap-10">
           <div className="bg-cover flex flex-col items-center gap-5 lg:flex-row lg:items-end h-fit -z-10">
             <Image

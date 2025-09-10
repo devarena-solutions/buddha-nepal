@@ -205,8 +205,8 @@ export default function Homepage() {
               <Image src={icons.mixed_grill} alt="food" />
             </div>
           </div>
-          <div className="bg-snow bg-cover w-full h-[200px] lg:h-[600px] rounded-lg"></div>
-        </div>
+{/*           <div className="bg-snow bg-cover w-full h-[200px] lg:h-[600px] rounded-lg"></div>
+ */}        </div>
       </div>
 
       <div className=" w-full flex flex-col items-center gap-10 bg-primary-blur px-3 py-[75px] text-white text-center md:text-start">
