@@ -1040,106 +1040,6 @@ export const menu = {
       },
     ],
   },
-  bread: {
-    source: "/bread-banner.jpg",
-    index: 7,
-    name: {
-      en: "Bread",
-      se: "BRÖD",
-    },
-    items: [
-      {
-        name: {
-          en: "Naan Bröd (Common)",
-          se: "Naan Bröd (Vanlig)",
-        },
-        description: {
-          en: "New made soft bread",
-          se: "Nybakat mjukt bröd",
-        },
-        price: 30,
-      },
-      {
-        name: {
-          en: "Vitlök Naan Bröd",
-          se: "Vitlök Naan Bröd",
-        },
-        description: {
-          en: "Naan with garlic.",
-          se: "Naan med vitlök.",
-        },
-        price: 40,
-      },
-      {
-        name: {
-          en: "Peshawari Naan",
-          se: "Peshawari Naan",
-        },
-        description: {
-          en: "Naan bread baked with raisins, cashews, coconut and baked with a sweet taste ",
-          se: "Naan bröd bakad med russin, cashewnötter, kokos och bakas med söt smak. ",
-        },
-        price: 40,
-      },
-      {
-        name: {
-          en: "Chicken Masala Naan",
-          se: "Chicken Masala Naan",
-        },
-        description: {
-          en: "Chicken stuffed naan, Slide spicy.",
-          se: "Kyckling fylld naan, Lagom stark.",
-        },
-        price: 40,
-      },
-    ],
-  },
-  accessories: {
-    source: "/accessories-banner.png",
-    index: 8,
-    name: {
-      en: "Accessories",
-      se: "TILLBEHÖR",
-    },
-    items: [
-      {
-        name: {
-          en: " Minta Sauce / Tamarind Sauce / Mango Chutney",
-          se: " Minta Sås / Tamarin Sås / Mango Chutney",
-        },
-        description: {
-          en: "Yoghurt with mint / tamarind / mango chutney.",
-          se: "Yogurt med minta / tamarin / mango chutney. ",
-        },
-        price: 40,
-      },
-      {
-        name: {
-          en: "Raita",
-          se: "Raita",
-        },
-        description: {
-          en: "Tomatoes, carrot, cucumber, yogurt and spice.",
-          se: "Tomat, morötter, yoghurt, gurkor och krydda.",
-        },
-        price: 40,
-      },
-      {
-        name: {
-          en: "Extra Basmati Rice",
-          se: "Extra Basmati Ris",
-        },
-        price: 40,
-      },
-      {
-        name: {
-          en: "Chili Pickles",
-          se: "Chili Pickles",
-        },
-        price: 40,
-      },
-    ],
-  },
   desserts: {
     source: "/dessert-banner.jpg",
     index: 9,
@@ -1234,6 +1134,81 @@ export const menu = {
             price: 175,
           },
         ],
+      },
+    ],
+  },
+  bread: {
+    source: "/bread-banner.jpg",
+    index: 7,
+    name: {
+      en: "Bread",
+      se: "BRÖD",
+    },
+    items: [
+      {
+        name: {
+          en: "Naan Bröd (Common)",
+          se: "Naan Bröd (Vanlig)",
+        },
+        description: {
+          en: "New made soft bread",
+          se: "Nybakat mjukt bröd",
+        },
+        price: 35,
+      },
+      {
+        name: {
+          en: "Vitlök Naan Bröd",
+          se: "Vitlök Naan Bröd",
+        },
+        description: {
+          en: "Naan with garlic.",
+          se: "Naan med vitlök.",
+        },
+        price: 45,
+      },
+      {
+        name: {
+          en: "Peshawari Naan",
+          se: "Peshawari Naan",
+        },
+        description: {
+          en: "Naan bread baked with raisins, cashews, coconut and baked with a sweet taste ",
+          se: "Naan bröd bakad med russin, cashewnötter, kokos och bakas med söt smak. ",
+        },
+        price: 50,
+      },
+    ],
+  },
+  accessories: {
+    source: "/accessories-banner.png",
+    index: 8,
+    name: {
+      en: "Accessories",
+      se: "TILLBEHÖR",
+    },
+    items: [
+      {
+        name: {
+          en: " Minta Sauce / Tamarind Sauce / Mango Chutney",
+          se: " Minta Sås / Tamarin Sås / Mango Chutney",
+        },
+        description: {
+          en: "Yoghurt with mint / tamarind / mango chutney.",
+          se: "Yogurt med minta / tamarin / mango chutney. ",
+        },
+        price: 50,
+      },
+      {
+        name: {
+          en: "Raita",
+          se: "Raita",
+        },
+        description: {
+          en: "Tomatoes, carrot, cucumber, yogurt and spice.",
+          se: "Tomat, morötter, yoghurt, gurkor och krydda.",
+        },
+        price: 40,
       },
     ],
   },

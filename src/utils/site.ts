@@ -77,11 +77,6 @@ export const siteSetting = {
         se: "Mo:Mo - Dumplings",
         src: "/momos.png",
       },
-      /* {
-        en: "Fish and Seafood",
-        se: "Fisk Och Skaldjur",
-        src: "/fish.svg",
-      },
       {
         en: "Naan Bread",
         se: "Naan Bröd",
@@ -92,6 +87,12 @@ export const siteSetting = {
         se: "Tillbehör",
         src: "/accessories.svg",
       },
+      /* {
+        en: "Fish and Seafood",
+        se: "Fisk Och Skaldjur",
+        src: "/fish.svg",
+      },
+      
       {
         en: "Desserts",
         se: "Efterrätter",
