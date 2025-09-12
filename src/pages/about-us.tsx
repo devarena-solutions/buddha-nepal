@@ -1,14 +1,17 @@
 import { galleryArray, icons } from "@/utils/icons";
 import { Language } from "@/utils/site";
 import { about_us, homepage } from "@/utils/translations";
+import { useLocation } from "@/context/LocationContext";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function AboutUs() {
   const router = useRouter();
+  const { location, locations } = useLocation();
 
   const t = router.locale as Language;
+  const mapSrc = (location ? locations[location] : locations.arsta).mapSrc;
 
   return (
     <div className="">
@@ -114,9 +117,7 @@ export default function AboutUs() {
             title="map"
             className="w-full h-[400px]"
             loading="lazy"
-            src={`https://www.google.com/maps/embed/v1/place?key=${
-              process.env.NEXT_PUBLIC_GOOGLE_API
-            }&q=cumin+stockholm&language=${t === "en" ? "en" : "sv"}`}
+            src={mapSrc}
           ></iframe>
         </div>
       </div>

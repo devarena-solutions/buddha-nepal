@@ -9,6 +9,7 @@ import { toast } from "react-toastify"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { contact } from "@/utils/translations";
+import { useLocation } from "@/context/LocationContext";
 
 const responsive = {
   superLargeDesktop: {
@@ -32,8 +33,11 @@ const responsive = {
 
 export default function Homepage() {
   const router = useRouter()
+  const { location, locations } = useLocation()
 
   const t = router.locale as keyof Language
+
+  const mapSrc = (location ? locations[location] : locations.arsta).mapSrc
 
   const [name, setName] = useState<string>("")
   const [email, setEmail] = useState<string>("")
@@ -367,8 +371,7 @@ export default function Homepage() {
             title="map"
             className="w-full h-[500px]"
             loading="lazy"
-            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_API
-              }&q=cumin+stockholm&language=${t === "en" ? "en" : "sv"}`}
+            src={mapSrc}
           ></iframe>
         </div>
       </div>
