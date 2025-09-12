@@ -73,6 +73,11 @@ export const siteSetting = {
         src: "/mughal.svg",
       },
       {
+        en: "Mo:Mo - Dumplings",
+        se: "Mo:Mo - Dumplings",
+        src: "/momos.png",
+      },
+      /* {
         en: "Fish and Seafood",
         se: "Fisk Och Skaldjur",
         src: "/fish.svg",
@@ -91,7 +96,7 @@ export const siteSetting = {
         en: "Desserts",
         se: "Efterrätter",
         src: "/dessert.svg",
-      },
+      }, */
     ];
 
     return items;
