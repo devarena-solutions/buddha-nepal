@@ -1,14 +1,14 @@
-import { useState } from "react"
-import FridayLunch from "@/components/fridayLunch"
-import MondayLunch from "@/components/mondayLunch"
-import ThursdayLunch from "@/components/thursdayLunch"
-import TuesdayLunch from "@/components/tuesdayLunch"
-import WednesdayLunch from "@/components/wednesdayLunch"
+import { useState } from "react";
+import FridayLunch from "@/components/fridayLunch";
+import MondayLunch from "@/components/mondayLunch";
+import ThursdayLunch from "@/components/thursdayLunch";
+import TuesdayLunch from "@/components/tuesdayLunch";
+import WednesdayLunch from "@/components/wednesdayLunch";
 import { messages } from "@/utils/translations";
 
-import Head from "next/head"
-import { useRouter } from "next/router"
-import { Language } from "@/utils/site"
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { Language } from "@/utils/site";
 
 export default function Lunch() {
   const router = useRouter();
@@ -44,17 +44,17 @@ export default function Lunch() {
       en: "Sunday",
       se: null,
     },
-  ]
+  ];
 
-  const dayIndex = new Date().getDay() === 0 ? 6 : new Date().getDay() - 1
-  const [lunch, setLunch] = useState(days[dayIndex].en)
+  const dayIndex = new Date().getDay() === 0 ? 6 : new Date().getDay() - 1;
+  const [lunch, setLunch] = useState(days[dayIndex].en);
 
   /* const [lunch, setLunch] = useState(days[new Date().getDay() - 1].en); */
 
   return (
     <main className="flex justify-center bg-white text-black text-center md:text-start flex-1">
       <Head>
-        <title>Buddha Nepal - Lunches</title>
+        <title>BUDDHA - Lunches</title>
       </Head>
       {/* <div classNameName="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] flex flex-col items-center gap-10">
         <h1 classNameName="text-primary font-bold text-3xl lg:text-[60px] mt-10">
@@ -96,11 +96,18 @@ export default function Lunch() {
         </div>
       </div> */}
 
-      <div className="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3 h-28 mt-6 w-1/2" role="alert">
-        <p className="font-bold text-lg">{messages.information.lunch.title[t]}</p>
+      <div
+        className="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3 h-28 mt-6 w-1/2"
+        role="alert"
+      >
+        <p className="font-bold text-lg">
+          {messages.information.lunch.title[t]}
+        </p>
         <p className="text-md">{messages.information.lunch.message[t]}</p>
-        <p className="text-md float-right mt-4">{messages.information.lunch.footer[t]}</p>
+        <p className="text-md float-right mt-4">
+          {messages.information.lunch.footer[t]}
+        </p>
       </div>
     </main>
-  )
+  );
 }

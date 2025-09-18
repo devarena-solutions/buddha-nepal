@@ -78,7 +78,7 @@ export default function Catering() {
   return (
     <div className="flex justify-center">
       <Head>
-        <title>Buddha Nepal - Catering</title>
+        <title>BUDDHA - Catering</title>
       </Head>
       <div className="w-[350px] md:w-[700px] mb-[100px] lg:w-[1000px] xl:w-[1200px] flex flex-col items-center">
         <div className="mt-[50px]">
@@ -201,8 +201,6 @@ export default function Catering() {
             </div>
           )}
         </h1>
-
-     
       </div>
     </div>
   );

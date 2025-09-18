@@ -16,31 +16,46 @@ export default function Navbar({ id }: { id: string }) {
 
   const t = router.locale as Language;
 
-  const phone =
-    location
-      ? locations[location].phones.find(
-          p => !p.replace(/\s+/g, "").startsWith("07")
-        )
-      : null;
+  const phone = location
+    ? locations[location].phones.find(
+        (p) => !p.replace(/\s+/g, "").startsWith("07")
+      )
+    : null;
 
   useEffect(() => {
     setLocationModal(!location);
   }, [location]);
 
   return (
-    <nav id={id} className={`z-50 w-full bg-[#ffffff] bg-cover flex justify-center ${menuOpen ? "sticky lg:relative" : ""} top-0 shadow-md shadow-primary`}>
+    <nav
+      id={id}
+      className={`z-50 w-full bg-[#ffffff] bg-cover flex justify-center ${
+        menuOpen ? "sticky lg:relative" : ""
+      } top-0 shadow-md shadow-primary`}
+    >
       <div className="z-50 md:px-0 w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] py-5 flex items-center justify-between">
-        <div className="flex flex-row items-center gap-5 text-primary cursor-pointer" onClick={() => router.push("/")}>
-          <Image src={icons.logo} alt="logo" className="w-[75px] lg:w-[100px]"/>
-          <h1 className="hidden lg:flex font-semibold md:text-[23px] lg:text-[32px]">Buddha Nepal</h1>
+        <div
+          className="flex flex-row items-center gap-5 text-primary cursor-pointer"
+          onClick={() => router.push("/")}
+        >
+          <Image
+            src={icons.logo}
+            alt="logo"
+            className="w-[75px] lg:w-[100px]"
+          />
+          <h1 className="hidden lg:flex font-semibold md:text-[23px] lg:text-[32px]">
+            BUDDHA
+          </h1>
         </div>
         <div className="hidden items-center md:flex text-md lg:text-lg gap-7 font-semibold text-primary">
-          {siteSetting.getHeaderLinks().map(item => (
+          {siteSetting.getHeaderLinks().map((item) => (
             <Link
               locale={router.locale}
               key={item.en}
               href={item.href}
-              className={`${router.asPath === item.href ? "border-b-2 border-primary" : ""}`}
+              className={`${
+                router.asPath === item.href ? "border-b-2 border-primary" : ""
+              }`}
             >
               {item[t]}
             </Link>
@@ -72,7 +87,13 @@ export default function Navbar({ id }: { id: string }) {
             />
           </div>
         </div>
-        <Image src={menuOpen ? icons.close : icons.menu} onClick={() => setMenuOpen(prev => !prev)} alt="menu" width={30} className="md:hidden cursor-pointer" />
+        <Image
+          src={menuOpen ? icons.close : icons.menu}
+          onClick={() => setMenuOpen((prev) => !prev)}
+          alt="menu"
+          width={30}
+          className="md:hidden cursor-pointer"
+        />
       </div>
       {menuOpen && (
         <div className="z-30 md:hidden fixed h-screen w-screen bg-white top-0 left-0 grid place-content-center">
@@ -82,7 +103,9 @@ export default function Navbar({ id }: { id: string }) {
                 key={item.en}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className={`${router.asPath === item.href ? "border-b-2 border-primary" : ""}`}
+                className={`${
+                  router.asPath === item.href ? "border-b-2 border-primary" : ""
+                }`}
               >
                 {item[t]}
               </Link>
@@ -93,8 +116,12 @@ export default function Navbar({ id }: { id: string }) {
                 onChange={() => setMenuOpen(false)}
               />
               {phone && (
-                <a href={`tel:${phone.replace(/\s+/g, "")}`}> 
-                  <Image src={icons.phone} alt="phone" className="w-6 h-6 mt-2" />
+                <a href={`tel:${phone.replace(/\s+/g, "")}`}>
+                  <Image
+                    src={icons.phone}
+                    alt="phone"
+                    className="w-6 h-6 mt-2"
+                  />
                 </a>
               )}
             </div>
@@ -119,7 +146,9 @@ export default function Navbar({ id }: { id: string }) {
           </div>
         </div>
       )}
-      {locationModal && <LocationModal onClose={() => setLocationModal(false)} />}
+      {locationModal && (
+        <LocationModal onClose={() => setLocationModal(false)} />
+      )}
     </nav>
   );
 }

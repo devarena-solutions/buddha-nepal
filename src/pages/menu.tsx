@@ -35,7 +35,7 @@ export default function Menu() {
   return (
     <div>
       <Head>
-        <title>Buddha Nepal - Menu</title>
+        <title>BUDDHA - Menu</title>
       </Head>
       <div className="flex mt-1 w-full overflow-x-auto menu-scroll sticky bg-white top-0">
         {siteSetting.getMenuHeader().map((item, index) => (

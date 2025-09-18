@@ -16,7 +16,7 @@ export default function AboutUs() {
   return (
     <div className="">
       <Head>
-        <title>Buddha Nepal - About Us</title>
+        <title>BUDDHA - About Us</title>
       </Head>
       <div className="flex justify-center py-[50px]">
         <div className="w-[350px] md:w-[700px] mb-[25px] lg:mb-[100px] lg:w-[1000px] xl:w-[1200px] flex items-start flex-col justify-center gap-10">
@@ -44,8 +44,9 @@ export default function AboutUs() {
               </div>
             </div>
           </div>
-{/*           <div className="bg-restaurant bg-cover bg-center flex-none h-[300px] lg:h-[750px] w-full rounded"></div>
- */}        </div>
+          {/*           <div className="bg-restaurant bg-cover bg-center flex-none h-[300px] lg:h-[750px] w-full rounded"></div>
+           */}{" "}
+        </div>
       </div>
 
       <div className="flex justify-center pb-[150px] lg:pb-[100px] text-center lg:text-start">

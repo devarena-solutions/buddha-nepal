@@ -1,13 +1,13 @@
-import { icons } from "@/utils/icons"
-import { type Language, homepage } from "@/utils/translations"
-import Head from "next/head"
-import Image from "next/image"
-import Link from "next/link"
-import { useRouter } from "next/router"
-import { useState } from "react"
-import { toast } from "react-toastify"
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import { icons } from "@/utils/icons";
+import { type Language, homepage } from "@/utils/translations";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import { contact } from "@/utils/translations";
 import { useLocation } from "@/context/LocationContext";
 
@@ -15,44 +15,44 @@ const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 1
+    items: 1,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 1
+    items: 1,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 1
+    items: 1,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
+    items: 1,
+  },
 };
 
 export default function Homepage() {
-  const router = useRouter()
-  const { location, locations } = useLocation()
+  const router = useRouter();
+  const { location, locations } = useLocation();
 
-  const t = router.locale as keyof Language
+  const t = router.locale as keyof Language;
 
-  const mapSrc = (location ? locations[location] : locations.arsta).mapSrc
+  const mapSrc = (location ? locations[location] : locations.arsta).mapSrc;
 
-  const [name, setName] = useState<string>("")
-  const [email, setEmail] = useState<string>("")
-  const [date, setDate] = useState<string>("")
-  const [phone, setPhone] = useState<string>("")
-  const [time, setTime] = useState<string>("")
-  const [message, setMessage] = useState<string>("")
-  const [guests, setGuests] = useState<string>("")
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [date, setDate] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [time, setTime] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [guests, setGuests] = useState<string>("");
 
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   async function formHandler(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    setIsLoading(true)
+    setIsLoading(true);
 
     const res = await fetch("/api/mail", {
       method: "POST",
@@ -68,9 +68,9 @@ export default function Homepage() {
         time,
         message,
       }),
-    })
-    const data = await res.json()
-    console.log(data)
+    });
+    const data = await res.json();
+    console.log(data);
 
     if (res.ok) {
       toast.success("Reservation mail sent", {
@@ -82,8 +82,8 @@ export default function Homepage() {
         draggable: true,
         progress: undefined,
         theme: "light",
-      })
-      setIsLoading(false)
+      });
+      setIsLoading(false);
     }
 
     if (!res.ok) {
@@ -96,16 +96,16 @@ export default function Homepage() {
         draggable: true,
         progress: undefined,
         theme: "light",
-      })
+      });
 
-      setIsLoading(false)
+      setIsLoading(false);
     }
   }
 
   return (
     <div>
       <Head>
-        <title>Buddha Nepal</title>
+        <title>BUDDHA</title>
       </Head>
       <div className="slider-container">
         <Carousel
@@ -115,31 +115,22 @@ export default function Homepage() {
           autoPlay
           autoPlaySpeed={3000}
         >
-          <Image
-            src={icons.homeSlider1}
-            alt="Food-1"
-          />
-          <Image
-            src={icons.homeSlider2}
-            alt="Food-2"
-          />
-          <Image
-            src={icons.homeSlider3}
-            alt="Food-2"
-          />
+          <Image src={icons.homeSlider1} alt="Food-1" />
+          <Image src={icons.homeSlider2} alt="Food-2" />
+          <Image src={icons.homeSlider3} alt="Food-2" />
         </Carousel>
 
         <div className="slider-message">
           <h1 className="text-[23px] lg:text-[32px] font-bold text-white">
-            Buddha Nepal
+            BUDDHA
           </h1>
 
-          <h1 className="mt-6 text-[23px] lg:text-[25px] text-white">{homepage.title[t]}</h1>
+          <h1 className="mt-6 text-[23px] lg:text-[25px] text-white">
+            {homepage.title[t]}
+          </h1>
 
           <div className="relative inline-flex  group">
-            <div
-              className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
-            </div>
+            <div className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
             <button
               onClick={() =>
                 document.getElementById("form")?.scrollIntoView({
@@ -150,13 +141,13 @@ export default function Homepage() {
               }
               title="Get quote now"
               className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-              role="button">{homepage.reservation_button[t]}
+              role="button"
+            >
+              {homepage.reservation_button[t]}
             </button>
           </div>
         </div>
       </div>
-
-
 
       {/* <div className="flex flex-col lg:flex-row bg-cover px-2 h-fit lg:h-[70vh]">
         <div className="w-full md:h-[50%] py-[50px] lg:w-[35%] lg:h-[70vh] bg-primary grid place-content-center text-white">
@@ -173,7 +164,7 @@ export default function Homepage() {
             />
 
             <h1 className="text-[23px] lg:text-[32px] font-bold">
-              Buddha Nepal
+              BUDDHA
             </h1>
 
             <h1 className="text-[23px] lg:text-[25px]">{homepage.title[t]}</h1>
@@ -209,8 +200,9 @@ export default function Homepage() {
               <Image src={icons.mixed_grill} alt="food" />
             </div>
           </div>
-{/*           <div className="bg-snow bg-cover w-full h-[200px] lg:h-[600px] rounded-lg"></div>
- */}        </div>
+          {/*           <div className="bg-snow bg-cover w-full h-[200px] lg:h-[600px] rounded-lg"></div>
+           */}{" "}
+        </div>
       </div>
 
       <div className=" w-full flex flex-col items-center gap-10 bg-primary-blur px-3 py-[75px] text-white text-center md:text-start">
@@ -376,5 +368,5 @@ export default function Homepage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
