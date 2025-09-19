@@ -202,7 +202,7 @@ export const menu = {
           en: "Crispy lentil flour bread.",
           se: "Krispigt linsmjölsbröd.",
         },
-        price: "40",
+        price: "30",
       },
       {
         name: {
@@ -235,7 +235,7 @@ export const menu = {
           en: "Indian pirogue with minced lamb/veg filling, 2 pieces.",
           se: "Indisk pirog med lammfärs/veg fylling , 2st.",
         },
-        price: 80,
+        price: 70,
       },
       {
         name: {
@@ -246,7 +246,7 @@ export const menu = {
           en: "Fry tiger prawns with sweet-chili sauce. Served with two different sauces.",
           se: "Stek tiger räkor med sweet-chili sås. Serveras med två olika såser.",
         },
-        price: 90,
+        price: 80,
       },
     ],
   },
@@ -273,14 +273,14 @@ export const menu = {
               en: "Chicken",
               se: "Kyckling",
             },
-            price: 199,
+            price: 189,
           },
           {
             name: {
               en: "Lamb",
               se: "Lamm",
             },
-            price: 219,
+            price: 209,
           },
         ],
       },
@@ -300,7 +300,7 @@ export const menu = {
               en: "Chicken",
               se: "Kyckling",
             },
-            price: 199,
+            price: 189,
           },
           {
             name: {
@@ -311,7 +311,7 @@ export const menu = {
               en: null,
               se: null,
             },
-            price: 219,
+            price: 209,
           },
         ],
       },
@@ -386,7 +386,7 @@ export const menu = {
               en: "Chicken",
               se: "Kyckling",
             },
-            price: 199,
+            price: 189,
             description: {
               en: null,
               se: null,
@@ -397,7 +397,7 @@ export const menu = {
               en: "Lamb",
               se: "Lamm",
             },
-            price: 219,
+            price: 209,
           },
         ],
       },
@@ -416,23 +416,23 @@ export const menu = {
               en: "Chicken",
               se: "Kyckling",
             },
-            price: 199,
+            price: 189,
           },
 
           {
             name: {
-              en: "Lamb, Mellan / Stark",
+              en: "Lamb, Medium / Large",
               se: "Lamm, Mellan / Stark",
             },
-            price: 219,
+            price: 209,
           },
 
           {
             name: {
-              en: "Scampi, Mellan / Stark",
+              en: "Scampi, Medium / Large",
               se: "Scampi, Mellan / Stark",
             },
-            price: 239,
+            price: 229,
           },
         ],
       },
@@ -477,14 +477,14 @@ export const menu = {
               en: "Chicken",
               se: "Kyckling",
             },
-            price: 199,
+            price: 189,
           },
           {
             name: {
               en: "Lamb, Mellan / Stark)",
               se: "Lamm, Mellan / Stark)",
             },
-            price: 219,
+            price: 209,
           },
         ],
       },
@@ -497,7 +497,7 @@ export const menu = {
           en: "Marinated chicken fillets cooked with mango, finely chopped garlic and ginger.",
           se: "Marinerade kycklingfileer tilllagad med mango, finnhakade vitlök och ingefära.",
         },
-        price: 199,
+        price: 189,
       },
       /* {
         name: {
@@ -597,7 +597,7 @@ export const menu = {
           en: "Chicken with paprika, onion, garlic, tomato sauce, chili sauce and soy sauce.",
           se: "Kyckling med paprika, lök, vitlök, tomatsås, chilisås och sojasås.",
         },
-        price: 205,
+        price: 195,
       },
       {
         name: {
@@ -608,7 +608,7 @@ export const menu = {
           en: "Grilled chicken fillet with paprika, onion, ginger, garlic, chili pepper and Timmur (Himalayan herbs, Sichuan pepper from Nepal)",
           se: "Grillad kycklingfilé med paprika, lök, ingefära, vitlök, chilipeppar och Timmur (Himalaya örter, Sichuan pepper från Nepal)",
         },
-        price: 199,
+        price: 189,
       },
       /* {
         name: {
@@ -647,14 +647,14 @@ export const menu = {
               en: "Chicken",
               se: "Kyckling",
             },
-            price: 209,
+            price: 199,
           },
           {
             name: {
               en: "Lamb, Mellan / Stark)",
               se: "Lamm, Mellan / Stark)",
             },
-            price: 219,
+            price: 209,
           },
         ],
       },
@@ -673,21 +673,21 @@ export const menu = {
               en: "Veg",
               se: "Veg",
             },
-            price: 189,
+            price: 179,
           },
           {
             name: {
               en: "Chicken",
               se: "Kyckling",
             },
-            price: 199,
+            price: 189,
           },
           {
             name: {
               en: "Lamb",
               se: "Lamm",
             },
-            price: 209,
+            price: 199,
           },
         ],
       },
@@ -706,21 +706,21 @@ export const menu = {
               en: "Chicken",
               se: "Kyckling",
             },
-            price: 199,
+            price: 189,
           },
           {
             name: {
               en: "Shrimp",
               se: "Räkor",
             },
-            price: 209,
+            price: 199,
           },
           {
             name: {
               en: "Lamb",
               se: "Lamm",
             },
-            price: 219,
+            price: 209,
           },
         ],
       },
@@ -743,7 +743,7 @@ export const menu = {
           en: "Three vegetarian dishes: spinach vadji, okra, lentils and mix-veg. Served with rice and raita.",
           se: "Tre vegetariska rätter: spenat vadji, okra, linser och mix-veg. Serveras med ris och raita.",
         },
-        price: 245,
+        price: 235,
       },
       /* {
         name: {
@@ -788,7 +788,7 @@ export const menu = {
           en: "Fine spiced cauliflower, potatoes with white cummin, peas and other spices",
           se: "Lätt kryddad blomkål, potatis, ärter, spiskummin, samt andra kryddor",
         },
-        price: 195,
+        price: 185,
       },
       {
         name: {
@@ -799,7 +799,7 @@ export const menu = {
           en: "Fresh Indian cheese cooked with capsicums, onions and mushrooms",
           se: "Färsk indisk ost tillagad med paprika, lök och champinjoner",
         },
-        price: 195,
+        price: 185,
       },
       /* {
         name: {
@@ -821,7 +821,7 @@ export const menu = {
           en: "Homemade fresh Indian cheese with spinach and curry",
           se: "Hemlagad färsk indisk ost med spenat och curry pulver",
         },
-        price: 195,
+        price: 185,
       },
       {
         name: {
@@ -832,7 +832,7 @@ export const menu = {
           en: "Yellow lentils, red chilli with butter.",
           se: "Gula linser, röd chilli med smör.",
         },
-        price: 199,
+        price: 189,
       },
       /* {
         name: {
@@ -875,7 +875,7 @@ export const menu = {
           en: "Marinated chicken fillets in a mild tandoori spice. Grilled in a clay oven and served with a mild cream sauce.",
           se: "Marinerade kycklingfiléer i en mild tandoori krydda grillad och den serveras med en mild grädd masala sås.",
         },
-        price: 219,
+        price: 209,
       },
       {
         name: {
@@ -886,7 +886,7 @@ export const menu = {
           en: "Marinated chicken filled with garlic, green chili, ginger and tandoori spices served with a red wine sauce",
           se: "Marinerad kycklingfiléer i vitlök, grön chili, ingefära och tandoori kryddor och serveras med en rödvinssås",
         },
-        price: 219,
+        price: 209,
       },
       {
         name: {
@@ -897,7 +897,7 @@ export const menu = {
           en: "A mixture of different tandoori dishes: Chicken tikka, lamb, tiger shrimps, salmon and garlic tikka. Served with a separate sauce",
           se: "En läcker blandning av olika tandoori rätter: chicken tikka, lamm, jätteräkor, lax och garlic tikka. Den serveras med separat sås.",
         },
-        price: 265,
+        price: 255,
       },
       {
         name: {
@@ -908,7 +908,7 @@ export const menu = {
           en: "Marinated chicken fillet, fresh vegetables, coriander with sweet chili sauce.",
           se: "Marinerade kycklingfiléer, färska grönsaker, koriander med sweet chili sås.",
         },
-        price: 225,
+        price: 215,
       },
       {
         name: {
@@ -919,7 +919,7 @@ export const menu = {
           en: "Marinated chicken fillet with garlic, cashews, green chilli, mint in alomond and coconut sauce.",
           se: "Marinerade kycklingfiléer med vitlök, cashewnötter, grön chili, mynta i mandel och kokossås.",
         },
-        price: 265,
+        price: 255,
       },
       /* {
         name: {
@@ -958,28 +958,28 @@ export const menu = {
               en: "Chicken",
               se: "Kyckling",
             },
-            price: 205,
+            price: 195,
           },
           {
             name: {
               en: "Lamb",
               se: "Lamm",
             },
-            price: 219,
+            price: 209,
           },
           {
             name: {
               en: "Shrimp",
               se: "Räkor",
             },
-            price: 225,
+            price: 215,
           },
           {
             name: {
               en: "Veg",
               se: "Veg",
             },
-            price: 199,
+            price: 189,
           },
         ],
       },
@@ -1117,21 +1117,21 @@ export const menu = {
               en: "Khasi Mo:mo (Lamb mince filling)",
               se: "Khasi Mo:mo (Lammfärs på fyllning)",
             },
-            price: 185,
+            price: 175,
           },
           {
             name: {
               en: "Kukhura Mo:mo (Chicken mince filling)",
               se: "Kukhura Mo:mo (Kycklingfärs på fyllning)",
             },
-            price: 175,
+            price: 165,
           },
           {
             name: {
               en: "Sabji Mo:mo (Vegetarian filling)",
               se: "Sabji Mo:mo (Vegetarisk fyllning)",
             },
-            price: 175,
+            price: 165,
           },
         ],
       },
@@ -1154,7 +1154,7 @@ export const menu = {
           en: "New made soft bread",
           se: "Nybakat mjukt bröd",
         },
-        price: 35,
+        price: 25,
       },
       {
         name: {
@@ -1165,7 +1165,7 @@ export const menu = {
           en: "Naan with garlic.",
           se: "Naan med vitlök.",
         },
-        price: 45,
+        price: 35,
       },
       {
         name: {
@@ -1176,7 +1176,7 @@ export const menu = {
           en: "Naan bread baked with raisins, cashews, coconut and baked with a sweet taste ",
           se: "Naan bröd bakad med russin, cashewnötter, kokos och bakas med söt smak. ",
         },
-        price: 50,
+        price: 40,
       },
     ],
   },
@@ -1197,7 +1197,7 @@ export const menu = {
           en: "Yoghurt with mint / tamarind / mango chutney.",
           se: "Yogurt med minta / tamarin / mango chutney. ",
         },
-        price: 50,
+        price: 40,
       },
       {
         name: {
@@ -1208,7 +1208,7 @@ export const menu = {
           en: "Tomatoes, carrot, cucumber, yogurt and spice.",
           se: "Tomat, morötter, yoghurt, gurkor och krydda.",
         },
-        price: 40,
+        price: 30,
       },
     ],
   },
