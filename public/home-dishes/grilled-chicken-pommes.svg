@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="grad-grilled" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f83600" />
+      <stop offset="100%" stop-color="#f9d423" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" rx="48" fill="url(#grad-grilled)" />
+  <path d="M160 540 C200 440 400 440 440 540" fill="#ffffff" opacity="0.25" />
+  <rect x="200" y="320" width="200" height="160" rx="32" fill="#fffcf2" opacity="0.6" />
+  <path d="M220 350 C260 310 340 310 380 350" fill="none" stroke="#ffad60" stroke-width="20" stroke-linecap="round" opacity="0.7" />
+  <path d="M200 510 C260 450 340 450 400 510" fill="none" stroke="#fff7d6" stroke-width="14" stroke-linecap="round" opacity="0.7" />
+  <text x="60" y="660" fill="#3a2000" font-size="46" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="700">Grilled Chicken &amp; Pommes</text>
+  <text x="60" y="710" fill="#3a2000" font-size="24" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="400">Charred fillet, herbed fries &amp; glaze</text>
+</svg>

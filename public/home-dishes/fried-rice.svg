@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="grad-rice" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f6d365" />
+      <stop offset="100%" stop-color="#fda085" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" rx="48" fill="url(#grad-rice)" />
+  <circle cx="300" cy="420" r="200" fill="#fff8e1" opacity="0.6" />
+  <g fill="#f9c74f" opacity="0.7">
+    <circle cx="220" cy="360" r="28" />
+    <circle cx="320" cy="330" r="22" />
+    <circle cx="380" cy="380" r="25" />
+    <circle cx="270" cy="420" r="18" />
+  </g>
+  <g fill="#f94144" opacity="0.7">
+    <circle cx="250" cy="370" r="12" />
+    <circle cx="360" cy="350" r="10" />
+    <circle cx="340" cy="430" r="14" />
+  </g>
+  <text x="60" y="660" fill="#5c2f00" font-size="48" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="700">Fried Rice</text>
+  <text x="60" y="710" fill="#5c2f00" font-size="26" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="400">Wok tossed rice &amp; garden veggies</text>
+</svg>

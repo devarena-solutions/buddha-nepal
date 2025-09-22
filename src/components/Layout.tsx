@@ -3,7 +3,7 @@ import Footer from "@/components/footer";
 import { icons } from "@/utils/icons";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import * as gtag from "@/utils/gtag";
@@ -13,17 +13,21 @@ import Script from "next/script";
 type PropsWithChildren = { children?: ReactNode };
 
 export default function Layout({ children }: PropsWithChildren) {
-    const [scrollTopButton, setScrollTopButton] = useState(false);
-  const [scroll, setScroll] = useState(0);
-
-  function getScrollValue() {
-    setScrollTopButton(scroll > window.scrollY && scroll > 100);
-    setScroll(window.scrollY);
-  }
+  const [scrollTopButton, setScrollTopButton] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    window.addEventListener("scroll", getScrollValue);
-  }, [scroll]);
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      setScrollTopButton(
+        lastScrollY.current > currentScroll && lastScrollY.current > 100
+      );
+      lastScrollY.current = currentScroll;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const router = useRouter();
   useEffect(() => {
@@ -36,9 +40,9 @@ export default function Layout({ children }: PropsWithChildren) {
     };
   }, [router.events]);
 
-    return (
-        <>
-        <Head>
+  return (
+    <>
+      <Head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -84,6 +88,6 @@ export default function Layout({ children }: PropsWithChildren) {
       </div>
       {children}
       <Footer />
-        </>
-    )
+    </>
+  );
 }

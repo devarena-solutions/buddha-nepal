@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="grad-tariyaki" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8360c3" />
+      <stop offset="100%" stop-color="#2ebf91" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" rx="48" fill="url(#grad-tariyaki)" />
+  <ellipse cx="300" cy="420" rx="210" ry="150" fill="#ffffff" opacity="0.25" />
+  <path d="M180 430 C240 360 360 360 420 430" fill="#fff7f0" opacity="0.6" />
+  <path d="M200 410 C260 340 340 340 400 410" fill="none" stroke="#fde0c8" stroke-width="18" stroke-linecap="round" opacity="0.65" />
+  <text x="60" y="660" fill="#0f1c2c" font-size="48" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="700">Chicken Tariyaki</text>
+  <text x="60" y="710" fill="#0f1c2c" font-size="26" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="400">Sweet glaze &amp; sesame char</text>
+</svg>
