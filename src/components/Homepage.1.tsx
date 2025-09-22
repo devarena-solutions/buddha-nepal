@@ -8,8 +8,11 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { contact } from "@/utils/translations";
-import { useLocation } from "@/context/LocationContext";
+import {
+  useLocation,
+  DEFAULT_LOCATION,
+  type LocationKey,
+} from "@/context/LocationContext";
 
 const responsive = {
   superLargeDesktop: {
@@ -37,7 +40,10 @@ export default function Homepage() {
 
   const t = router.locale as keyof Language;
 
-  const mapSrc = (location ? locations[location] : locations.arsta).mapSrc;
+  const activeLocationKey = (location ?? DEFAULT_LOCATION) as LocationKey;
+  const activeLocation = locations[activeLocationKey];
+  const mapSrc = activeLocation.mapSrc;
+  const contactNumbers = activeLocation.phones;
 
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -218,24 +224,18 @@ export default function Homepage() {
           {homepage.dishes.map((item) => (
             <div
               key={item.name.en}
-              className="food-banner rounded-md flex-none overflow-hidden w-[250px] h-[300px] md:w-[300px] md:h-[400px] flex flex-col bg-cover bg-center justify-between"
+              className="food-banner relative rounded-2xl flex-none overflow-hidden w-[250px] h-[300px] md:w-[300px] md:h-[400px] flex flex-col justify-end bg-cover bg-center shadow-xl shadow-black/10 ring-1 ring-white/10"
               style={{ backgroundImage: `url(${item.source})` }}
             >
-              {/* {item.price !== null ? (
-                      <h1 className="bg-primary w-fit p-3 md:p-5 rounded-md font-bold">
-                        {item.price}kr
-                      </h1>
-                    ) : (
-                      <div />
-                    )} */}
-              {/* <div className="bg-primary py-3 px-2 flex flex-col">
-                      <h1 className="text-[20px] md:text-[25px] font-bold">
-                        {item.name[t]}
-                      </h1>
-                      <p className="text-[12px] md:text-[18px] food-description">
-                        {item.description[t]}
-                      </p>
-                    </div> */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="relative w-full p-5 text-left text-white flex flex-col gap-2">
+                <h2 className="text-lg font-semibold md:text-xl lg:text-2xl">
+                  {item.name[t]}
+                </h2>
+                <p className="text-sm md:text-base leading-relaxed opacity-90">
+                  {item.description[t]}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -259,12 +259,22 @@ export default function Homepage() {
                   <h1 className="text-[23px] mt-3 font-semibold">
                     {homepage.phone[t]}
                   </h1>
-                  <Link href={"tel:0868427190"}>
-                    <h1 className="mt-[10px]">{contact.phone_one[t]}</h1>
-                  </Link>
-                  <Link href={"tel:0760353799"}>
-                    <h1 className="mt-[10px]">{contact.phone_two[t]}</h1>
-                  </Link>
+                  <p className="text-sm text-primary mt-1 uppercase tracking-wide">
+                    {activeLocation.shortName}
+                  </p>
+                  <div className="flex flex-col items-center gap-2">
+                    {contactNumbers.map((phoneNumber) => {
+                      const sanitized = phoneNumber.replace(/\s+/g, "");
+                      return (
+                        <Link
+                          key={sanitized}
+                          href={`tel:${sanitized}`}
+                        >
+                          <h1 className="mt-[10px]">{phoneNumber}</h1>
+                        </Link>
+                      );
+                    })}
+                  </div>
                   {/* <h1 className="">093 234 34324</h1> */}
                 </div>
                 <div className="w-[250px] h-[175px] bg-white flex flex-col items-center">
