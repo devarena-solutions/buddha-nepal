@@ -1,0 +1,7 @@
+{
+  "cwd": "/Users/brahmdev.pandey/projects/devarena/websites/buddha-nepal",
+  "sandbox_mode": "workspace-write",
+  "network_access": "enabled",
+  "approval_policy": "on-request",
+  "shell": "zsh"
+}

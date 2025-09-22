@@ -1,4 +1,5 @@
 import { icons } from "@/utils/icons";
+import { sacredImages } from "@/utils/sacredImages";
 import { type Language, homepage } from "@/utils/translations";
 import Head from "next/head";
 import Image from "next/image";
@@ -200,10 +201,29 @@ export default function Homepage() {
             </h1>
             <p className="text-lg">{homepage.intro_description_one[t]}</p>
             <p className="text-lg">{homepage.intro_description_two[t]}</p>
-            <div className="flex justify-between lg:w-full [&>img]:rounded-lg [&>img]:w-[110px] [&>img]:md:w-[160px] lg:[&>img]:w-[150px] xl:[&>img]:w-[180px]">
-              <Image src={icons.chicken_tikka} alt="food" />
-              <Image src={icons.chicken_korai} alt="food" />
-              <Image src={icons.mixed_grill} alt="food" />
+            <div className="grid w-full grid-cols-1 gap-5 pt-2 sm:grid-cols-3">
+              {sacredImages.map((item) => (
+                <figure
+                  key={item.key}
+                  className="flex flex-col items-center gap-3 text-center"
+                >
+                  <div
+                    className="relative w-full overflow-hidden rounded-xl border border-primary/20 bg-white/80 shadow-sm"
+                    style={{ aspectRatio: "1 / 1" }}
+                  >
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      sizes="(min-width: 1024px) 280px, (min-width: 768px) 220px, 90vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <figcaption className="text-base font-semibold text-primary">
+                    {item.label}
+                  </figcaption>
+                </figure>
+              ))}
             </div>
           </div>
           {/*           <div className="bg-snow bg-cover w-full h-[200px] lg:h-[600px] rounded-lg"></div>
@@ -266,10 +286,7 @@ export default function Homepage() {
                     {contactNumbers.map((phoneNumber) => {
                       const sanitized = phoneNumber.replace(/\s+/g, "");
                       return (
-                        <Link
-                          key={sanitized}
-                          href={`tel:${sanitized}`}
-                        >
+                        <Link key={sanitized} href={`tel:${sanitized}`}>
                           <h1 className="mt-[10px]">{phoneNumber}</h1>
                         </Link>
                       );
