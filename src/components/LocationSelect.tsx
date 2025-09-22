@@ -20,11 +20,17 @@ export default function LocationSelect({ className = "", onChange }: { className
       <option value="" disabled>
         Select Location
       </option>
-      {Object.entries(locations).map(([key, info]) => (
-        <option key={key} value={key}>
-          {info.shortName}
-        </option>
-      ))}
+      {Object.entries(locations).map(([key, info]) => {
+        const label = info.isActive
+          ? info.shortName
+          : `${info.shortName} (Coming Soon)`;
+
+        return (
+          <option key={key} value={key} disabled={!info.isActive}>
+            {label}
+          </option>
+        );
+      })}
     </select>
   );
 }

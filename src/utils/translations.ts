@@ -35,76 +35,172 @@ export const homepage = {
 
   dishes: [
     {
-      price: 110,
-      name: {
-        en: "Chicen Tikka Masala",
-        se: "Kyckling Tikka Masala",
-      },
-      description: {
-        en: "These dishes are roasted in a clay oven in a masala sauce with yoghurt, cheese, butter and nuts",
-        se: "Dessa rätter är rostade i en lerugn i en masalasås med yoghurt, ost, smör och nötter",
-      },
-      source: "/samosa.jpeg",
-    },
-    {
-      price: 125,
-      name: {
-        en: "Mixed Chicken Grill",
-        se: "Blandad kycklinggrill",
-      },
-      description: {
-        en: "Chicken fillet marinated in tandoori, garlic and green chili, grilled in a clay oven and stir-fried fresh vegetables and sauce.",
-        se: "Kycklingfilé marinerad i tandoori, vitlök och grön chili, grillad i lerugn och wokade färska grönsaker och sås",
-      },
-      source: "/mixed-grill.jpg",
-    },
-    {
       price: 115,
       name: {
-        en: "Dal Pumpkin Paneer",
-        se: "Dal Pumpkin Paneer",
+        en: "Samosa Chaat",
+        se: "Samosa Chaat",
       },
       description: {
-        en: "Leaf spinach, homemade cheese with blandale lentils and in a huggable sauce.",
-        se: "Bladspenat, hemgjord ost med blandale linser och i en krambar sås",
+        en: "Crisp pastry pockets served with tamarind and mango mint chutneys.",
+        se: "Krispiga degknyten serverade med tamarind- och mangomintsås.",
       },
-      source: "/chicken-tikka.jpg",
+      source: "/menu/samosa-tamarind-mango-mint.svg",
     },
     {
-      price: null,
+      price: 159,
       name: {
-        en: "Korai",
-        se: "Korai",
+        en: "Thukpa",
+        se: "Thukpa",
       },
       description: {
-        en: "These dishes are roasted in a clay oven in a masala sauce with yoghurt, cheese, butter and nuts",
-        se: "Dessa rätter rostas i en lerugn i en masalasås med yoghurt, ost, smör och nötter",
+        en: "Comforting Himalayan noodle soup with vegetables and aromatics.",
+        se: "Värmande himalayisk nudelsoppa med grönsaker och aromatiska kryddor.",
       },
-      source: "/chicken-korai.jpg",
-    },
-    {
-      price: 120,
-      name: {
-        en: "OUMPH! KORAI",
-        se: "OUMPH! KORAI",
-      },
-      description: {
-        en: "Clay oven grilled soy fillets",
-        se: "Lerugnsgrillade sojafiléer",
-      },
-      source: "/oumph-korai.jpg",
+      source: "/menu/thukpa.svg",
     },
     {
       price: 135,
       name: {
-        en: "Lamb Biryani",
-        se: "Lamm Biryani",
+        en: "Momos",
+        se: "Momos",
       },
       description: {
-        en: "Indian party risotto made from lamb with a lot of good spices and saffron",
-        se: "Indisk festrisotto gjord på lamm med mycket goda kryddor och saffran",
+        en: "Steamed Nepali dumplings filled with spiced vegetables or chicken.",
+        se: "Ångade nepalesiska dumplings fyllda med kryddade grönsaker eller kyckling.",
       },
-      source: "/palak_paneer.jpg",
+      source: "/menu/momos.svg",
+    },
+    {
+      price: 149,
+      name: {
+        en: "Choila",
+        se: "Choila",
+      },
+      description: {
+        en: "Smoky grilled meat tossed with toasted spices, herbs and mustard oil.",
+        se: "Rökt grillat kött med rostade kryddor, örter och senapsolja.",
+      },
+      source: "/menu/choila.svg",
+    },
+    {
+      price: 179,
+      name: {
+        en: "Chicken Timur",
+        se: "Chicken Timur",
+      },
+      description: {
+        en: "Charred chicken seasoned with citrusy timur pepper and fresh coriander.",
+        se: "Grillad kyckling kryddad med citrusdoftande timurpeppar och färsk koriander.",
+      },
+      source: "/menu/chicken-timur.svg",
+    },
+    {
+      price: 169,
+      name: {
+        en: "Chilli Chicken",
+        se: "Chili-kyckling",
+      },
+      description: {
+        en: "Indo-Nepalese style chilli chicken glazed in a spicy soy sauce.",
+        se: "Indisk-nepalesisk chili-kyckling glaserad i kryddig sojasås.",
+      },
+      source: "/menu/chilli-chicken.svg",
+    },
+    {
+      price: 159,
+      name: {
+        en: "Chicken & Scampi Noodles",
+        se: "Nudlar med kyckling och scampi",
+      },
+      description: {
+        en: "Wok-tossed noodles with chicken, scampi and colourful vegetables.",
+        se: "Wokade nudlar med kyckling, scampi och färgglada grönsaker.",
+      },
+      source: "/menu/noodles-chicken-scampi.svg",
+    },
+    {
+      price: 149,
+      name: {
+        en: "Fried Rice",
+        se: "Stekt ris",
+      },
+      description: {
+        en: "Fragrant fried rice folded with seasonal vegetables and egg.",
+        se: "Aromatiskt stekt ris med säsongens grönsaker och ägg.",
+      },
+      source: "/menu/fried-rice.svg",
+    },
+    {
+      price: 189,
+      name: {
+        en: "Grilled Chicken & Pommes",
+        se: "Grillad kyckling med pommes",
+      },
+      description: {
+        en: "Herb grilled chicken served with crisp pommes frites and salad.",
+        se: "Örtgrillad kyckling serverad med krispiga pommes frites och sallad.",
+      },
+      source: "/menu/grilled-chicken-pommes.svg",
+    },
+    {
+      price: 155,
+      name: {
+        en: "Chicken Burger",
+        se: "Kycklingburgare",
+      },
+      description: {
+        en: "Juicy chicken burger layered with pickles, greens and house sauce.",
+        se: "Saftig kycklingburgare med pickles, grönt och husets sås.",
+      },
+      source: "/menu/chicken-burger.svg",
+    },
+    {
+      price: 185,
+      name: {
+        en: "Schnitzel",
+        se: "Schnitzel",
+      },
+      description: {
+        en: "Golden fried schnitzel with lemon, butter and garden greens.",
+        se: "Gyllene friterad schnitzel med citron, smör och gröna blad.",
+      },
+      source: "/menu/schnitzel.svg",
+    },
+    {
+      price: 145,
+      name: {
+        en: "Caesar Salad",
+        se: "Caesarsallad",
+      },
+      description: {
+        en: "Classic Caesar with romaine, parmesan, croutons and creamy dressing.",
+        se: "Klassisk Caesar med romansallad, parmesan, krutonger och krämig dressing.",
+      },
+      source: "/menu/caesar-salad.svg",
+    },
+    {
+      price: 129,
+      name: {
+        en: "Mustang Aaloo",
+        se: "Mustang Aaloo",
+      },
+      description: {
+        en: "Smoked potatoes tempered with Himalayan spices and sesame.",
+        se: "Rökta potatisar smaksatta med himalayiska kryddor och sesam.",
+      },
+      source: "/menu/mustang-aloo.svg",
+    },
+    {
+      price: 189,
+      name: {
+        en: "Chicken Teriyaki",
+        se: "Kyckling Teriyaki",
+      },
+      description: {
+        en: "Glazed teriyaki chicken with sesame, spring onion and steamed rice.",
+        se: "Glaserad teriyakikyckling med sesam, salladslök och ångat ris.",
+      },
+      source: "/menu/chicken-teriyaki.svg",
     },
   ],
 

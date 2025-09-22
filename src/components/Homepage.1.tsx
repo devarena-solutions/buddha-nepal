@@ -214,29 +214,37 @@ export default function Homepage() {
             {homepage.menu_description[t]}
           </h1>
         </div>
-        <div className="food-scroll w-full pb-2 flex flex-row gap-5 overflow-x-auto">
-          {homepage.dishes.map((item) => (
-            <div
+        <div className="food-scroll w-full pb-2 flex flex-row gap-6 overflow-x-auto snap-x snap-mandatory">
+          {homepage.dishes.map((item, index) => (
+            <article
               key={item.name.en}
-              className="food-banner rounded-md flex-none overflow-hidden w-[250px] h-[300px] md:w-[300px] md:h-[400px] flex flex-col bg-cover bg-center justify-between"
-              style={{ backgroundImage: `url(${item.source})` }}
+              className="relative group flex-none w-[260px] h-[360px] md:w-[300px] md:h-[420px] lg:w-[320px] rounded-3xl overflow-hidden shadow-xl shadow-black/10 bg-black/10 backdrop-blur-sm transition-transform duration-500 hover:-translate-y-2 snap-start"
             >
-              {/* {item.price !== null ? (
-                      <h1 className="bg-primary w-fit p-3 md:p-5 rounded-md font-bold">
-                        {item.price}kr
-                      </h1>
-                    ) : (
-                      <div />
-                    )} */}
-              {/* <div className="bg-primary py-3 px-2 flex flex-col">
-                      <h1 className="text-[20px] md:text-[25px] font-bold">
-                        {item.name[t]}
-                      </h1>
-                      <p className="text-[12px] md:text-[18px] food-description">
-                        {item.description[t]}
-                      </p>
-                    </div> */}
-            </div>
+              <Image
+                src={item.source}
+                alt={item.name.en}
+                fill
+                sizes="(max-width: 768px) 260px, (max-width: 1024px) 300px, 320px"
+                priority={index === 0}
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
+              <div className="relative z-10 flex h-full flex-col justify-end gap-4 p-6 text-left text-white">
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="text-lg font-semibold uppercase tracking-wide">
+                    {item.name[t]}
+                  </h3>
+                  {item.price !== null && (
+                    <span className="rounded-full bg-white/20 px-3 py-1 text-sm font-semibold uppercase tracking-wide backdrop-blur-sm">
+                      {item.price} kr
+                    </span>
+                  )}
+                </div>
+                <p className="text-sm leading-relaxed text-white/80">
+                  {item.description[t]}
+                </p>
+              </div>
+            </article>
           ))}
         </div>
       </div>
