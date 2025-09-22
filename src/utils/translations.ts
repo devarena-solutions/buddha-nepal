@@ -109,11 +109,11 @@ export const homepage = {
     {
       price: null,
       name: {
-        en: "Noodles (Chicken & Scampi)",
+        en: "Noodles (Chicken & Prawn)",
         se: "Nudlar (kyckling & skaldjur)",
       },
       description: {
-        en: "Silky noodles tossed with chicken, scampi and wok vegetables.",
+        en: "Silky noodles tossed with chicken, prawn and wok vegetables.",
         se: "Silkeslena nudlar med kyckling, scampi och wokade grönsaker.",
       },
       source: "/home-dishes/noodles-chicken-scampi.jpeg",
@@ -525,7 +525,7 @@ export const menu = {
 
           {
             name: {
-              en: "Scampi, Medium / Large",
+              en: "Prawn, Medium / Large",
               se: "Scampi, Mellan / Stark",
             },
             price: 229,
@@ -848,7 +848,7 @@ export const menu = {
         },
 
         description: {
-          en: "Grilled lamb fillet, Chicken sambal and Scampi curry. Served with rice and raita.",
+          en: "Grilled lamb fillet, Chicken sambal and Prawn curry. Served with rice and raita.",
           se: "Grillad lammfilé, Kyckling sambal och Scampi curry. Serveras med ris, och raita.",
         },
         price: 265,
@@ -1114,7 +1114,7 @@ export const menu = {
     items: [
       {
         name: {
-          en: "Scampi Kadai (Medium & Strong)",
+          en: "Prawn Kadai (Medium & Strong)",
           se: "Scampi Kadai (Mellan & Stark)",
         },
         description: {
