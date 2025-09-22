@@ -21,8 +21,15 @@ export default function LocationSelect({ className = "", onChange }: { className
         Select Location
       </option>
       {Object.entries(locations).map(([key, info]) => (
-        <option key={key} value={key}>
+        <option
+          key={key}
+          value={key}
+          disabled={!info.isActive}
+        >
           {info.shortName}
+          {!info.isActive && info.statusMessage
+            ? ` — ${info.statusMessage}`
+            : ""}
         </option>
       ))}
     </select>

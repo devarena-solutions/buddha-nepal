@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="grad-choila" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff512f" />
+      <stop offset="100%" stop-color="#f09819" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" rx="48" fill="url(#grad-choila)" />
+  <g fill="#ffffff" opacity="0.2">
+    <circle cx="150" cy="160" r="90" />
+    <circle cx="470" cy="200" r="120" />
+    <circle cx="470" cy="580" r="150" />
+  </g>
+  <path d="M140 520 C200 460 400 460 460 520 L460 560 C400 620 200 620 140 560 Z" fill="#ffddc7" opacity="0.7" />
+  <path d="M160 490 C220 430 380 430 440 490" fill="none" stroke="#ffeed9" stroke-width="18" stroke-linecap="round" opacity="0.7" />
+  <text x="60" y="660" fill="#2d0600" font-size="48" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="700">Choila</text>
+  <text x="60" y="710" fill="#2d0600" font-size="26" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="500">Smoky grilled meat salad</text>
+</svg>

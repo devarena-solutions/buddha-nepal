@@ -218,24 +218,18 @@ export default function Homepage() {
           {homepage.dishes.map((item) => (
             <div
               key={item.name.en}
-              className="food-banner rounded-md flex-none overflow-hidden w-[250px] h-[300px] md:w-[300px] md:h-[400px] flex flex-col bg-cover bg-center justify-between"
+              className="food-banner relative rounded-2xl flex-none overflow-hidden w-[250px] h-[300px] md:w-[300px] md:h-[400px] flex flex-col justify-end bg-cover bg-center shadow-xl shadow-black/10 ring-1 ring-white/10"
               style={{ backgroundImage: `url(${item.source})` }}
             >
-              {/* {item.price !== null ? (
-                      <h1 className="bg-primary w-fit p-3 md:p-5 rounded-md font-bold">
-                        {item.price}kr
-                      </h1>
-                    ) : (
-                      <div />
-                    )} */}
-              {/* <div className="bg-primary py-3 px-2 flex flex-col">
-                      <h1 className="text-[20px] md:text-[25px] font-bold">
-                        {item.name[t]}
-                      </h1>
-                      <p className="text-[12px] md:text-[18px] food-description">
-                        {item.description[t]}
-                      </p>
-                    </div> */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="relative w-full p-5 text-left text-white flex flex-col gap-2">
+                <h2 className="text-lg font-semibold md:text-xl lg:text-2xl">
+                  {item.name[t]}
+                </h2>
+                <p className="text-sm md:text-base leading-relaxed opacity-90">
+                  {item.description[t]}
+                </p>
+              </div>
             </div>
           ))}
         </div>

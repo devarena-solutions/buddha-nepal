@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="grad-caesar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#11998e" />
+      <stop offset="100%" stop-color="#38ef7d" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" rx="48" fill="url(#grad-caesar)" />
+  <circle cx="300" cy="420" r="200" fill="#e8fff2" opacity="0.4" />
+  <path d="M200 420 C240 360 360 360 400 420" fill="#ffffff" opacity="0.5" />
+  <path d="M220 400 C260 340 340 340 380 400" fill="none" stroke="#c8ffd4" stroke-width="16" stroke-linecap="round" opacity="0.7" />
+  <text x="60" y="660" fill="#013422" font-size="48" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="700">Caesar Sallad</text>
+  <text x="60" y="710" fill="#013422" font-size="26" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="400">Crisp romaine &amp; shaved parmesan</text>
+</svg>
