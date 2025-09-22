@@ -2110,6 +2110,22 @@ export const contact = {
     en: "You can order by calling us on:",
     se: "Du kan beställa genom att ringa oss på:",
   },
+  open_label: {
+    en: "Open",
+    se: "Öppet",
+  },
+  coming_soon_default: {
+    en: "Coming soon",
+    se: "Kommer snart",
+  },
+  coming_soon_description: {
+    en: "We're preparing something special for this neighborhood.",
+    se: "Vi förbereder något speciellt för det här området.",
+  },
+  coming_soon_follow: {
+    en: "Follow us for updates and be the first to know when BUDDHA Haga opens its doors.",
+    se: "Följ oss för uppdateringar och var först med att få veta när BUDDHA Haga öppnar sina dörrar.",
+  },
   phone_one: {
     en: "08-684 271 90",
     se: "08-684 271 90",
@@ -2117,6 +2133,49 @@ export const contact = {
   phone_two: {
     en: "0760-35 37 99",
     se: "0760-35 37 99",
+  },
+};
+
+export const footerContent = {
+  tagline: {
+    en: "Authentic Himalayan flavors in the heart of Stockholm.",
+    se: "Äkta himalayiska smaker i Stockholms hjärta.",
+  },
+  ctaLabel: {
+    en: "Book a Table",
+    se: "Boka bord",
+  },
+  ctaDescription: {
+    en: "Reserve your seat and let us prepare a feast for you and your company.",
+    se: "Boka ditt bord så förbereder vi en fest för dig och ditt sällskap.",
+  },
+  exploreTitle: {
+    en: "Explore",
+    se: "Utforska",
+  },
+  contactTitle: {
+    en: "Visit & Contact",
+    se: "Besök & kontakt",
+  },
+  visitUsTitle: {
+    en: "Visit us",
+    se: "Besök oss",
+  },
+  callUsTitle: {
+    en: "Call us",
+    se: "Ring oss",
+  },
+  hoursTitle: {
+    en: "Opening hours",
+    se: "Öppettider",
+  },
+  deliveryTitle: {
+    en: "Delivery partners",
+    se: "Leveranspartners",
+  },
+  rights: {
+    en: "© 2024 BUDDHA Nepal. All rights reserved.",
+    se: "© 2024 BUDDHA Nepal. Alla rättigheter förbehållna.",
   },
 };
 
