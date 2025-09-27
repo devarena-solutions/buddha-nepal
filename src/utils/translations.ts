@@ -1310,6 +1310,30 @@ export const menu = {
   },
 };
 
+export type MenuData = typeof menu;
+export type MenuSectionKey = keyof MenuData;
+
+export const MENU_ICONS: Record<MenuSectionKey, string> = {
+  appetizer: "/appetizer.svg",
+  favourites: "/favourites.svg",
+  thali: "/thali.svg",
+  veg: "/veg.svg",
+  clay_oven: "/clay_oven.svg",
+  biryani_dishes: "/mughal.svg",
+  momos: "/momos.png",
+  bread: "/naan.svg",
+  accessories: "/accessories.svg",
+};
+
+const hagaMenu: MenuData = {
+  ...menu,
+};
+
+export const menuByLocation: Record<"arsta" | "haga", MenuData> = {
+  arsta: menu,
+  haga: hagaMenu,
+};
+
 export const drinks = {
   bottle_beer: {
     name: {
