@@ -87,6 +87,16 @@ export default function Navbar({ id }: { id: string }) {
             />
           </div>
         </div>
+        <div className="flex items-center gap-3 text-primary md:hidden">
+          <LocationSelect
+            className="cursor-pointer bg-transparent border border-primary/50 rounded px-2 py-1 text-sm text-primary"
+          />
+          {phone && (
+            <a href={`tel:${phone.replace(/\s+/g, "")}`}>
+              <Image src={icons.phone} alt="phone" className="w-5 h-5" />
+            </a>
+          )}
+        </div>
         <Image
           src={menuOpen ? icons.close : icons.menu}
           onClick={() => setMenuOpen((prev) => !prev)}
