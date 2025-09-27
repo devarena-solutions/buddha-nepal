@@ -2,9 +2,9 @@ import { DEFAULT_LOCATION, useLocation } from "@/context/LocationContext";
 import { Language } from "@/utils/site";
 import {
   MENU_ICONS,
-  MenuData,
-  MenuSectionKey,
-  menu,
+  MenuArstaData,
+  MenuArstaSectionKey,
+  menuArsta,
   menuByLocation,
 } from "@/utils/translations";
 import Head from "next/head";
@@ -17,14 +17,19 @@ export default function Menu() {
   const t = router.locale as Language;
   const { location } = useLocation();
 
-  const activeLocationKey = (location ?? DEFAULT_LOCATION) as keyof typeof menuByLocation;
-  const menuData: MenuData = menuByLocation[activeLocationKey] ?? menu;
+  const activeLocationKey = (location ??
+    DEFAULT_LOCATION) as keyof typeof menuByLocation;
+  const menuData: MenuArstaData =
+    menuByLocation[activeLocationKey] ?? menuArsta;
 
   const menuEntries = useMemo(
     () =>
-      (Object.entries(menuData) as [MenuSectionKey, MenuData[MenuSectionKey]][]).sort(
-        (a, b) => a[1].index - b[1].index
-      ),
+      (
+        Object.entries(menuData) as [
+          MenuArstaSectionKey,
+          MenuArstaData[MenuArstaSectionKey]
+        ][]
+      ).sort((a, b) => a[1].index - b[1].index),
     [menuData]
   );
 
@@ -38,7 +43,9 @@ export default function Menu() {
     [menuEntries]
   );
 
-  const [currentSection, setCurrentSection] = useState<string>(headerItems[0]?.id ?? "");
+  const [currentSection, setCurrentSection] = useState<string>(
+    headerItems[0]?.id ?? ""
+  );
 
   useEffect(() => {
     setCurrentSection(headerItems[0]?.id ?? "");

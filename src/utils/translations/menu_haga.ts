@@ -1,4 +1,4 @@
-export const menu = {
+export const menuHaga = {
   appetizer: {
     index: 0,
     name: {
@@ -1028,5 +1028,5 @@ export const menu = {
   },
 };
 
-export type MenuData = typeof menu;
-export type MenuSectionKey = keyof MenuData;
+export type MenuHagaData = typeof menuHaga;
+export type MenuHagaSectionKey = keyof MenuHagaData;

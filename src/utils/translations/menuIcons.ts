@@ -1,6 +1,6 @@
-import type { MenuSectionKey } from "./menu";
+import type { MenuArstaSectionKey } from "./menu_arsta";
 
-export const MENU_ICONS: Record<MenuSectionKey, string> = {
+export const MENU_ICONS: Record<MenuArstaSectionKey, string> = {
   appetizer: "/appetizer.svg",
   favourites: "/favourites.svg",
   thali: "/thali.svg",
