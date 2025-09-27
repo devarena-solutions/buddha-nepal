@@ -1,5 +1,5 @@
 import { Language } from "@/utils/site";
-import { drinks, menu } from "@/utils/translations";
+import { drinks } from "@/utils/translations";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
