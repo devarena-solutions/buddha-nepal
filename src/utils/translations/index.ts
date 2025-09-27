@@ -4,7 +4,7 @@ export { menuArsta } from "./menu_arsta";
 export type { MenuArstaData, MenuArstaSectionKey } from "./menu_arsta";
 export { menuHaga } from "./menu_haga";
 export type { MenuHagaData, MenuHagaSectionKey } from "./menu_haga";
-export { MENU_ICONS } from "./menuIcons";
+export { MENU_ICONS_ARSTA, MENU_ICONS_HAGA } from "./menuIcons";
 export { menuByLocation } from "./menuByLocation";
 export { drinks } from "./drinks";
 export { catering } from "./catering";

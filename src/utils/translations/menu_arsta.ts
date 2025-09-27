@@ -29,17 +29,6 @@ export const menuArsta = {
         },
         price: 80,
       },
-      /* {
-        name: {
-          en: "Onion Roll",
-          se: "Onion Roll",
-        },
-        description: {
-          en: "Sliced onions smothered in a simple, fragrant spiced chickpea flour and fried to crispy perfection.",
-          se: "Skivad lök kvävd i en enkel, doftande kryddad kikärtsmjöl och stekt till krispig perfektion.",
-        },
-        price: 70,
-      }, */
       {
         name: {
           en: "Samosa(Veg. / Kött)",
@@ -559,30 +548,6 @@ export const menuArsta = {
         },
         price: 235,
       },
-      /* {
-        name: {
-          en: "Mix Thali",
-          se: "Mix Thali",
-        },
-
-        description: {
-          en: "Grilled lamb fillet, Chicken sambal and Prawn curry. Served with rice and raita.",
-          se: "Grillad lammfilé, Kyckling sambal och Scampi curry. Serveras med ris, och raita.",
-        },
-        price: 265,
-      },
-      {
-        name: {
-          en: "Thakali Thali ( Medium)",
-          se: "Thakali Thali ( Mellan)",
-        },
-
-        description: {
-          en: "Complete and very popular dish from Nepal, consisting of Daal Jhaneko (Urud lentils with 'Jimmu' . An herb from high altitude Himalaya), Chicken Timmur, Lamb Sadeko, Panir Chilli. Specially prepared with Himalayan herbs",
-          se: "Komplett och mycket populär maträtt från Nepal, bestående av Daal Jhaneko (Urud linser med 'Jimmu' . En ört från höghöjd Himalaya), Chicken Timmur, Lamm Sadeko, Panir Chilli. Speciellt lagat med Himalaya örter.",
-        },
-        price: 270,
-      }, */
     ],
   },
   veg: {
