@@ -1,4 +1,8 @@
-import { locationData } from "@/context/LocationContext";
+import {
+  locationData,
+  type LocationInfo,
+  type LocationKey,
+} from "@/context/LocationContext";
 import { icons } from "@/utils/icons";
 import { contact, footerContent } from "@/utils/translations";
 import { siteSetting, type Language as SiteLanguage } from "@/utils/site";
@@ -10,12 +14,12 @@ export default function Footer() {
   const router = useRouter();
   const locale = (router.locale as SiteLanguage) ?? "en";
   const links = siteSetting.getHeaderLinks();
-  const locationEntries = Object.entries(locationData);
+  const locationEntries = Object.entries(locationData) as [
+    LocationKey,
+    LocationInfo,
+  ][];
   const activeLocations = locationEntries.filter(([, info]) => info.isActive);
   const upcomingLocations = locationEntries.filter(([, info]) => !info.isActive);
-  const phoneNumbers = Array.from(
-    new Set(activeLocations.flatMap(([, info]) => info.phones))
-  );
 
   const deliveryPartners = [
     { src: "/foodora.svg", alt: "Foodora" },
@@ -97,69 +101,92 @@ export default function Footer() {
             </nav>
           </div>
 
-          <div className="md:col-span-4 flex flex-col gap-6">
-            <div className="space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
-                {footerContent.contactTitle[locale]}
-              </p>
-              <div className="grid gap-4">
-                {activeLocations.map(([key, info]) => (
-                  <div
-                    key={key}
-                    className="rounded-2xl border border-white/10 bg-white/5 p-4"
-                  >
-                    <p className="text-sm font-semibold text-white">
-                      {info.shortName}
-                    </p>
-                    <p className="mt-1 text-sm text-white/70">{info.name}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {upcomingLocations.length > 0 && (
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
-                  {contact.coming_soon_default[locale]}
-                </p>
-                {upcomingLocations.map(([key, info]) => (
-                  <div key={key} className="mt-3">
-                    <p className="text-sm font-semibold text-white">
-                      {info.shortName}
-                    </p>
-                    <p className="text-sm text-white/70">{info.name}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-
+          <div className="md:col-span-7 flex flex-col gap-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+              {footerContent.contactTitle[locale]}
+            </p>
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
-                  {footerContent.hoursTitle[locale]}
-                </p>
-                <p className="mt-3 text-sm text-white/80">{contact.weekdays[locale]}</p>
-                <p className="text-sm text-white/80">{contact.weekends[locale]}</p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
-                  {footerContent.callUsTitle[locale]}
-                </p>
-                <div className="mt-3 flex flex-col gap-2">
-                  {phoneNumbers.map((phone) => {
-                    const sanitized = phone.replace(/\s+/g, "");
-                    return (
-                      <a
-                        key={sanitized}
-                        href={`tel:${sanitized}`}
-                        className="text-sm font-semibold text-white transition hover:text-white/80"
-                      >
-                        {phone}
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
+              {activeLocations.map(([key, info]) => {
+                const phoneNumbers = info.phones ?? [];
+
+                return (
+                  <article
+                    key={key}
+                    className="relative flex h-full flex-col gap-4 rounded-3xl border border-white/15 bg-white/95 p-6 text-slate-900 shadow-lg shadow-primary/10"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex flex-col">
+                        <h3 className="text-xl font-semibold text-primary">
+                          {info.shortName}
+                        </h3>
+                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary/70">
+                          {contact.opening_times[locale]}
+                        </p>
+                      </div>
+                      <span className="rounded-full bg-primary/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-primary">
+                        {contact.open_label[locale]}
+                      </span>
+                    </div>
+                    <p className="text-sm text-slate-600">{info.name}</p>
+                    <div className="space-y-1 text-sm text-slate-600">
+                      <p>{contact.weekdays[locale]}</p>
+                      <p>{contact.weekends[locale]}</p>
+                    </div>
+                    <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-primary">
+                        {contact.order_call[locale]}
+                      </p>
+                      <div className="mt-3 flex flex-col gap-2">
+                        {phoneNumbers.map((phone) => {
+                          const sanitized = phone.replace(/\s+/g, "");
+                          return (
+                            <a
+                              key={sanitized}
+                              href={`tel:${sanitized}`}
+                              className="text-sm font-semibold text-primary transition hover:text-primary/80"
+                            >
+                              {phone}
+                            </a>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+
+              {upcomingLocations.map(([key, info]) => {
+                const statusMessage = info.statusMessage?.[locale];
+                const statusLabel =
+                  statusMessage ?? contact.coming_soon_default[locale];
+
+                return (
+                  <article
+                    key={key}
+                    className="relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-br from-primary to-primary/70 p-6 text-white shadow-xl"
+                  >
+                    <div className="pointer-events-none absolute -top-10 right-0 h-24 w-24 rounded-full bg-white/10 blur-3xl" />
+                    <div className="pointer-events-none absolute -bottom-6 left-6 h-20 w-20 rounded-full bg-white/10 blur-2xl" />
+                    <div className="relative flex h-full flex-col gap-3">
+                      <div className="flex items-start justify-between gap-3">
+                        <div>
+                          <h3 className="text-xl font-semibold">{info.shortName}</h3>
+                          <p className="text-sm text-white/80">{info.name}</p>
+                        </div>
+                        <span className="rounded-full bg-white/20 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-white">
+                          {statusLabel}
+                        </span>
+                      </div>
+                      <p className="text-sm text-white/80">
+                        {statusMessage ?? contact.coming_soon_description[locale]}
+                      </p>
+                      <p className="text-xs text-white/60">
+                        {contact.coming_soon_follow[locale]}
+                      </p>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </div>
