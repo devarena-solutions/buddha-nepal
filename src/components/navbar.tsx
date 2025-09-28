@@ -16,11 +16,7 @@ export default function Navbar({ id }: { id: string }) {
 
   const t = router.locale as Language;
 
-  const phone = location
-    ? locations[location].phones.find(
-        (p) => !p.replace(/\s+/g, "").startsWith("07")
-      )
-    : null;
+  const phone = location ? locations[location].phones[0] ?? null : null;
 
   useEffect(() => {
     setLocationModal(!location);
