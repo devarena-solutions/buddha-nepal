@@ -112,28 +112,28 @@ export default function Footer() {
                 return (
                   <article
                     key={key}
-                    className="relative flex h-full flex-col gap-4 rounded-3xl border border-white/15 bg-white/95 p-6 text-slate-900 shadow-lg shadow-primary/10"
+                    className="relative flex h-full flex-col gap-4 rounded-3xl border border-white/10 bg-gradient-to-br from-[#1b302a] via-[#132420] to-[#0c1916] p-6 text-white shadow-[0_24px_48px_-32px_rgba(8,30,24,0.9)]"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex flex-col">
-                        <h3 className="text-xl font-semibold text-primary">
+                        <h3 className="text-xl font-semibold text-white">
                           {info.shortName}
                         </h3>
-                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary/70">
+                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-200/70">
                           {contact.opening_times[locale]}
                         </p>
                       </div>
-                      <span className="rounded-full bg-primary/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-primary">
+                      <span className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-emerald-200">
                         {contact.open_label[locale]}
                       </span>
                     </div>
-                    <p className="text-sm text-slate-600">{info.name}</p>
-                    <div className="space-y-1 text-sm text-slate-600">
+                    <p className="text-sm text-white/70">{info.name}</p>
+                    <div className="space-y-1 text-sm text-white/70">
                       <p>{contact.weekdays[locale]}</p>
                       <p>{contact.weekends[locale]}</p>
                     </div>
-                    <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-primary">
+                    <div className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-emerald-200">
                         {contact.order_call[locale]}
                       </p>
                       <div className="mt-3 flex flex-col gap-2">
@@ -143,7 +143,7 @@ export default function Footer() {
                             <a
                               key={sanitized}
                               href={`tel:${sanitized}`}
-                              className="text-sm font-semibold text-primary transition hover:text-primary/80"
+                              className="text-sm font-semibold text-emerald-200 transition hover:text-emerald-100"
                             >
                               {phone}
                             </a>
