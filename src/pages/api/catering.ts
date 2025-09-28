@@ -15,12 +15,10 @@ export default function POST(req: NextApiRequest, res: NextApiResponse) {
   try {
     resend.emails
       .send({
-        from: "clients@the-table-himalaya.com",
+        from: "clients@buddhanepal.se",
         to: [
-          "neetesh2000@gmail.com",
-          "prashunnaral8@gmail.com",
           "rajkumar.777@hotmail.com",
-          "thetablehimalaya@gmail.com",
+          "buddhanepal0707@gmail.com",
         ],
         subject: `Catering Reservation from ${name}`,
         html: `

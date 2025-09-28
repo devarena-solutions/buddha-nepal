@@ -302,8 +302,8 @@ export default function Homepage() {
                   <h1 className="text-[23px] mt-3 font-semibold">
                     {homepage.email[t]}
                   </h1>
-                  <Link href={"mailto:thetablehimalaya@gmail.com"}>
-                    <h1 className="mt-[20px]">thetablehimalaya@gmail.com</h1>
+                  <Link href={"mailto:buddhanepal0707@gmail.com"}>
+                    <h1 className="mt-[20px]">buddhanepal0707@gmail.com</h1>
                   </Link>
                   {/* <h1 className="">test@gmail.com</h1> */}
                 </div>
