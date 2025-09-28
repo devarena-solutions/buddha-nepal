@@ -15,11 +15,9 @@ export default function POST(req: NextApiRequest, res: NextApiResponse) {
   try {
     resend.emails
       .send({
-        from: "clients@the-table-himalaya.com",
-        to: [
-          "rajkumar.777@hotmail.com",
-          "thetablehimalaya@gmail.com",
-        ],
+        from: "clients@buddhanepal.se",
+        //to: [`${email}, "pandey.dev25@gmail.com", "buddhanepal0707@gmail.com"`],
+        to: ["pandey.dev25@gmail.com", "buddhanepal0707@gmail.com"],
         subject: `Table Reservation from ${name}`,
         html: `
         <div>
