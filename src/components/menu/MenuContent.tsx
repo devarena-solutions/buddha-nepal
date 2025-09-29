@@ -163,7 +163,7 @@ export function MenuContent<TSectionKey extends string>(
                 ) : (
                   <span className="h-8 w-8" aria-hidden="true" />
                 )}
-                <h1 className="font-bold text-xs md:text-sm text-primary">
+                <h1 className="font-bold text-xs md:text-sm text-primary dark:text-emerald-200">
                   {itemLabel}
                 </h1>
               </div>

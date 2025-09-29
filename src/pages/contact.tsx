@@ -7,15 +7,32 @@ import {
   type LocationInfo,
   type LocationKey,
 } from "@/context/LocationContext";
+import { useTheme } from "@/context/ThemeContext";
 import { Language as LanguageCode } from "@/utils/site";
 
 export default function Contact() {
   const router = useRouter();
   const t = router.locale as LanguageCode;
+  const { theme } = useTheme();
   const locationEntries = Object.entries(locationData) as [
     LocationKey,
     LocationInfo,
   ][];
+
+  const partnerLogos = [
+    {
+      alt: "Foodora",
+      lightSrc: "/foodora.svg",
+      darkSrc: "/foodora.svg",
+      className: "drop-shadow-lg",
+    },
+    {
+      alt: "Qopla",
+      lightSrc: "/qopla.svg",
+      darkSrc: "/qopla-dark.svg",
+      className: "drop-shadow-lg", 
+    },
+  ];
 
   return (
     <main className="flex-1 flex bg-white/80 text-slate-900 transition-colors dark:bg-slate-900/60 dark:text-slate-100">
@@ -113,8 +130,16 @@ export default function Contact() {
           </div>
 
           <div className="flex items-center justify-center gap-6 mt-12">
-            <Image src="/foodora.svg" alt="Foodora" width={60} height={60} />
-            <Image src="/qopla.svg" alt="Qopla" width={60} height={60} />
+            {partnerLogos.map((logo) => (
+              <Image
+                key={logo.alt}
+                src={theme === "dark" ? logo.darkSrc : logo.lightSrc}
+                alt={logo.alt}
+                width={60}
+                height={60}
+                className={`h-[60px] w-[60px] object-contain ${logo.className}`}
+              />
+            ))}
           </div>
         </div>
       </div>
