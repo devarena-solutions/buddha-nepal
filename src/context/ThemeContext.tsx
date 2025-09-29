@@ -44,29 +44,40 @@ const getSystemTheme = (): Theme => {
 };
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const storedPreference = getStoredPreference();
-
-  const [preference, setPreferenceState] = useState<ThemePreference>(
-    storedPreference ?? "system"
-  );
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (storedPreference === "light" || storedPreference === "dark") {
-      return storedPreference;
-    }
-
-    return getSystemTheme();
-  });
+  const [preference, setPreferenceState] = useState<ThemePreference>("system");
+  const [theme, setTheme] = useState<Theme>("light");
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") {
       return;
     }
 
-    window.localStorage.setItem(STORAGE_KEY, preference);
-  }, [preference]);
+    const storedPreference = getStoredPreference();
+    if (storedPreference) {
+      setPreferenceState(storedPreference);
+      if (storedPreference === "light" || storedPreference === "dark") {
+        setTheme(storedPreference);
+      }
+    }
+
+    if (!storedPreference || storedPreference === "system") {
+      setTheme(getSystemTheme());
+    }
+
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
-    if (typeof window === "undefined") {
+    if (!isMounted || typeof window === "undefined") {
+      return;
+    }
+
+    window.localStorage.setItem(STORAGE_KEY, preference);
+  }, [preference, isMounted]);
+
+  useEffect(() => {
+    if (!isMounted || typeof window === "undefined") {
       return;
     }
 
@@ -101,7 +112,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         mediaQuery.removeListener(syncWithSystem);
       }
     };
-  }, [preference]);
+  }, [preference, isMounted]);
 
   useEffect(() => {
     if (typeof document === "undefined") {
