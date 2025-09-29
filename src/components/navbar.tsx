@@ -121,7 +121,7 @@ export default function Navbar({ id }: { id: string }) {
           onClick={() => setMenuOpen((prev) => !prev)}
           alt="menu"
           width={30}
-          className="md:hidden cursor-pointer"
+          className="md:hidden cursor-pointer transition dark:invert"
         />
       </div>
       {menuOpen && (
