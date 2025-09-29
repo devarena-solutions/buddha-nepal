@@ -103,24 +103,24 @@ export default function Contact() {
               return (
                 <article
                   key={key}
-                  className="relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-br from-primary to-primary/70 p-8 text-white shadow-xl"
+                  className="relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-br from-primary to-primary/70 p-8 text-white shadow-xl dark:border-emerald-200/15 dark:text-slate-200"
                 >
-                  <div className="pointer-events-none absolute -top-16 right-0 h-32 w-32 rounded-full bg-white/10 blur-3xl" />
-                  <div className="pointer-events-none absolute -bottom-10 left-10 h-24 w-24 rounded-full bg-white/10 blur-2xl" />
+                  <div className="pointer-events-none absolute -top-16 right-0 h-32 w-32 rounded-full bg-white/10 blur-3xl dark:bg-emerald-200/10" />
+                  <div className="pointer-events-none absolute -bottom-10 left-10 h-24 w-24 rounded-full bg-white/10 blur-2xl dark:bg-emerald-200/10" />
                   <div className="relative flex h-full flex-col gap-4">
                     <div className="flex items-start justify-between gap-4">
                       <div>
                         <h2 className="text-2xl font-semibold">{info.shortName}</h2>
-                        <p className="text-sm text-white/80">{info.name}</p>
+                        <p className="text-sm text-white/80 dark:text-slate-300">{info.name}</p>
                       </div>
-                      <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+                      <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white dark:bg-emerald-200/10 dark:text-emerald-100">
                         {statusLabel}
                       </span>
                     </div>
-                    <p className="text-base text-white/80">
+                    <p className="text-base text-white/80 dark:text-slate-300">
                       {statusMessage ?? contact.coming_soon_description[t]}
                     </p>
-                    <p className="text-sm text-white/60">
+                    <p className="text-sm text-white/60 dark:text-slate-400">
                       {contact.coming_soon_follow[t]}
                     </p>
                   </div>

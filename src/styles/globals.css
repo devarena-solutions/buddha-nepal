@@ -18,7 +18,7 @@
   color-scheme: dark;
   --background-start-rgb: 2, 6, 23;
   --background-end-rgb: 15, 23, 42;
-  --foreground-rgb: 226, 232, 240;
+  --foreground-rgb: 203, 213, 225;
   --muted-rgb: 148, 163, 184;
   --card-rgb: 15, 23, 42;
 }
@@ -32,6 +32,10 @@ body {
       rgb(var(--background-end-rgb))
     ),
     rgb(var(--background-start-rgb));
+}
+
+.dark body {
+  color: rgba(var(--foreground-rgb), 0.9);
 }
 
 * {

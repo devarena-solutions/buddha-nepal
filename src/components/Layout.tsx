@@ -82,7 +82,7 @@ export default function Layout({ children }: PropsWithChildren) {
             .getElementById("navbar")!
             .scrollIntoView({ behavior: "smooth" })
         }
-        className={`fixed bottom-0 right-0 mb-[25px] mr-[25px] lg:mb-[50px] lg:mr-[50px] border border-white/80 dark:border-emerald-200/50 p-3 rounded-lg bg-primary text-white shadow-lg shadow-primary/30 transition ${
+        className={`fixed bottom-0 right-0 mb-[25px] mr-[25px] lg:mb-[50px] lg:mr-[50px] border border-white/80 dark:border-emerald-200/40 p-3 rounded-lg bg-primary text-white shadow-lg shadow-primary/30 transition dark:bg-emerald-200/15 dark:text-emerald-100 dark:shadow-emerald-200/10 ${
           scrollTopButton ? "scale-100" : "scale-0"
         }`}
       >

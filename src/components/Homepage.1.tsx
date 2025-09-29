@@ -130,11 +130,11 @@ export default function Homepage() {
         </Carousel>
 
         <div className="slider-message">
-          <h1 className="text-[23px] lg:text-[32px] font-bold text-white">
+          <h1 className="text-[23px] lg:text-[32px] font-bold text-white dark:text-slate-100">
             BUDDHA
           </h1>
 
-          <h1 className="mt-6 text-[23px] lg:text-[25px] text-white">
+          <h1 className="mt-6 text-[23px] lg:text-[25px] text-white dark:text-slate-200">
             {homepage.title[t]}
           </h1>
 
@@ -149,7 +149,7 @@ export default function Homepage() {
                 })
               }
               title="Get quote now"
-              className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+              className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 dark:bg-slate-100/10 dark:text-emerald-100 dark:focus:ring-emerald-200/40 dark:focus:ring-offset-slate-950/60"
               role="button"
             >
               {homepage.reservation_button[t]}
@@ -233,7 +233,7 @@ export default function Homepage() {
         </div>
       </div>
 
-      <div className=" w-full flex flex-col items-center gap-10 bg-primary-blur px-3 py-[75px] text-white text-center transition-colors md:text-start dark:bg-emerald-900/30">
+      <div className=" w-full flex flex-col items-center gap-10 bg-primary-blur px-3 py-[75px] text-white text-center transition-colors md:text-start dark:bg-emerald-900/30 dark:text-slate-200">
         <div className="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px]">
           <h2 className="text-[23px] font-semibold text-primary dark:text-emerald-200">
             {homepage.menu_title[t]}
@@ -250,7 +250,7 @@ export default function Homepage() {
               style={{ backgroundImage: `url(${item.source})` }}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="relative w-full p-5 text-left text-white flex flex-col gap-2">
+              <div className="relative w-full p-5 text-left text-white flex flex-col gap-2 dark:text-slate-200">
                 <h2 className="text-lg font-semibold md:text-xl lg:text-2xl">
                   {item.name[t]}
                 </h2>
@@ -266,7 +266,7 @@ export default function Homepage() {
       <div className="bg-reservation bg-cover h-fit py-[75px] flex justify-center text-center md:text-start">
         <div className="w-[350px] lg:w-[1000px] xl:w-[1200px] md:w-[700px] flex items-center flex-col lg:grid grid-cols-2 gap-14">
           <div className="flex items-center">
-            <div className="text-white h-fit grid gap-10">
+            <div className="text-white h-fit grid gap-10 dark:text-slate-200">
               <h2 className="text-[18px]">{homepage.contact_us[t]}</h2>
               <h1 className="text-[28px] font-bold">
                 {homepage.contact_description_one[t]}
@@ -378,7 +378,7 @@ export default function Homepage() {
             />
             <button
               disabled={isLoading}
-              className="bg-primary w-full text-white font-semibold py-3 rounded transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-80"
+              className="bg-primary w-full text-white font-semibold py-3 rounded transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-80 dark:bg-emerald-200/20 dark:text-emerald-100 dark:hover:bg-emerald-200/30"
             >
               {homepage.reservation_button[t]}
             </button>

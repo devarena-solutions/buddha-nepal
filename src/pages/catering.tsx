@@ -92,7 +92,7 @@ export default function Catering() {
           </p>
         </div>
 
-        <div className="mt-[50px] w-full rounded bg-primary p-10 text-white shadow-lg shadow-primary/30">
+        <div className="mt-[50px] w-full rounded bg-primary p-10 text-white shadow-lg shadow-primary/30 dark:bg-emerald-200/20 dark:text-emerald-100 dark:shadow-emerald-200/20">
           <h1 className="text-center text-lg lg:text-[23px]">
             NOTE: Please call us at 0760353799/+4686123780 for special catering
             requests !!
@@ -163,7 +163,7 @@ export default function Catering() {
           />
           <button
             disabled={isLoading}
-            className="bg-primary w-full text-white font-semibold py-3 rounded transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-80"
+            className="bg-primary w-full text-white font-semibold py-3 rounded transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-80 dark:bg-emerald-200/20 dark:text-emerald-100 dark:hover:bg-emerald-200/30"
           >
             {homepage.reservation_button[t]}
           </button>
@@ -179,7 +179,7 @@ export default function Catering() {
               <p
                 className={`w-fit rounded-xl p-5 ${
                   categoryIndex === index
-                    ? "bg-primary text-white shadow-lg shadow-primary/30"
+                    ? "bg-primary text-white shadow-lg shadow-primary/30 dark:bg-emerald-200/20 dark:text-emerald-100 dark:shadow-emerald-200/20"
                     : "bg-primary-blur text-primary dark:text-emerald-200"
                 }`}
               >
