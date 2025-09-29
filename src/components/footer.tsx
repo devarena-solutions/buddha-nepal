@@ -23,8 +23,7 @@ export default function Footer() {
 
   const deliveryPartners = [
     { src: "/foodora.svg", alt: "Foodora" },
-    { src: "/wolt.svg", alt: "Wolt" },
-    { src: "/uber-eats.svg", alt: "Uber Eats" },
+    { src: "/qopla.svg", alt: "Qopla" },
   ];
 
   return (
