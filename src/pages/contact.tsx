@@ -114,8 +114,7 @@ export default function Contact() {
 
           <div className="flex items-center justify-center gap-6 mt-12">
             <Image src="/foodora.svg" alt="Foodora" width={60} height={60} />
-            <Image src="/wolt.svg" alt="Wolt" width={60} height={60} />
-            <Image src="/uber-eats.svg" alt="Uber Eats" width={60} height={60} />
+            <Image src="/qopla.svg" alt="Qopla" width={60} height={60} />
           </div>
         </div>
       </div>
