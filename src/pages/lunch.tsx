@@ -52,7 +52,7 @@ export default function Lunch() {
   /* const [lunch, setLunch] = useState(days[new Date().getDay() - 1].en); */
 
   return (
-    <main className="flex justify-center bg-white text-black text-center md:text-start flex-1">
+    <main className="flex justify-center bg-white/80 text-slate-900 transition-colors text-center md:text-start flex-1 dark:bg-slate-900/60 dark:text-slate-100">
       <Head>
         <title>BUDDHA - Lunches</title>
       </Head>
@@ -97,7 +97,7 @@ export default function Lunch() {
       </div> */}
 
       <div
-        className="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3 h-28 mt-6 w-1/2"
+        className="mt-6 h-28 w-full max-w-3xl rounded-xl border border-blue-500/60 bg-blue-100/70 px-4 py-3 text-blue-700 shadow-lg shadow-blue-200/50 transition dark:border-blue-400/50 dark:bg-blue-900/40 dark:text-blue-200"
         role="alert"
       >
         <p className="font-bold text-lg">

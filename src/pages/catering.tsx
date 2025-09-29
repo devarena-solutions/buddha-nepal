@@ -6,6 +6,7 @@ import Image from "next/image";
 import { toast } from "react-toastify";
 import { icons } from "@/utils/icons";
 import Head from "next/head";
+import { useTheme } from "@/context/ThemeContext";
 
 export default function Catering() {
   const [categoryIndex, setCategoryIndex] = useState(0);
@@ -19,6 +20,7 @@ export default function Catering() {
   const [guests, setGuests] = useState<string>("");
 
   const [isLoading, setIsLoading] = useState(false);
+  const { theme } = useTheme();
 
   async function formHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -52,7 +54,7 @@ export default function Catering() {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme,
       });
       setIsLoading(false);
     }
@@ -66,7 +68,7 @@ export default function Catering() {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme,
       });
 
       setIsLoading(false);
@@ -76,7 +78,7 @@ export default function Catering() {
   const t = useRouter().locale as Language;
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center bg-white/80 text-slate-900 transition-colors dark:bg-slate-900/60 dark:text-slate-100">
       <Head>
         <title>BUDDHA - Catering</title>
       </Head>
@@ -90,8 +92,8 @@ export default function Catering() {
           </p>
         </div>
 
-        <div className="mt-[50px] rounded w-full p-10 bg-primary">
-          <h1 className="text-white text-center text-lg lg:text-[23px]">
+        <div className="mt-[50px] w-full rounded bg-primary p-10 text-white shadow-lg shadow-primary/30">
+          <h1 className="text-center text-lg lg:text-[23px]">
             NOTE: Please call us at 0760353799/+4686123780 for special catering
             requests !!
           </h1>
@@ -100,13 +102,13 @@ export default function Catering() {
         <form
           id="form"
           onSubmit={formHandler}
-          className=" md:mx-0 bg-white rounded-lg md:w-full h-[550px] lg:h-full py-[30px] px-4 md:px-7 gap-5 flex flex-col items-center"
+          className=" md:mx-0 bg-white/95 text-slate-900 dark:bg-slate-900/80 dark:text-slate-100 rounded-lg md:w-full h-[550px] lg:h-full py-[30px] px-4 md:px-7 gap-5 flex flex-col items-center shadow-xl shadow-black/10"
         >
           <h1 className="text-[28px] font-bold">Catering Reservation</h1>
           <div className="w-full grid grid-cols-2 flex-1 [&>input]:border [&>input]:rounded [&>input]:py-4 [&>input]:px-2 md:[&>input]:px-5 [&>input]:border-[#ddd] gap-3">
             <input
               type="text"
-              className="focus:border-primary border outline-none"
+              className="focus:border-primary border outline-none dark:border-slate-700 dark:bg-slate-800/60"
               placeholder={`${homepage.name[t]}*`}
               onChange={(e) => setName(e.target.value)}
               value={name}
@@ -114,7 +116,7 @@ export default function Catering() {
             />
             <input
               type="email"
-              className="focus:border-primary border outline-none"
+              className="focus:border-primary border outline-none dark:border-slate-700 dark:bg-slate-800/60"
               placeholder={`${homepage.mail[t]}*`}
               onChange={(e) => setEmail(e.target.value)}
               value={email}
@@ -122,7 +124,7 @@ export default function Catering() {
             />
             <input
               type="text"
-              className="focus:border-primary border outline-none"
+              className="focus:border-primary border outline-none dark:border-slate-700 dark:bg-slate-800/60"
               placeholder={`${homepage.phone_number[t]}*`}
               onChange={(e) => setPhone(e.target.value)}
               value={phone}
@@ -130,7 +132,7 @@ export default function Catering() {
             />
             <input
               type="number"
-              className="focus:border-primary border outline-none"
+              className="focus:border-primary border outline-none dark:border-slate-700 dark:bg-slate-800/60"
               placeholder={`${homepage.guests[t]}*`}
               onChange={(e) => setGuests(e.target.value)}
               value={guests}
@@ -138,7 +140,7 @@ export default function Catering() {
             />
             <input
               type="date"
-              className="focus:border-primary border outline-none"
+              className="focus:border-primary border outline-none dark:border-slate-700 dark:bg-slate-800/60"
               placeholder={`${homepage.date[t]}*`}
               onChange={(e) => setDate(e.target.value)}
               value={date}
@@ -146,7 +148,7 @@ export default function Catering() {
             />
             <input
               type="time"
-              className="focus:border-primary border outline-none"
+              className="focus:border-primary border outline-none dark:border-slate-700 dark:bg-slate-800/60"
               placeholder={`${homepage.time[t]}*`}
               onChange={(e) => setTime(e.target.value)}
               value={time}
@@ -155,13 +157,13 @@ export default function Catering() {
           </div>
           <textarea
             placeholder={`${homepage.message[t]}`}
-            className="focus:border-primary border outline-none w-full border-[#ddd] rounded pl-5 pt-3 h-[150px]"
+            className="focus:border-primary border outline-none w-full border-[#ddd] rounded pl-5 pt-3 h-[150px] dark:border-slate-700 dark:bg-slate-800/60"
             onChange={(e) => setMessage(e.target.value)}
             value={message}
           />
           <button
             disabled={isLoading}
-            className="bg-primary w-full text-white font-semibold py-3 rounded "
+            className="bg-primary w-full text-white font-semibold py-3 rounded transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-80"
           >
             {homepage.reservation_button[t]}
           </button>
@@ -176,14 +178,18 @@ export default function Catering() {
             >
               <p
                 className={`w-fit rounded-xl p-5 ${
-                  categoryIndex === index ? "bg-primary" : "bg-primary-blur"
+                  categoryIndex === index
+                    ? "bg-primary text-white shadow-lg shadow-primary/30"
+                    : "bg-primary-blur text-primary dark:text-emerald-200"
                 }`}
               >
                 <Image src={item.source} alt="image" width={50} height={50} />
               </p>{" "}
               <p
-                className={`text-[20px] font-semibold ${
-                  categoryIndex === index ? "text-primary" : "text-black"
+                className={`text-[20px] font-semibold transition ${
+                  categoryIndex === index
+                    ? "text-primary dark:text-emerald-200"
+                    : "text-slate-800 dark:text-slate-200"
                 }`}
               >
                 {catering.category[index].name[t]}

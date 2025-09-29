@@ -130,7 +130,7 @@ export function MenuContent<TSectionKey extends string>(
 
   return (
     <div>
-      <div className="flex mt-1 w-full overflow-x-auto menu-scroll sticky bg-white top-0 z-10">
+      <div className="flex mt-1 w-full overflow-x-auto menu-scroll sticky top-0 z-10 bg-white/90 text-slate-800 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/80 dark:bg-slate-900/80 dark:text-slate-100">
         {headerItems.map((item) => {
           const itemLabel = item.name[locale] ?? item.name.en ?? "";
           const altText = itemLabel || "menu";
@@ -143,11 +143,13 @@ export function MenuContent<TSectionKey extends string>(
                   .getElementById(item.id)
                   ?.scrollIntoView({ behavior: "smooth", block: "center" })
               }
-              className="w-[125px] md:w-[200px] text-slate-800 font-semibold text-center flex flex-shrink-0 justify-center border border-y-slate-200 cursor-pointer"
+              className="w-[125px] md:w-[200px] flex flex-shrink-0 justify-center border border-y-slate-200 cursor-pointer text-center text-sm font-semibold transition hover:bg-white/60 dark:border-y-slate-700 dark:hover:bg-slate-800/60"
             >
               <div
-                className={`py-[10px] md:py-[20px] flex flex-col items-center gap-3 w-full border-b-[10px] hover:border-primary ${
-                  item.id === currentSection ? "border-primary" : "border-white"
+                className={`py-[10px] md:py-[20px] flex flex-col items-center gap-3 w-full border-b-[10px] hover:border-primary/70 dark:hover:border-emerald-200/60 ${
+                  item.id === currentSection
+                    ? "border-primary dark:border-emerald-200"
+                    : "border-transparent"
                 }`}
               >
                 {item.icon ? (
@@ -197,7 +199,7 @@ export function MenuContent<TSectionKey extends string>(
                 className="menu-section flex items-center gap-5"
                 id={section.index.toString()}
               >
-                <h1 className="text-[27px] md:text-[40px] font-bold text-primary">
+                <h1 className="text-[27px] md:text-[40px] font-bold text-primary dark:text-emerald-200">
                   {section.name[locale]}
                 </h1>
                 <hr className="flex-1 border-[1px] border-primary" />
@@ -213,12 +215,14 @@ export function MenuContent<TSectionKey extends string>(
                       className={itemWrapperClass}
                       key={`${section.index}-${itemName}`}
                     >
-                      <div className="flex font-bold text-primary justify-between gap-5 text-[23px]">
+                      <div className="flex justify-between gap-5 text-[23px] font-bold text-primary dark:text-emerald-200">
                         <h2>{itemName}</h2>
                         {priceLabel && <p>{priceLabel}</p>}
                       </div>
                       {itemDescription && (
-                        <p className="text-sm mt-3">{itemDescription}</p>
+                        <p className="mt-3 text-sm text-slate-700 dark:text-slate-200">
+                          {itemDescription}
+                        </p>
                       )}
                       {item.sub && item.sub.length > 0 && (
                         <div>
@@ -230,7 +234,7 @@ export function MenuContent<TSectionKey extends string>(
                             return (
                               <div
                                 key={`${section.index}-${itemName}-${subName}`}
-                                className="grid gap-3 ml-3 mt-5"
+                                className="ml-3 mt-5 grid gap-3 text-slate-700 dark:text-slate-200"
                               >
                                 <div className="flex gap-5">
                                   <div className="flex items-center gap-1">

@@ -18,7 +18,7 @@ export default function Contact() {
   ][];
 
   return (
-    <main className="flex-1 flex">
+    <main className="flex-1 flex bg-white/80 text-slate-900 transition-colors dark:bg-slate-900/60 dark:text-slate-100">
       <Head>
         <title>{`BUDDHA - ${contact.title[t]}`}</title>
       </Head>
@@ -37,31 +37,31 @@ export default function Contact() {
                 return (
                   <article
                     key={key}
-                    className="relative flex h-full flex-col gap-6 rounded-3xl border border-primary/10 bg-white/95 p-8 text-slate-900 shadow-lg transition-shadow duration-300 hover:shadow-xl"
+                    className="relative flex h-full flex-col gap-6 rounded-3xl border border-primary/10 bg-white/95 p-8 text-slate-900 shadow-lg transition duration-300 hover:shadow-xl dark:border-emerald-200/20 dark:bg-slate-900/80 dark:text-slate-100"
                   >
                     <div className="flex flex-col gap-3">
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex flex-col">
-                          <h2 className="text-2xl font-semibold text-primary">
+                          <h2 className="text-2xl font-semibold text-primary dark:text-emerald-200">
                             {info.shortName}
                           </h2>
-                          <p className="text-sm font-medium uppercase tracking-wide text-primary/70">
+                          <p className="text-sm font-medium uppercase tracking-wide text-primary/70 dark:text-emerald-200/80">
                             {contact.opening_times[t]}
                           </p>
                         </div>
-                        <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
+                        <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary dark:bg-emerald-200/20 dark:text-emerald-100">
                           {contact.open_label[t]}
                         </span>
                       </div>
-                      <p className="text-base text-slate-600">{info.name}</p>
-                      <div className="space-y-1 text-sm text-slate-700">
+                      <p className="text-base text-slate-600 dark:text-slate-300">{info.name}</p>
+                      <div className="space-y-1 text-sm text-slate-700 dark:text-slate-300">
                         <p>{contact.weekdays[t]}</p>
                         <p>{contact.weekends[t]}</p>
                       </div>
                     </div>
 
-                    <div className="rounded-2xl border border-primary/20 bg-primary/5 p-5">
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                    <div className="rounded-2xl border border-primary/20 bg-primary/5 p-5 dark:border-emerald-200/20 dark:bg-slate-800/60">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary dark:text-emerald-200">
                         {contact.order_call[t]}
                       </p>
                       <div className="mt-4 flex flex-col gap-2">
@@ -71,7 +71,7 @@ export default function Contact() {
                             <a
                               key={sanitized}
                               href={`tel:${sanitized}`}
-                              className="text-lg font-semibold text-primary transition-colors duration-200 hover:text-primary/80"
+                              className="text-lg font-semibold text-primary transition-colors duration-200 hover:text-primary/80 dark:text-emerald-200 dark:hover:text-emerald-100"
                             >
                               {phone}
                             </a>
