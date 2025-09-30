@@ -21,7 +21,7 @@ export default function LocationSelect({ className = "", onChange }: { className
 
   return (
     <select
-      className={className}
+      className={`rounded-md border border-primary/30 bg-white/80 text-sm text-primary transition focus:outline-none focus:ring-2 focus:ring-primary/30 dark:border-emerald-200/40 dark:bg-slate-800/60 dark:text-emerald-100 ${className}`}
       value={location ?? DEFAULT_LOCATION}
       onChange={handleChange}
     >

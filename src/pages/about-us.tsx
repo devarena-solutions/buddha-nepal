@@ -28,17 +28,29 @@ export default function AboutUs() {
               <p>{about_us.first_description[t]}</p>
               <div className="flex mt-5 justify-between">
                 <div className="flex flex-col items-center gap-3">
-                  <Image src={icons.speed} alt="speed" />
+                  <Image
+                    src={icons.speed}
+                    alt="speed"
+                    className="h-12 w-12 dark:invert"
+                  />
                   <h2>{about_us.fast_service[t]}</h2>
                 </div>
                 <hr className="h-full border" />
                 <div className="flex flex-col items-center gap-3">
-                  <Image src={icons.grape} alt="speed" />
+                  <Image
+                    src={icons.grape}
+                    alt="speed"
+                    className="h-12 w-12 dark:invert"
+                  />
                   <h2>{about_us.fresh_food[t]}</h2>
                 </div>
                 <hr className="h-full border" />
                 <div className="flex flex-col items-center gap-3">
-                  <Image src={icons.headphones} alt="speed" />
+                  <Image
+                    src={icons.headphones}
+                    alt="speed"
+                    className="h-12 w-12 dark:invert"
+                  />
                   <h2>{about_us.fast_support[t]}</h2>
                 </div>
               </div>
@@ -56,13 +68,13 @@ export default function AboutUs() {
               src={icons.food_one}
               width={450}
               alt="food"
-              className="rounded lg:-translate-y-[75px]"
+              className="rounded lg:-translate-y-[75px] shadow-lg ring-1 ring-slate-200/60 dark:ring-emerald-200/25"
             />
             <Image
               src={icons.food_two}
               alt="food"
               height={270}
-              className="rounded lg:-translate-x-[50px] w-full lg:w-[175px] object-fill "
+              className="rounded lg:-translate-x-[50px] w-full lg:w-[175px] object-fill shadow-lg ring-1 ring-slate-200/60 dark:ring-emerald-200/25"
             />
           </div>
 
@@ -103,7 +115,7 @@ export default function AboutUs() {
                 key={index}
                 src={item.src}
                 alt="images"
-                className={`object-cover h-[300px] w-full ${
+                className={`object-cover h-[300px] w-full rounded-lg shadow-md ring-1 ring-slate-200/50 dark:ring-emerald-200/20 ${
                   [4, 5].includes(index) ? "object-left" : "object-center"
                 }`}
               />

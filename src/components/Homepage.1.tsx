@@ -14,6 +14,7 @@ import {
   DEFAULT_LOCATION,
   type LocationKey,
 } from "@/context/LocationContext";
+import { useTheme } from "@/context/ThemeContext";
 
 const responsive = {
   superLargeDesktop: {
@@ -55,6 +56,7 @@ export default function Homepage() {
   const [guests, setGuests] = useState<string>("");
 
   const [isLoading, setIsLoading] = useState(false);
+  const { theme } = useTheme();
 
   async function formHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -88,7 +90,7 @@ export default function Homepage() {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme,
       });
       setIsLoading(false);
     }
@@ -102,7 +104,7 @@ export default function Homepage() {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme,
       });
 
       setIsLoading(false);
@@ -128,11 +130,11 @@ export default function Homepage() {
         </Carousel>
 
         <div className="slider-message">
-          <h1 className="text-[23px] lg:text-[32px] font-bold text-white">
+          <h1 className="text-[23px] lg:text-[32px] font-bold text-white dark:text-slate-100">
             BUDDHA
           </h1>
 
-          <h1 className="mt-6 text-[23px] lg:text-[25px] text-white">
+          <h1 className="mt-6 text-[23px] lg:text-[25px] text-white dark:text-slate-200">
             {homepage.title[t]}
           </h1>
 
@@ -147,7 +149,7 @@ export default function Homepage() {
                 })
               }
               title="Get quote now"
-              className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+              className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 dark:bg-slate-100/10 dark:text-emerald-100 dark:focus:ring-emerald-200/40 dark:focus:ring-offset-slate-950/60"
               role="button"
             >
               {homepage.reservation_button[t]}
@@ -192,11 +194,11 @@ export default function Homepage() {
         <div className="bg-wallpaper2 bg-cover bg-center lg:flex lg:flex-1 h-[300px] md:h-[600px] lg:h-full "></div>
       </div> */}
 
-      <div className="flex justify-center bg-white text-black text-center md:text-start">
+      <div className="flex justify-center bg-white/80 text-slate-900 transition-colors text-center md:text-start dark:bg-slate-900/60 dark:text-slate-100">
         <div className="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-7 my-[50px] ">
           <div className="flex flex-col gap-7">
-            <h2 className="text-[23px] text-primary">{homepage.intro[t]}</h2>
-            <h1 className="text-[32px] text-primary font-bold">
+            <h2 className="text-[23px] text-primary dark:text-emerald-200">{homepage.intro[t]}</h2>
+            <h1 className="text-[32px] text-primary font-bold dark:text-emerald-200">
               {homepage.intro_header[t]}
             </h1>
             <p className="text-lg">{homepage.intro_description_one[t]}</p>
@@ -208,7 +210,7 @@ export default function Homepage() {
                   className="flex flex-col items-center gap-3 text-center"
                 >
                   <div
-                    className="relative w-full overflow-hidden rounded-xl border border-primary/20 bg-white/80 shadow-sm"
+                    className="relative w-full overflow-hidden rounded-xl border border-primary/20 bg-white/80 shadow-sm dark:border-emerald-200/30 dark:bg-slate-900/70"
                     style={{ aspectRatio: "1 / 1" }}
                   >
                     <Image
@@ -219,7 +221,7 @@ export default function Homepage() {
                       className="object-cover"
                     />
                   </div>
-                  <figcaption className="text-base font-semibold text-primary">
+                  <figcaption className="text-base font-semibold text-primary dark:text-emerald-200">
                     {item.label}
                   </figcaption>
                 </figure>
@@ -231,12 +233,12 @@ export default function Homepage() {
         </div>
       </div>
 
-      <div className=" w-full flex flex-col items-center gap-10 bg-primary-blur px-3 py-[75px] text-white text-center md:text-start">
+      <div className=" w-full flex flex-col items-center gap-10 bg-primary-blur px-3 py-[75px] text-white text-center transition-colors md:text-start dark:bg-emerald-900/30 dark:text-slate-200">
         <div className="w-[350px] md:w-[700px] lg:w-[1000px] xl:w-[1200px]">
-          <h2 className="text-[23px] font-semibold text-primary">
+          <h2 className="text-[23px] font-semibold text-primary dark:text-emerald-200">
             {homepage.menu_title[t]}
           </h2>
-          <h1 className="text-[32px] text-black font-bold">
+          <h1 className="text-[32px] font-bold text-slate-900 dark:text-slate-100">
             {homepage.menu_description[t]}
           </h1>
         </div>
@@ -248,7 +250,7 @@ export default function Homepage() {
               style={{ backgroundImage: `url(${item.source})` }}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="relative w-full p-5 text-left text-white flex flex-col gap-2">
+              <div className="relative w-full p-5 text-left text-white flex flex-col gap-2 dark:text-slate-200">
                 <h2 className="text-lg font-semibold md:text-xl lg:text-2xl">
                   {item.name[t]}
                 </h2>
@@ -264,22 +266,22 @@ export default function Homepage() {
       <div className="bg-reservation bg-cover h-fit py-[75px] flex justify-center text-center md:text-start">
         <div className="w-[350px] lg:w-[1000px] xl:w-[1200px] md:w-[700px] flex items-center flex-col lg:grid grid-cols-2 gap-14">
           <div className="flex items-center">
-            <div className="text-white h-fit grid gap-10">
+            <div className="text-white h-fit grid gap-10 dark:text-slate-200">
               <h2 className="text-[18px]">{homepage.contact_us[t]}</h2>
               <h1 className="text-[28px] font-bold">
                 {homepage.contact_description_one[t]}
               </h1>
               <p>{homepage.contact_description_two[t]}</p>
-              <div className="flex gap-10 items-center md:gap-4 flex-col md:flex-row [&>div]:rounded-md justify-between text-black">
-                <div className="w-[250px] h-[175px] bg-white flex flex-col items-center">
-                  <div className="bg-primary p-5 w-fit rounded-full mt-[-30px]">
+              <div className="flex gap-10 items-center md:gap-4 flex-col md:flex-row [&>div]:rounded-md justify-between text-slate-900 dark:text-slate-100">
+                <div className="w-[250px] h-[175px] bg-white/95 dark:bg-slate-900/80 flex flex-col items-center shadow-lg shadow-black/10">
+                  <div className="bg-primary p-5 w-fit rounded-full mt-[-30px] shadow-lg shadow-primary/30">
                     <Image src={icons.phone} alt="phone" className="invert" />
                   </div>
 
                   <h1 className="text-[23px] mt-3 font-semibold">
                     {homepage.phone[t]}
                   </h1>
-                  <p className="text-sm text-primary mt-1 uppercase tracking-wide">
+                  <p className="text-sm text-primary mt-1 uppercase tracking-wide dark:text-emerald-200">
                     {activeLocation.shortName}
                   </p>
                   <div className="flex flex-col items-center gap-2">
@@ -294,8 +296,8 @@ export default function Homepage() {
                   </div>
                   {/* <h1 className="">093 234 34324</h1> */}
                 </div>
-                <div className="w-[250px] h-[175px] bg-white flex flex-col items-center">
-                  <div className="bg-primary p-5 w-fit rounded-full mt-[-30px]">
+                <div className="w-[250px] h-[175px] bg-white/95 dark:bg-slate-900/80 flex flex-col items-center shadow-lg shadow-black/10">
+                  <div className="bg-primary p-5 w-fit rounded-full mt-[-30px] shadow-lg shadow-primary/30">
                     <Image src={icons.mail} alt="phone" className="invert" />
                   </div>
 
@@ -313,7 +315,7 @@ export default function Homepage() {
           <form
             id="form"
             onSubmit={formHandler}
-            className=" md:mx-0 bg-white rounded-lg md:w-full h-[550px] lg:h-full py-[30px] px-4 md:px-7 gap-5 flex flex-col items-center"
+            className=" md:mx-0 bg-white/95 text-slate-900 dark:bg-slate-900/80 dark:text-slate-100 rounded-lg md:w-full h-[550px] lg:h-full py-[30px] px-4 md:px-7 gap-5 flex flex-col items-center shadow-xl shadow-black/10"
           >
             <h1 className="text-[28px] font-bold">
               {homepage.table_reservation_title[t]}
@@ -321,7 +323,7 @@ export default function Homepage() {
             <div className="w-full grid grid-cols-2 flex-1 [&>input]:border [&>input]:rounded [&>input]:px-2 md:[&>input]:px-5 [&>input]:border-[#ddd] gap-3">
               <input
                 type="text"
-                className="focus:border-primary border outline-none"
+                className="focus:border-primary border outline-none dark:border-slate-700 dark:bg-slate-800/60"
                 placeholder={`${homepage.name[t]}*`}
                 onChange={(e) => setName(e.target.value)}
                 value={name}
@@ -329,7 +331,7 @@ export default function Homepage() {
               />
               <input
                 type="email"
-                className="focus:border-primary border outline-none"
+                className="focus:border-primary border outline-none dark:border-slate-700 dark:bg-slate-800/60"
                 placeholder={`${homepage.mail[t]}*`}
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
@@ -337,7 +339,7 @@ export default function Homepage() {
               />
               <input
                 type="tel"
-                className="focus:border-primary border outline-none"
+                className="focus:border-primary border outline-none dark:border-slate-700 dark:bg-slate-800/60"
                 placeholder={`${homepage.phone_number[t]}*`}
                 onChange={(e) => setPhone(e.target.value)}
                 value={phone}
@@ -345,7 +347,7 @@ export default function Homepage() {
               />
               <input
                 type="number"
-                className="focus:border-primary border outline-none"
+                className="focus:border-primary border outline-none dark:border-slate-700 dark:bg-slate-800/60"
                 placeholder={`${homepage.guests[t]}*`}
                 onChange={(e) => setGuests(e.target.value)}
                 value={guests}
@@ -353,7 +355,7 @@ export default function Homepage() {
               />
               <input
                 type="date"
-                className="focus:border-primary border outline-none"
+                className="focus:border-primary border outline-none dark:border-slate-700 dark:bg-slate-800/60"
                 placeholder={`${homepage.date[t]}*`}
                 onChange={(e) => setDate(e.target.value)}
                 value={date}
@@ -361,7 +363,7 @@ export default function Homepage() {
               />
               <input
                 type="time"
-                className="focus:border-primary border outline-none"
+                className="focus:border-primary border outline-none dark:border-slate-700 dark:bg-slate-800/60"
                 placeholder={`${homepage.time[t]}*`}
                 onChange={(e) => setTime(e.target.value)}
                 value={time}
@@ -370,13 +372,13 @@ export default function Homepage() {
             </div>
             <textarea
               placeholder={`${homepage.message[t]}`}
-              className="focus:border-primary border outline-none w-full border-[#ddd] rounded pl-5 pt-3 h-[150px]"
+              className="focus:border-primary border outline-none w-full border-[#ddd] rounded pl-5 pt-3 h-[150px] dark:border-slate-700 dark:bg-slate-800/60"
               onChange={(e) => setMessage(e.target.value)}
               value={message}
             />
             <button
               disabled={isLoading}
-              className="bg-primary w-full text-white font-semibold py-3 rounded "
+              className="bg-primary w-full text-white font-semibold py-3 rounded transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-80 dark:bg-emerald-200/20 dark:text-emerald-100 dark:hover:bg-emerald-200/30"
             >
               {homepage.reservation_button[t]}
             </button>

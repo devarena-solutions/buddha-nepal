@@ -6,16 +6,36 @@
 
 :root {
   font-family: "Manrope", sans-serif;
+  color-scheme: light;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 241, 245, 249;
+  --foreground-rgb: 15, 23, 42;
+  --muted-rgb: 100, 116, 139;
+  --card-rgb: 255, 255, 255;
+}
+
+.dark {
+  color-scheme: dark;
+  --background-start-rgb: 2, 6, 23;
+  --background-end-rgb: 15, 23, 42;
+  --foreground-rgb: 184, 196, 208;
+  --muted-rgb: 148, 163, 184;
+  --card-rgb: 15, 23, 42;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  background-color: rgb(var(--background-start-rgb));
+  background-image: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
-    )
+    ),
     rgb(var(--background-start-rgb));
+}
+
+.dark body {
+  color: rgba(var(--foreground-rgb), 0.85);
 }
 
 * {

@@ -9,12 +9,14 @@ import "react-toastify/dist/ReactToastify.css";
 import * as gtag from "@/utils/gtag";
 import Head from "next/head";
 import Script from "next/script";
+import { useTheme } from "@/context/ThemeContext";
 
 type PropsWithChildren = { children?: ReactNode };
 
 export default function Layout({ children }: PropsWithChildren) {
   const [scrollTopButton, setScrollTopButton] = useState(false);
   const lastScrollY = useRef(0);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,7 +73,7 @@ export default function Layout({ children }: PropsWithChildren) {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="light"
+        theme={theme}
       />
       <Navbar id="navbar" />
       <div
@@ -80,7 +82,7 @@ export default function Layout({ children }: PropsWithChildren) {
             .getElementById("navbar")!
             .scrollIntoView({ behavior: "smooth" })
         }
-        className={`fixed bottom-0 right-0 mb-[25px] mr-[25px] lg:mb-[50px] lg:mr-[50px] border border-white p-3 rounded-lg bg-primary ${
+        className={`fixed bottom-0 right-0 mb-[25px] mr-[25px] lg:mb-[50px] lg:mr-[50px] border border-white/80 dark:border-emerald-200/40 p-3 rounded-lg bg-primary text-white shadow-lg shadow-primary/30 transition dark:bg-emerald-200/15 dark:text-emerald-100 dark:shadow-emerald-200/10 ${
           scrollTopButton ? "scale-100" : "scale-0"
         }`}
       >
