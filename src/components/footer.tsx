@@ -19,7 +19,6 @@ export default function Footer() {
     LocationInfo,
   ][];
   const activeLocations = locationEntries.filter(([, info]) => info.isActive);
-  const upcomingLocations = locationEntries.filter(([, info]) => !info.isActive);
 
   const deliveryPartners = [
     { src: "/foodora.svg", alt: "Foodora" },
@@ -154,38 +153,7 @@ export default function Footer() {
                 );
               })}
 
-              {upcomingLocations.map(([key, info]) => {
-                const statusMessage = info.statusMessage?.[locale];
-                const statusLabel =
-                  statusMessage ?? contact.coming_soon_default[locale];
-
-                return (
-                  <article
-                    key={key}
-                    className="relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-br from-primary to-primary/70 p-6 text-white shadow-xl"
-                  >
-                    <div className="pointer-events-none absolute -top-10 right-0 h-24 w-24 rounded-full bg-white/10 blur-3xl" />
-                    <div className="pointer-events-none absolute -bottom-6 left-6 h-20 w-20 rounded-full bg-white/10 blur-2xl" />
-                    <div className="relative flex h-full flex-col gap-3">
-                      <div className="flex items-start justify-between gap-3">
-                        <div>
-                          <h3 className="text-xl font-semibold">{info.shortName}</h3>
-                          <p className="text-sm text-white/80">{info.name}</p>
-                        </div>
-                        <span className="rounded-full bg-white/20 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-white">
-                          {statusLabel}
-                        </span>
-                      </div>
-                      <p className="text-sm text-white/80">
-                        {statusMessage ?? contact.coming_soon_description[locale]}
-                      </p>
-                      <p className="text-xs text-white/60">
-                        {contact.coming_soon_follow[locale]}
-                      </p>
-                    </div>
-                  </article>
-                );
-              })}
+              {/* Upcoming locations (such as BUDDHA Haga) are hidden until launch. */}
             </div>
           </div>
         </div>
