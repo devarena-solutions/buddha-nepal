@@ -34,6 +34,10 @@ const SECTION_CONFIG: Partial<Record<MenuArstaSectionKey, SectionConfig>> = {
     gridClass: "w-full grid lg:grid-cols-1",
     itemWrapperClass: "w-full mt-5",
   },
+  thali: {
+    gridClass: "w-full grid lg:grid-cols-1",
+    itemWrapperClass: "w-full mt-5",
+  },
 };
 
 interface MenuArstaProps {

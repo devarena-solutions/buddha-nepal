@@ -8,392 +8,332 @@ export const menuHaga = {
     source: "/appetizer-banner.jpg",
     items: [
       {
-        name: {
-          en: "Chopsi Potato",
-          se: "Chopsi Potato",
-        },
+        name: { en: "Papadam", se: "Papadam" },
         description: {
-          en: "Hot potato snack . Apart from red chilies, Himalayan Timur chilli (Sichuan peppers) black pepper, fenugreek, cumin and coriander in spicy flavour.",
-          se: "Het potatismacka. Förutom röd chili, himalayansk timurchili (sichuanpeppar), svartpeppar, bockhornsklöver, spiskummin och koriander i kryddig smak.",
+          en: "Papadum is a thin, crispy Indian flatbread made from lentil flour, served as a crunchy side or snack.",
+          se: "Papadam är ett tunt och krispigt indiskt bröd gjort på linsmjöl, som serveras som tillbehör eller snacks.",
+        },
+        price: 30,
+      },
+      {
+        name: { en: "Chopsi Potato", se: "Chopsi Potato" },
+        description: {
+          en: "Hot potato snack in a spicy flavour, seasoned with red chilies, Himalayan Timur chili (Sichuan pepper), black pepper, fenugreek, cumin, and coriander.",
+          se: "Het potatischips med kryddig smak, smaksatt med röd chili, Himalaya-Timurpeppar (Sichuanpeppar), svartpeppar, bockhornsklöver, spiskummin och koriander.",
         },
         price: 80,
       },
       {
-        name: {
-          en: "Samosa Chat",
-          se: "Samosa Chat",
-        },
+        name: { en: "Samosa Chat", se: "Samosa Chat" },
         description: {
-          en: "Homemade veg samosa flattened on a plate, cucumber, tomato, onion, coriander, yoghurt",
-          se: "Hemlagad veg samosa tillplattade på en tallrik, gurka, tommat, lök, koriander, yoghurt.",
+          en: "Homemade vegetable samosas served on a plate with cucumber, tomato, onion, coriander, and yoghurt.",
+          se: "Hemlagade vegsamosor upplagda på en tallrik, med gurka, tomat, lök, koriander och yoghurt.",
         },
         price: 80,
       },
       {
-        name: {
-          en: "Mountain Heart Stone Cocktail",
-          se: "Mountain Heart Stone Cocktail",
-        },
+        name: { en: "Mountain Heart Stone Cocktail", se: "Mountain Heart Stone Cocktail" },
         description: {
-          en: "Fry tiger prawns with sweet-chili sauce. Served with two different sauces.",
-          se: "Stek tiger räkor med sweet-chili sås. Serveras med två olika såser.",
+          en: "Fried tiger prawns with sweet chili sauce, capsicum, onion and parsley.",
+          se: "Stekta tigerräkor med sweet chilisås, paprika, lök och persilja.",
         },
         price: 90,
       },
     ],
   },
-  favourites: {
+  main_dishes: {
     source: "/favourite-banner.jpg",
     index: 1,
     name: {
       en: "Main Dishes",
-      se: "Huvud Rätter",
+      se: "Huvudrätter",
     },
     items: [
       {
-        name: {
-          en: "Noodles with crispy Chicken/Prawn/ Seefood",
-          se: "Noodles with crispy Kyckling/Scampi/ Seefood",
-        },
+        name: { en: "Tikka Butter Masala", se: "Tikka Butter Masala" },
         description: {
-          en: "Noodles, egg, carrot, cabbage, green and red bell pepper, soya sauce, white pepper powder and on top crispy chicken / prawns/ seefood",
-          se: "Nudlar, morot, kål, grön och röd paprika, sojasås, vitpepparpulver och ovanpå krispiga kyckling/ Scampi/ Seefood.",
+          en: "Grilled chicken fillet or lamb, well-seasoned and prepared with nuts, butter, and a creamy sauce.",
+          se: "Grillad kycklingfilé eller lamm, välkryddad och tillagad med nötter, smör och en krämig gräddsås.",
         },
         sub: [
-          {
-            name: {
-              en: "Chicken",
-              se: "Kyckling",
-            },
-            price: 180,
-          },
-          {
-            name: {
-              en: "Prawns",
-              se: "Scampi",
-            },
-            price: 205,
-          },
+          { name: { en: "Chicken", se: "Kyckling" }, price: 195 },
+          { name: { en: "Lamb", se: "Lamm" }, price: 210 },
         ],
       },
       {
-        name: {
-          en: "Bamboo Chicken",
-          se: "Chicken teriyaki",
-        },
+        name: { en: "Kathmandu Rabaf", se: "Kathmandu Rabaf" },
         description: {
-          en: "Chicken, onion, bell pepper, sesame seeds, with teriyaki sauce.",
-          se: "Kyckling, lök, paprika, sesamfrön med teriyakisås.",
+          en: "Chicken or lamb marinated with sambal oelek, fresh ginger, star anise, and garlic. Cooked with honey, bell pepper, and tomato.",
+          se: "Kyckling- eller lamm marinerad med sambal oelek, färsk ingefära, anis och vitlök. Tillagas med honung, paprika och tomat.",
         },
-        price: 199,
+        sub: [
+          { name: { en: "Chicken", se: "Kyckling" }, price: 195 },
+          { name: { en: "Lamb", se: "Lamm" }, price: 210 },
+        ],
       },
       {
-        name: {
-          en: "Bamboo Chicken",
-          se: "Bamboo Chicken",
-        },
+        name: { en: "Swadilo", se: "Swadilo" },
         description: {
-          en: "Chicken with sesame seeds, sweet and sour sauce.",
-          se: "Kyckling med sesamfrön, sötsur sås.",
+          en: "Chicken or lamb cooked with sesame seeds, coriander, turmeric, and ginger, served with fruit and a mango sauce.",
+          se: "Kyckling- eller lamm tillagad med sesamfrön, koriander, gurkmeja och ingefära, serveras med frukt och mangosås.",
         },
-        price: 199,
+        sub: [
+          { name: { en: "Chicken", se: "Kyckling" }, price: 195 },
+          { name: { en: "Lamb", se: "Lamm" }, price: 210 },
+        ],
       },
       {
-        name: {
-          en: "Schnitzel",
-          se: "Schnitzel",
-        },
+        name: { en: "Bhuttan (Medium)", se: "Bhuttan (Mellan)" },
         description: {
-          en: "Breaded high-quality pork, served with fries and béarnaise sauce.",
-          se: "Panerade högkvaliete fläsk, serveras med pommes och bernaisesås.",
+          en: "Chicken or lamb seasoned with cumin, ginger, garlic, black pepper, and garam masala.",
+          se: "Kyckling- eller lamm kryddad med kummin, ingefära, vitlök, svartpeppar och garam masala.",
         },
-        price: 215,
+        sub: [
+          { name: { en: "Chicken", se: "Kyckling" }, price: 195 },
+          { name: { en: "Lamb", se: "Lamm" }, price: 210 },
+        ],
       },
       {
-        name: {
-          en: "Burgare ( Chicken / Hamburger )",
-          se: "Burgare ( Kyckling / Hamburgare )",
-        },
+        name: { en: "Mango Chicken", se: "Mango Chicken" },
         description: {
-          en: "Chicken burger or hamburger with french fries.",
-          se: "Kyckling burgare eller hamburgare med pommes.",
-        },
-        price: 90,
-      },
-      {
-        name: {
-          en: "Chicken Grill ( Fries/ Rice)",
-          se: "Chicken Grill ( Pommes/ Ris)",
-        },
-        description: {
-          en: "Grilled chicken fillet with French fries or rice",
-          se: "Grillad kycklingfile med pommes eller ris",
-        },
-        price: 215,
-      },
-      {
-        name: {
-          en: "Chicken white sås pasta",
-          se: "Chicken white sås pasta",
-        },
-        description: {
-          en: "Chicken pieces, cream, mashrom, paprika, onion, parmesan, chives, with pasta.",
-          se: "Kyckling bitar,gräde, mashrom ,paprika ,lök, parmesan ,gräs lök, med pasta.",
+          en: "Marinated chicken fillets cooked with mango, finely chopped garlic, and ginger.",
+          se: "Marinerade kycklingfiléer tillagade med mango, finhackad vitlök och ingefära.",
         },
         price: 195,
       },
       {
-        name: {
-          en: "Choila (Chicken / Lamb, Stark)",
-          se: "Choila (Kyckling / Lamm, Stark)",
-        },
+        name: { en: "Chicken Timmur (Medium)", se: "Chicken Timmur (Mellan)" },
         description: {
-          en: "A distinct culinary tradition originating from Kathmandu in Nepal. Paprika, onion, leek, tomato and a healthy blend of Himalayan spices. Usually quite spicy.",
-          se: "En distinct kulinarisk tradition som härstammar från Kathmandu i Nepal . Paprika, lök, purjolök, tomat och hälsosamt kryddblandning från himalaya. Brukar bara stark.",
-        },
-        sub: [
-          {
-            name: {
-              en: "Chicken",
-              se: "Kyckling",
-            },
-            price: 199,
-          },
-          {
-            name: {
-              en: "Lamb, Mellan / Stark)",
-              se: "Lamm, Mellan / Stark)",
-            },
-            price: 209,
-          },
-        ],
-      },
-      {
-        name: {
-          en: "Chicken Timmur (Medium)",
-          se: "Kyckling Timmur (Mellan)",
-        },
-        description: {
-          en: "Chicken fillet with peppers, onions, chili peppers and Timmur (Himalayan herbs, Sichuan pepper, from Nepal)",
-          se: "Kycklingfile med paprika,lök, chillipeppar och Timmur ( Himalaya örter, Sichuan peppar,från Nepal)",
+          en: "Chicken fillet stir-fried with peppers, onions, and chili, seasoned with Timmur (Himalayan herb) and Sichuan pepper.",
+          se: "Kycklingfilé wokad med paprika, lök och chilifrukter, kryddad med Timmur och Sichuanpeppar från Nepal.",
         },
         price: 199,
       },
       {
-        name: {
-          en: "Thukpa (Chicken / Lamb)",
-          se: "Thukpa (Kyckling / Lamm)",
-        },
+        name: { en: "Kadai", se: "Kadai" },
         description: {
-          en: "Thukpa is a Nepali/Tibetan noodle soup, but the name is used as an umbrella term for several regional Himalayan noodle dishes. This warm and nutritious soup traditionally consists of a rich broth, hand-pulled noodles, meat (such as chicken or lamb), and local vegetables. Thukpa is popular in Tibet, China, Nepal, Bhutan, and India.",
-          se: "Thukpa  är en nepali / tibetanskt nudelsoppa, men namnet används som en paraplyterm för flera regionala nudelrätter i Himalaya. Denna varma och näringsrika soppa består traditionellt av en rik buljong, handdragna nudlar, kött (som kyckling eller lamm) och lokala grönsaker. Thukpa är populär i Tibet Kina, Nepal, Bhutan och i Indien.",
-        },
-        price: 180,
-      },
-      {
-        name: {
-          en: "Balti (Chicken / Lamb, Mellan)",
-          se: "Balti (Chicken / Lamm, Mellan)",
-        },
-        description: {
-          en: "Marinated chicken / lamm fillets with green chili, onions, capsicums & garlic in a spicy sauce.",
-          se: "Marinerade kycklingfiléer med grön chili, lök, paprika och vitlök i en kryddstark sås.",
+          en: "Marinated chicken fillet, lamb, or scampi with bell peppers, onions, and vegetables in a basil sauce.",
+          se: "Marinerade kycklingfiléer, lamm eller scampi med paprika, lök och grönsaker i basilikasås.",
         },
         sub: [
-          {
-            name: {
-              en: "Chicken",
-              se: "Kyckling",
-            },
-            price: 205,
-          },
-          {
-            name: {
-              en: "Lamb, Mellan)",
-              se: "Lamm, Mellan)",
-            },
-            price: 215,
-          },
+          { name: { en: "Chicken", se: "Kyckling" }, price: 205 },
+          { name: { en: "Lamb", se: "Lamm" }, price: 220 },
+          { name: { en: "Prawns", se: "Räkor" }, price: 230 },
         ],
       },
       {
-        name: {
-          en: "Tikka Butter Masala (Chicken / Lamm)",
-          se: "Tikka Butter Masala (Kyckling / Lamm)",
-        },
+        name: { en: "Balti (Medium)", se: "Balti (Mellan)" },
         description: {
-          en: "Grilled chicken/lamb in Tandoori spices cooked with mint, nuts and crème sauce.",
-          se: "Grillad kyckling/lamm i Tandoori kryddor tillagad med mynta, nötter & gräddsås.",
+          en: "Grilled chicken fillet or lamb, well-seasoned and prepared with nuts, butter, and a creamy sauce.",
+          se: "Marinerad kycklingfilé eller lamm med grön chili, lök, paprika och vitlök i en kryddstark sås.",
         },
         sub: [
-          {
-            name: {
-              en: "Chicken",
-              se: "Kyckling",
-            },
-            price: 199,
-          },
-          {
-            name: {
-              en: "Lamb",
-              se: "Lamm",
-            },
-            price: 209,
-          },
+          { name: { en: "Chicken", se: "Kyckling" }, price: 205 },
+          { name: { en: "Lamb", se: "Lamm" }, price: 220 },
         ],
       },
-    ],
-  },
-  veg: {
-    source: "/vegetarian-banner.jpg",
-    index: 3,
-    name: {
-      en: "Vegetarian/Vegan (Rice included)",
-      se: "Vegetariska/Veganska (Ris ingår)",
-    },
-    items: [
       {
-        name: {
-          en: "Palak Paneer (Melan)",
-          se: "Palak Paneer (Melan)",
-        },
+        name: { en: "Saag Curry", se: "Saag Curry" },
         description: {
-          en: "Homemade fresh Indian cheese with spinach and curry",
-          se: "Hemlagad färsk indisk ost med spenat och curry pulver",
+          en: "Chicken fillet, lamb, or small shrimp cooked with fresh ginger, garlic, and fenugreek, served with spinach leaves.",
+          se: "Kycklingfilé, lamm eller små räkor tillagade med färsk ingefära, vitlök och bockhornsklöver, serveras med spenatblad.",
         },
-        price: 195,
-      },
-      {
-        name: {
-          en: "Tadka Daal",
-          se: "Tadka Daal",
-        },
-        description: {
-          en: "Yellow lentils, red chilli with butter.",
-          se: "Gula linser, röd chilli med smör.",
-        },
-        price: 190,
+        sub: [
+          { name: { en: "Chicken", se: "Kyckling" }, price: 195 },
+          { name: { en: "Lamb", se: "Lamm" }, price: 210 },
+          { name: { en: "Prawns", se: "Räkor" }, price: 210 },
+        ],
       },
     ],
   },
   momos: {
     source: "/momos.jpeg",
-    index: 6,
+    index: 2,
     name: {
       en: "MO:MO - Dumplings",
       se: "MO:MO - Dumplings",
     },
     items: [
       {
-        name: {
-          en: "MO:MO - Dumplings (Lamb / Chicken / Veg)",
-          se: "MO:MO - Dumplings (Lamm / Kyckling / Veg)",
-        },
+        name: { en: "MO:MO - Dumplings", se: "MO:MO - Dumplings" },
         description: {
-          en: "Momo are tasty dumplings with different fillings. Momo is a traditional delicacy in China, India, Nepal and Bhutan. You can eat Momo only steaming or steaming and frying for a crispier surface. We serve 10pcs Momos with good sauces that are healthy and directly imported from the Himalayas. It takes about 20 minutes to prepare.",
-          se: "Momo är mumsiga degknyten med olika fyllningar. Momo är traditionell delikates i Kina, Indien, Nepal och Bhutan. Man kan äta Momo enbart ångande eller ångande och sketa för frasigare yta. Vi serverar 10st Momos med goda sås som hälsosamt och direkt importerade från himalaya. Det tar ca 20 minuter att tillaga.",
+          en: "Momo are delicious dumplings with various fillings. We serve 10 freshly made momos with a flavorful sauce. Preparation time is approx 20 minutes.",
+          se: "Momo är mumsiga degknyten med olika fyllningar. Vi serverar 10 stycken nygjorda momos tillsammans med en smakrik sås. Tillagningstiden är cirka 20 minuter.",
         },
         sub: [
-          {
-            name: {
-              en: "Khasi Mo:mo (Lamb mince filling)",
-              se: "Khasi Mo:mo (Lammfärs på fyllning)",
-            },
-            price: 175,
-          },
-          {
-            name: {
-              en: "Kukhura Mo:mo (Chicken mince filling)",
-              se: "Kukhura Mo:mo (Kycklingfärs på fyllning)",
-            },
-            price: 165,
-          },
-          {
-            name: {
-              en: "Sabji Mo:mo (Vegetarian filling)",
-              se: "Sabji Mo:mo (Vegetarisk fyllning)",
-            },
-            price: 165,
-          },
+          { name: { en: "Maasu MoMo (Lamb)", se: "Maasu MoMo (Lammfärs)" }, price: 175 },
+          { name: { en: "Kukhura MoMo (Chicken)", se: "Kukhura MoMo (Kycklingfärs)" }, price: 170 },
+          { name: { en: "Sabji MoMo (Veg)", se: "Sabji MoMo (Veg)" }, price: 170 },
         ],
+      },
+    ],
+  },
+  grill: {
+    index: 3,
+    source: "/grill.jpg",
+    name: { en: "Grill Dishes", se: "Grill Rätter" },
+    items: [
+      {
+        name: { en: "Tilicho (Scampi Grill)", se: "Tilicho (Scampi Grill)" },
+        description: {
+          en: "King prawns in mustard, garlic, honey, and green chili, served with a creamy red sauce.",
+          se: "Kungsräkor i senap, vitlök, honung och grön chili, serverade med en krämig röd sås.",
+        },
+        price: 245,
+      },
+      {
+        name: { en: "Chicken Roast (Medium)", se: "Chicken Roast (Mellan)" },
+        description: {
+          en: "Grilled chicken fillet, lightly fried in lentil flour and seasoned with Himalayan spices.",
+          se: "Grillad kycklingfilé, lätt friterad i linsmjöl och kryddad med Himalayakrydda.",
+        },
+        price: 215,
+      },
+      {
+        name: { en: "Hariyali Chicken Grill", se: "Hariyali Chicken Grill" },
+        description: {
+          en: "Marinated chicken fillets with mint, coriander and sesame seeds, served with a separate sauce.",
+          se: "Marinerade kycklingfiléer med mynta, koriander och sesamfrön, serverade med separat sås.",
+        },
+        price: 225,
+      },
+      {
+        name: { en: "Chicken Grill", se: "Chicken Grill" },
+        description: {
+          en: "Grilled chicken fillet, served with French fries or rice.",
+          se: "Grillad kycklingfilé, serveras med friterade pommes eller ris.",
+        },
+        price: 215,
+      },
+      {
+        name: { en: "Choila (Spicy)", se: "Choila (Stark)" },
+        description: {
+          en: "A distinct culinary tradition from Kathmandu. Prepared with bell pepper, onion, leek, tomato, and Himalayan spices. Quite spicy.",
+          se: "En distinkt kulinarisk tradition från Kathmandu. Tillagad med paprika, lök, purjolök, tomat och en hälsosam kryddblandning. Ganska stark.",
+        },
+        sub: [
+          { name: { en: "Chicken", se: "Kyckling" }, price: 199 },
+          { name: { en: "Lamb", se: "Lamm" }, price: 215 },
+        ],
+      },
+    ],
+  },
+  special: {
+    index: 4,
+    source: "/special.webp",
+    name: { en: "Special Dishes", se: "Special Rätt" },
+    items: [
+      {
+        name: { en: "Thali Mix", se: "Thali Mix" },
+        description: {
+          en: "A delicious combination of dishes: Chicken Timmur, Lamb Choila, Paneer Chilli, and mixed raita.",
+          se: "En utsökt kombination av rätter: Chicken Timmur, Lamm Choila, Paneer Chilli och mixad raita.",
+        },
+        price: 245,
+      },
+      {
+        name: { en: "Schnitzel", se: "Schnitzel" },
+        description: {
+          en: "Breaded high-quality pork, served with fries and creamy Béarnaise sauce.",
+          se: "Panerat högkvalitativt fläsk, serveras med pommes frites och krämig bearnaisesås.",
+        },
+        price: 215,
+      },
+    ],
+  },
+  veg: {
+    source: "/vegetarian-banner.jpg",
+    index: 5,
+    name: {
+      en: "Vegetarian Dishes",
+      se: "Vegetarisk Rätt",
+    },
+    items: [
+      {
+        name: { en: "Palak Paneer (Mild)", se: "Palak Paneer (Mild)" },
+        description: {
+          en: "Fresh, homemade Indian cheese with spinach and curry powder.",
+          se: "Färsk, hemlagad indisk ost med spenat och currypulver.",
+        },
+        price: 195,
+      },
+      {
+        name: { en: "Alo Gobi (Medium)", se: "Alo Gobi (Lagom Stark)" },
+        description: {
+          en: "Lightly spiced cauliflower, potatoes, and peas with cumin and other aromatic spices.",
+          se: "Lätt kryddad blomkål, potatis och ärter med spiskummin samt andra aromatiska kryddor.",
+        },
+        price: 195,
+      },
+      {
+        name: { en: "Tadka Daal (Medium)", se: "Tadka Daal (Mellan)" },
+        description: {
+          en: "Yellow lentils slow-cooked with red chili and tempered in butter or oil.",
+          se: "Gula linser långkokta med röd chili och tempererade i smör eller olja.",
+        },
+        price: 190,
       },
     ],
   },
   bread: {
     source: "/bread-banner.jpg",
-    index: 7,
-    name: {
-      en: "Bread",
-      se: "BRÖD",
-    },
+    index: 6,
+    name: { en: "Paratha", se: "Paratha" },
     items: [
       {
-        name: {
-          en: "Paratha",
-          se: "Paratha (Typ av NAAN bröd)",
-        },
+        name: { en: "Plain Naan", se: "Typ av NAAN bröd" },
         description: {
-          en: "New made soft bread",
-          se: "Nybakat mjukt bröd",
+          en: "Traditional naan bread fried with butter.",
+          se: "Klassiskt naanbröd stekt med smör.",
         },
         price: 20,
+      },
+    ],
+  },
+  accessories: {
+    source: "/accessories-banner.png",
+    index: 7,
+    name: { en: "Accessories", se: "Tillbehör" },
+    items: [
+      {
+        name: { en: "Fried Rice", se: "Fried Rice" },
+        description: {
+          en: "Fragrant fried rice with fresh vegetables and egg.",
+          se: "Kryddat stekt ris med färska grönsaker och ägg.",
+        },
+        price: 50,
+      },
+      {
+        name: { en: "French Fries", se: "Pommes" },
+        description: {
+          en: "Crispy golden French fries.",
+          se: "Krispiga gyllene pommes frites.",
+        },
+        price: 30,
       },
     ],
   },
   desserts: {
     source: "/dessert-banner.jpg",
     index: 8,
-    name: {
-      en: "Desserts",
-      se: "EFTERRÄTTER",
-    },
+    name: { en: "Dessert", se: "Efterrätt / Desert" },
     items: [
       {
-        name: {
-          en: "Choklad Fondant",
-          se: "Choklad Fondant",
-        },
+        name: { en: "Fanny Banana", se: "Fanny Banana" },
         description: {
-          en: "Chocolat fondant, served with vanila ice cream",
-          se: "Serveras med vaniljglass",
+          en: "Fried banana served with caramel sauce and cream.",
+          se: "Friterad banan serverad med kolasås och grädde.",
         },
         price: 80,
       },
       {
-        name: {
-          en: "Mango Sabari",
-          se: "Mango Sabari",
-        },
+        name: { en: "Mango Sabari", se: "Mango Sabari" },
         description: {
-          en: "Vanilla ice cream with mango, coconut and pine nuts.",
-          se: "Vaniljglass med mango, kokos och pintage nötter.",
+          en: "Creamy vanilla ice cream topped with fresh mango, toasted coconut flakes, and crunchy pistachios.",
+          se: "Krämig vaniljglass toppad med färsk mango, rostade kokosflingor och knapriga pistagenötter.",
         },
         price: 90,
       },
     ],
   },
-  accessories: {
-    source: "/accessories-banner.png",
-    index: 9,
-    name: {
-      en: "Accessories",
-      se: "TILLBEHÖR",
-    },
-    items: [
-      {
-        name: {
-          en: "Fried Rice",
-          se: "Fried Rice",
-        },
-        description: {
-          en: "Fried rice with some vegetables and eggs.",
-          se: "Stekt ris med grönsaker och egg.",
-        },
-        price: 50,
-      },
-    ],
-  },
 };
-
-export type MenuHagaData = typeof menuHaga;
-export type MenuHagaSectionKey = keyof MenuHagaData;

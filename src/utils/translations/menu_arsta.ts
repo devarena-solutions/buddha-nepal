@@ -543,10 +543,10 @@ export const menuArsta = {
           se: "Ayurveda Thali",
         },
         description: {
-          en: "Three vegetarian dishes: spinach vadji, okra, lentils and mix-veg. Served with rice and raita.",
-          se: "Tre vegetariska rätter: spenat vadji, okra, linser och mix-veg. Serveras med ris och raita.",
+          en: "Complete and very popular dish from Nepal, consisting of Daal Jhaneko (Urud lentils with 'Jimmu'. An herb from high altitude of Himalaya), Chicken Timmur, Lamb Sadeko, Panir Chilli Specially prepared with Himalayan herbs.",
+          se: "Komplett och mycket populär rätt från Nepal, bestående av Daal Jhaneko (Urudlinser med 'Jimmu'. En ört från Himalayas höga höjder), kycklingtimmur, lammsadeko och panirchili. Speciellt tillagad med himalayas örter.",
         },
-        price: 235,
+        price: 270,
       },
     ],
   },

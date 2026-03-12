@@ -10,13 +10,15 @@ import type { Language } from "@/utils/site";
 import { MenuContent, type SectionConfig } from "./MenuContent";
 
 const SECTION_ORDER: MenuHagaSectionKey[] = [
-  "appetizer",
-  "favourites",
-  "veg",
-  "accessories",
-  "momos",
-  "bread",
-  "desserts",
+  "appetizer",    // Förrätter (Items 01-04)
+  "main_dishes",  // Main Dishes (Items 05-13)
+  "momos",        // MO:MO - Dumplings (Item 14)
+  "grill",        // Grill Rätter (Items 15-19)
+  "special",      // Special Rätt (Items 20-21)
+  "veg",          // Vegetarisk Rätt (Items 22-24)
+  "bread",        // Paratha / Naan (Item 25)
+  "accessories",  // Tillbehör (Fried rice / Pommes)
+  "desserts",     // Efterrätt / Desert
 ];
 
 const SECTION_CONFIG: Partial<Record<MenuHagaSectionKey, SectionConfig>> = {
