@@ -22,7 +22,7 @@ const SECTION_ORDER: MenuHagaSectionKey[] = [
 ];
 
 const SECTION_CONFIG: Partial<Record<MenuHagaSectionKey, SectionConfig>> = {
-  favourites: {
+  main_dishes: {
     gridClass: "w-full grid lg:grid-cols-2 gap-7",
     itemWrapperClass: "mt-5",
   },

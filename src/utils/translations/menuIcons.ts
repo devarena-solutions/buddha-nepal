@@ -15,7 +15,7 @@ export const MENU_ICONS_ARSTA: Partial<Record<MenuArstaSectionKey, string>> = {
 
 export const MENU_ICONS_HAGA: Partial<Record<MenuHagaSectionKey, string>> = {
   appetizer: "/appetizer.svg",
-  favourites: "/favourites.svg",
+  main_dishes: "/favourites.svg",
   veg: "/veg.svg",
   momos: "/momos.png",
   bread: "/naan.svg",

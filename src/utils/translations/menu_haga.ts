@@ -1,5 +1,3 @@
-import { menuArsta } from "@/utils/translations/menu_arsta";
-
 export const menuHaga = {
   appetizer: {
     index: 0,
@@ -340,5 +338,5 @@ export const menuHaga = {
   },
 };
 
-export type MenuHagaData = typeof menuArsta;
+export type MenuHagaData = typeof menuHaga;
 export type MenuHagaSectionKey = keyof MenuHagaData;
