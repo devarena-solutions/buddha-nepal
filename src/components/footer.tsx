@@ -21,7 +21,7 @@ export default function Footer() {
   const activeLocations = locationEntries.filter(([, info]) => info.isActive);
 
   const deliveryPartners = [
-    { src: "/foodora.svg", alt: "Foodora" },
+    /*{ src: "/foodora.svg", alt: "Foodora" },*/
     { src: "/qopla-white.svg", alt: "Qopla" },
   ];
 
@@ -127,12 +127,13 @@ export default function Footer() {
                     </div>
                     <p className="text-sm text-white/70">{info.name}</p>
                     <div className="space-y-1 text-sm text-white/70">
-                      <p>{contact.weekdays[locale]}</p>
-                      <p>{contact.weekends[locale]}</p>
+                      <p>{`${contact.weekdays[locale]} ${info.openingTimes.weekDays}`}</p>
+                      <p>{`${contact.saturday[locale]} ${info.openingTimes.saturday}`}</p>
+                      <p>{`${contact.sunday[locale]} ${info.openingTimes.sunday}`}</p>
                     </div>
                     <div className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
                       <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-emerald-200">
-                        {contact.order_call[locale]}
+                      {contact.order_call[locale]}
                       </p>
                       <div className="mt-3 flex flex-col gap-2">
                         {phoneNumbers.map((phone) => {

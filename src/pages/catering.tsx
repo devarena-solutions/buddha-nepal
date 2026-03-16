@@ -40,8 +40,7 @@ export default function Catering() {
         message,
       }),
     });
-    const data = await res.json();
-    console.log(data);
+    //const data = await res.json();
 
     if (res.ok) {
       toast.success("Reservation mail sent", {

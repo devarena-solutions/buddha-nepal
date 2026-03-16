@@ -52,8 +52,10 @@ export default function Contact() {
                     </div>
                     <p className="text-base text-slate-600">{info.name}</p>
                     <div className="space-y-1 text-sm text-slate-700">
-                      <p>{contact.weekdays[t]}</p>
-                      <p>{contact.weekends[t]}</p>
+                      <p>{`${contact.weekdays[t]} ${info.openingTimes.weekDays}`}</p>
+                      <p>{`${contact.saturday[t]} ${info.openingTimes.saturday}`}</p>
+                      <p>{`${contact.sunday[t]} ${info.openingTimes.sunday}`}</p>
+
                     </div>
                   </div>
 
@@ -110,7 +112,6 @@ export default function Contact() {
           </div>
 
           <div className="flex items-center justify-center gap-6 mt-12">
-            <Image src="/foodora.svg" alt="Foodora" width={60} height={60} />
             <Image src="/qopla.svg" alt="Qopla" width={60} height={60} />
           </div>
         </div>

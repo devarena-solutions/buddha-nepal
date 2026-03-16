@@ -76,8 +76,7 @@ export default function Homepage() {
         message,
       }),
     });
-    const data = await res.json();
-    console.log(data);
+    //const data = await res.json();
 
     if (res.ok) {
       toast.success("Reservation mail sent", {

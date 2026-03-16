@@ -21,6 +21,12 @@ export interface LocationInfo {
   isActive: boolean;
   /** Optional status or availability message */
   statusMessage?: LanguageMap;
+
+  openingTimes: {
+    weekDays: string,
+    saturday: string,
+    sunday: string,
+  }
 }
 
 const locations: Record<LocationKey, LocationInfo> = {
@@ -31,14 +37,24 @@ const locations: Record<LocationKey, LocationInfo> = {
     mapSrc:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2037.2104655923176!2d18.05061867705999!3d59.296042113684926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f7791cc0466d9%3A0xa844d6d5435f306a!2sBUDDHA%20Nepal!5e0!3m2!1sen!2sse!4v1757644635036!5m2!1sen!2sse",
     isActive: true,
+    openingTimes: {
+      weekDays: "11:00 - 21:00",
+      saturday: "13:00 - 21:00",
+      sunday: "13:00 - 21:00",
+    }
   },
   haga: {
-    name: "Ynglingagatan 9, 113 47 Stockholm",
+    name: "Ynglingagatan 9, 113 47 Stockholm (Hagagatan 58, 113 47)",
     shortName: "BUDDHA Haga",
-    phones: ["076-582 82 88", "0760-35 37 99"],
+    phones: ["0765- 828288"],
     mapSrc:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4068.038657368876!2d18.04833100611805!3d59.34932516386402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d724ef405ef%3A0xba83e55580836315!2sYnglingagatan%209%2C%20113%2047%20Stockholm!5e0!3m2!1sen!2sse!4v1757644789600!5m2!1sen!2sse",
     isActive: true,
+    openingTimes: {
+      weekDays: "11:00 - 14:30, 17:00 - 21:00",
+      saturday: "13:00 - 21:00",
+      sunday: "Stängt"
+    }
   },
 };
 

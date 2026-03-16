@@ -314,7 +314,7 @@ export const menuHaga = {
     ],
   },
   desserts: {
-    source: "/dessert-banner.jpg",
+    source: "/desserts.jpg",
     index: 8,
     name: { en: "Dessert", se: "Efterrätt / Desert" },
     items: [

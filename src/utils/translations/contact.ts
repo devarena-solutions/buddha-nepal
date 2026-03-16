@@ -8,20 +8,28 @@ export const contact = {
     se: "Årstavägen 39, 120 52 Årsta",
   },
   address_two: {
-    en: "Ynglingagatan 9, 113 47 Stockholm",
-    se: "Ynglingagatan 9, 113 47 Stockholm",
+    en: "Ynglingagatan 9, 113 47 Stockholm (Hagagatan 58, 113 47)",
+    se: "Ynglingagatan 9, 113 47 Stockholm (Hagagatan 58, 113 47)",
   },
   opening_times: {
     en: "Opening times for this location:",
     se: "Öppettider för denna plats:",
   },
   weekdays: {
-    en: "Mon - Fri : 11:00 - 21:00",
-    se: "Mån - Fre : 11:00 - 21:00",
+    en: "Mon - Fri :",
+    se: "Mån - Fre :",
+  },
+  saturday: {
+    en: "Sat:",
+    se: "Lör:"
+  },
+  sunday: {
+    en: "Sun:",
+    se: "Sön:"
   },
   weekends: {
-    en: "Sat - Sun : 13:00 - 21:00",
-    se: "Lör - Sön : 13:00 - 21:00",
+    en: "Sat - Sun :",
+    se: "Lör - Sön :",
   },
   order_call: {
     en: "You can order by calling us on:",
