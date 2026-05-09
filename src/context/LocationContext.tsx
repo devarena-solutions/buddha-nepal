@@ -23,10 +23,10 @@ export interface LocationInfo {
   statusMessage?: LanguageMap;
 
   openingTimes: {
-    weekDays: string,
-    saturday: string,
-    sunday: string,
-  }
+    weekDays: string;
+    saturday: string;
+    sunday: string;
+  };
 }
 
 const locations: Record<LocationKey, LocationInfo> = {
@@ -39,9 +39,9 @@ const locations: Record<LocationKey, LocationInfo> = {
     isActive: true,
     openingTimes: {
       weekDays: "11:00 - 21:00",
-      saturday: "13:00 - 21:00",
-      sunday: "13:00 - 21:00",
-    }
+      saturday: "16:00 - 21:00",
+      sunday: "16:00 - 21:00",
+    },
   },
   haga: {
     name: "Ynglingagatan 9, 113 47 Stockholm (Hagagatan 58, 113 47)",
@@ -51,10 +51,10 @@ const locations: Record<LocationKey, LocationInfo> = {
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4068.038657368876!2d18.04833100611805!3d59.34932516386402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d724ef405ef%3A0xba83e55580836315!2sYnglingagatan%209%2C%20113%2047%20Stockholm!5e0!3m2!1sen!2sse!4v1757644789600!5m2!1sen!2sse",
     isActive: true,
     openingTimes: {
-      weekDays: "11:00 - 14:30, 17:00 - 21:00",
-      saturday: "13:00 - 21:00",
-      sunday: "Stängt"
-    }
+      weekDays: "11:00 - 14:00, 17:00 - 21:00",
+      saturday: "Stängt",
+      sunday: "Stängt",
+    },
   },
 };
 
@@ -74,7 +74,7 @@ const LocationContext = createContext<LocationContextProps>({
 
 export const LocationProvider = ({ children }: { children: ReactNode }) => {
   const [location, setLocationState] = useState<LocationKey | null>(
-    locations[DEFAULT_LOCATION]?.isActive ? DEFAULT_LOCATION : null
+    locations[DEFAULT_LOCATION]?.isActive ? DEFAULT_LOCATION : null,
   );
 
   useEffect(() => {
